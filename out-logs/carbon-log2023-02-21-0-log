@@ -1,0 +1,340 @@
+10:28:11.134 [main] INFO  org.carbonPool.User.loginTest - Starting loginTest on DESKTOP-SPJKFLC with PID 9104 (D:\code\javacode\corbonPoolApiAuto\target\test-classes started by 65678 in D:\code\javacode\corbonPoolApiAuto)
+10:28:11.135 [main] INFO  org.carbonPool.User.loginTest - No active profile set, falling back to default profiles: default
+10:28:12.061 [main] INFO  o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker - Bean 'org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration' of type [org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+10:28:12.578 [main] INFO  org.carbonPool.Utils.EnvironmentUtil - 测试环境域名：http://web.corp-sit.lvtanlian.com
+10:28:13.118 [main] INFO  o.s.s.c.ThreadPoolTaskExecutor - Initializing ExecutorService 'applicationTaskExecutor'
+10:28:14.058 [main] INFO  org.mongodb.driver.cluster - Cluster created with settings {hosts=[localhost:27017], mode=SINGLE, requiredClusterType=UNKNOWN, serverSelectionTimeout='30000 ms', maxWaitQueueSize=500}
+10:28:14.220 [main] INFO  org.carbonPool.User.loginTest - Started loginTest in 3.326 seconds (JVM running for 4.113)
+10:28:14.330 [TestNG-method=logintest-1] INFO  org.carbonPool.User.loginTest - 准备开始---------
+10:28:14.330 [TestNG-method=logintest-1] INFO  org.carbonPool.Utils.EnvironmentUtil - 测试环境域名：http://web.corp-sit.lvtanlian.com
+10:28:14.445 [TestNG-method=logintest-1] INFO  org.carbonPool.Utils.HttprequestUtil - 这里是请求路径：：：http://web.corp-sit.lvtanlian.com/api/uaa/user/login
+10:28:14.445 [TestNG-method=logintest-1] INFO  org.carbonPool.Utils.HttprequestUtil - 这里是请求header：：：
+10:28:14.449 [TestNG-method=logintest-1] INFO  org.carbonPool.Utils.HttprequestUtil - 此处是请求参数：：：：8ktmjNNPiiND/SxFcVxEmGDJBuFhoHsKdKw91U32efim+V4nHgXu8RQYYPXV1wp7
+10:28:14.583 [TestNG-method=logintest-1] ERROR org.carbonPool.Utils.AESUtil - null
+java.lang.IllegalArgumentException: Illegal base64 character 7b
+	at java.util.Base64$Decoder.decode0(Base64.java:714)
+	at java.util.Base64$Decoder.decode(Base64.java:526)
+	at org.springframework.util.Base64Utils.decode(Base64Utils.java:59)
+	at org.springframework.util.Base64Utils.decodeFromString(Base64Utils.java:111)
+	at org.carbonPool.Utils.Base64Util.decode(Base64Util.java:15)
+	at org.carbonPool.Utils.AESUtil.decrypt(AESUtil.java:54)
+	at org.carbonPool.service.BaseService.assertMsgAndData(BaseService.java:104)
+	at org.carbonPool.service.user.loginService.login(loginService.java:41)
+	at org.carbonPool.User.loginTest.logintest(loginTest.java:30)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:124)
+	at org.testng.internal.MethodInvocationHelper$1.runTestMethod(MethodInvocationHelper.java:230)
+	at org.springframework.test.context.testng.AbstractTestNGSpringContextTests.run(AbstractTestNGSpringContextTests.java:180)
+	at org.testng.internal.MethodInvocationHelper.invokeHookable(MethodInvocationHelper.java:242)
+	at org.testng.internal.InvokeMethodRunnable.runOne(InvokeMethodRunnable.java:56)
+	at org.testng.internal.InvokeMethodRunnable.run(InvokeMethodRunnable.java:44)
+	at java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:511)
+	at java.util.concurrent.FutureTask.run(FutureTask.java:266)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1149)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:624)
+	at java.lang.Thread.run(Thread.java:748)
+10:28:14.847 [SpringContextShutdownHook] INFO  o.s.s.c.ThreadPoolTaskExecutor - Shutting down ExecutorService 'applicationTaskExecutor'
+10:31:13.069 [main] INFO  org.carbonPool.User.loginTest - Starting loginTest on DESKTOP-SPJKFLC with PID 19364 (D:\code\javacode\corbonPoolApiAuto\target\test-classes started by 65678 in D:\code\javacode\corbonPoolApiAuto)
+10:31:13.070 [main] INFO  org.carbonPool.User.loginTest - No active profile set, falling back to default profiles: default
+10:31:13.733 [main] INFO  o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker - Bean 'org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration' of type [org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+10:31:14.185 [main] INFO  org.carbonPool.Utils.EnvironmentUtil - 测试环境域名：http://web.corp-sit.lvtanlian.com
+10:31:14.717 [main] INFO  o.s.s.c.ThreadPoolTaskExecutor - Initializing ExecutorService 'applicationTaskExecutor'
+10:31:15.453 [main] INFO  org.mongodb.driver.cluster - Cluster created with settings {hosts=[localhost:27017], mode=SINGLE, requiredClusterType=UNKNOWN, serverSelectionTimeout='30000 ms', maxWaitQueueSize=500}
+10:31:15.581 [main] INFO  org.carbonPool.User.loginTest - Started loginTest in 2.793 seconds (JVM running for 3.594)
+10:31:15.749 [TestNG-method=logintest-1] INFO  org.carbonPool.User.loginTest - 准备开始---------
+10:31:15.749 [TestNG-method=logintest-1] INFO  org.carbonPool.Utils.EnvironmentUtil - 测试环境域名：http://web.corp-sit.lvtanlian.com
+10:31:15.872 [TestNG-method=logintest-1] INFO  org.carbonPool.Utils.HttprequestUtil - 这里是请求路径：：：http://web.corp-sit.lvtanlian.com/api/uaa/user/login
+10:31:15.873 [TestNG-method=logintest-1] INFO  org.carbonPool.Utils.HttprequestUtil - 这里是请求header：：：
+10:31:15.876 [TestNG-method=logintest-1] INFO  org.carbonPool.Utils.HttprequestUtil - 此处是请求参数：：：：LoginBean(username=17800000001, password=A147258)
+10:31:16.002 [TestNG-method=logintest-1] ERROR org.carbonPool.Utils.AESUtil - null
+java.lang.IllegalArgumentException: Illegal base64 character 7b
+	at java.util.Base64$Decoder.decode0(Base64.java:714)
+	at java.util.Base64$Decoder.decode(Base64.java:526)
+	at org.springframework.util.Base64Utils.decode(Base64Utils.java:59)
+	at org.springframework.util.Base64Utils.decodeFromString(Base64Utils.java:111)
+	at org.carbonPool.Utils.Base64Util.decode(Base64Util.java:15)
+	at org.carbonPool.Utils.AESUtil.decrypt(AESUtil.java:54)
+	at org.carbonPool.service.BaseService.assertMsgAndData(BaseService.java:104)
+	at org.carbonPool.service.user.loginService.login(loginService.java:42)
+	at org.carbonPool.User.loginTest.logintest(loginTest.java:30)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:124)
+	at org.testng.internal.MethodInvocationHelper$1.runTestMethod(MethodInvocationHelper.java:230)
+	at org.springframework.test.context.testng.AbstractTestNGSpringContextTests.run(AbstractTestNGSpringContextTests.java:180)
+	at org.testng.internal.MethodInvocationHelper.invokeHookable(MethodInvocationHelper.java:242)
+	at org.testng.internal.InvokeMethodRunnable.runOne(InvokeMethodRunnable.java:56)
+	at org.testng.internal.InvokeMethodRunnable.run(InvokeMethodRunnable.java:44)
+	at java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:511)
+	at java.util.concurrent.FutureTask.run(FutureTask.java:266)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1149)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:624)
+	at java.lang.Thread.run(Thread.java:748)
+10:31:16.252 [SpringContextShutdownHook] INFO  o.s.s.c.ThreadPoolTaskExecutor - Shutting down ExecutorService 'applicationTaskExecutor'
+10:34:21.003 [main] INFO  org.carbonPool.User.loginTest - Starting loginTest on DESKTOP-SPJKFLC with PID 13336 (D:\code\javacode\corbonPoolApiAuto\target\test-classes started by 65678 in D:\code\javacode\corbonPoolApiAuto)
+10:34:21.005 [main] INFO  org.carbonPool.User.loginTest - No active profile set, falling back to default profiles: default
+10:34:21.679 [main] INFO  o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker - Bean 'org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration' of type [org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+10:34:22.143 [main] INFO  org.carbonPool.Utils.EnvironmentUtil - 测试环境域名：http://web.corp-sit.lvtanlian.com
+10:34:22.656 [main] INFO  o.s.s.c.ThreadPoolTaskExecutor - Initializing ExecutorService 'applicationTaskExecutor'
+10:34:23.379 [main] INFO  org.mongodb.driver.cluster - Cluster created with settings {hosts=[localhost:27017], mode=SINGLE, requiredClusterType=UNKNOWN, serverSelectionTimeout='30000 ms', maxWaitQueueSize=500}
+10:34:23.503 [main] INFO  org.carbonPool.User.loginTest - Started loginTest in 2.749 seconds (JVM running for 3.569)
+10:34:23.654 [TestNG-method=logintest-1] INFO  org.carbonPool.User.loginTest - 准备开始---------
+10:34:23.759 [TestNG-method=logintest-1] INFO  org.carbonPool.Utils.HttprequestUtil - 这里是请求路径：：：http://web.corp-sit.lvtanlian.com/api/uaa/user/login
+10:34:23.759 [TestNG-method=logintest-1] INFO  org.carbonPool.Utils.HttprequestUtil - 这里是请求header：：：
+10:34:23.765 [TestNG-method=logintest-1] INFO  org.carbonPool.Utils.HttprequestUtil - 此处是请求参数：：：：{"username":"17800000001","password":"A147258"}
+10:34:24.115 [TestNG-method=logintest-1] ERROR org.carbonPool.Utils.AESUtil - null
+java.lang.IllegalArgumentException: Illegal base64 character 7b
+	at java.util.Base64$Decoder.decode0(Base64.java:714)
+	at java.util.Base64$Decoder.decode(Base64.java:526)
+	at org.springframework.util.Base64Utils.decode(Base64Utils.java:59)
+	at org.springframework.util.Base64Utils.decodeFromString(Base64Utils.java:111)
+	at org.carbonPool.Utils.Base64Util.decode(Base64Util.java:15)
+	at org.carbonPool.Utils.AESUtil.decrypt(AESUtil.java:54)
+	at org.carbonPool.service.BaseService.assertMsgAndData(BaseService.java:104)
+	at org.carbonPool.service.user.loginService.login(loginService.java:33)
+	at org.carbonPool.User.loginTest.logintest(loginTest.java:30)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:124)
+	at org.testng.internal.MethodInvocationHelper$1.runTestMethod(MethodInvocationHelper.java:230)
+	at org.springframework.test.context.testng.AbstractTestNGSpringContextTests.run(AbstractTestNGSpringContextTests.java:180)
+	at org.testng.internal.MethodInvocationHelper.invokeHookable(MethodInvocationHelper.java:242)
+	at org.testng.internal.InvokeMethodRunnable.runOne(InvokeMethodRunnable.java:56)
+	at org.testng.internal.InvokeMethodRunnable.run(InvokeMethodRunnable.java:44)
+	at java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:511)
+	at java.util.concurrent.FutureTask.run(FutureTask.java:266)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1149)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:624)
+	at java.lang.Thread.run(Thread.java:748)
+10:34:24.375 [SpringContextShutdownHook] INFO  o.s.s.c.ThreadPoolTaskExecutor - Shutting down ExecutorService 'applicationTaskExecutor'
+10:36:39.513 [main] INFO  org.carbonPool.User.loginTest - Starting loginTest on DESKTOP-SPJKFLC with PID 19176 (D:\code\javacode\corbonPoolApiAuto\target\test-classes started by 65678 in D:\code\javacode\corbonPoolApiAuto)
+10:36:39.514 [main] INFO  org.carbonPool.User.loginTest - No active profile set, falling back to default profiles: default
+10:36:40.239 [main] INFO  o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker - Bean 'org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration' of type [org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+10:36:40.715 [main] INFO  org.carbonPool.Utils.EnvironmentUtil - 测试环境域名：http://web.corp-sit.lvtanlian.com
+10:36:41.201 [main] INFO  o.s.s.c.ThreadPoolTaskExecutor - Initializing ExecutorService 'applicationTaskExecutor'
+10:36:41.976 [main] INFO  org.mongodb.driver.cluster - Cluster created with settings {hosts=[localhost:27017], mode=SINGLE, requiredClusterType=UNKNOWN, serverSelectionTimeout='30000 ms', maxWaitQueueSize=500}
+10:36:42.137 [main] INFO  org.carbonPool.User.loginTest - Started loginTest in 2.865 seconds (JVM running for 3.676)
+10:36:42.284 [TestNG-method=logintest-1] INFO  org.carbonPool.User.loginTest - 准备开始---------
+10:36:42.392 [TestNG-method=logintest-1] INFO  org.carbonPool.Utils.HttprequestUtil - 这里是请求路径：：：http://web.corp-sit.lvtanlian.com/api/uaa/user/login
+10:36:42.392 [TestNG-method=logintest-1] INFO  org.carbonPool.Utils.HttprequestUtil - 这里是请求header：：：
+10:36:42.397 [TestNG-method=logintest-1] INFO  org.carbonPool.Utils.HttprequestUtil - 此处是请求参数：：：：{"username":"17800000001","password":"A147258"}
+10:36:42.799 [TestNG-method=logintest-1] INFO  org.carbonPool.Utils.JsonUtil - 转换结果:{"data":"Bearer eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiIxXzE3ODAwMDAwMDAxIiwiY3JlYXRlZCI6MTY3Njk0NzAwNDM4OSwiZXhwIjoxNjc3NTUxODA0fQ.PALCsQHrilSBcn5LOkFToGnUGIhnM3r080ahrtwnvmPRrllNRaUHko50UFQ9ffEPWc9gS6ZWoT6XlPAveOhb6w","error":"Access.success.general","message":"操作成功","status":200,"timestamp":"1676947004408"}
+10:36:42.800 [TestNG-method=logintest-1] INFO  org.carbonPool.User.loginTest - {"data":"Bearer eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiIxXzE3ODAwMDAwMDAxIiwiY3JlYXRlZCI6MTY3Njk0NzAwNDM4OSwiZXhwIjoxNjc3NTUxODA0fQ.PALCsQHrilSBcn5LOkFToGnUGIhnM3r080ahrtwnvmPRrllNRaUHko50UFQ9ffEPWc9gS6ZWoT6XlPAveOhb6w","error":"Access.success.general","message":"操作成功","status":200,"timestamp":"1676947004408"}
+10:36:43.005 [SpringContextShutdownHook] INFO  o.s.s.c.ThreadPoolTaskExecutor - Shutting down ExecutorService 'applicationTaskExecutor'
+10:38:16.434 [main] INFO  org.carbonPool.User.loginTest - Starting loginTest on DESKTOP-SPJKFLC with PID 11492 (D:\code\javacode\corbonPoolApiAuto\target\test-classes started by 65678 in D:\code\javacode\corbonPoolApiAuto)
+10:38:16.435 [main] INFO  org.carbonPool.User.loginTest - No active profile set, falling back to default profiles: default
+10:38:17.232 [main] INFO  o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker - Bean 'org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration' of type [org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+10:38:17.804 [main] INFO  org.carbonPool.Utils.EnvironmentUtil - 测试环境域名：http://web.corp-sit.lvtanlian.com
+10:38:18.495 [main] INFO  o.s.s.c.ThreadPoolTaskExecutor - Initializing ExecutorService 'applicationTaskExecutor'
+10:38:19.606 [main] INFO  org.mongodb.driver.cluster - Cluster created with settings {hosts=[localhost:27017], mode=SINGLE, requiredClusterType=UNKNOWN, serverSelectionTimeout='30000 ms', maxWaitQueueSize=500}
+10:38:19.782 [main] INFO  org.carbonPool.User.loginTest - Started loginTest in 3.629 seconds (JVM running for 4.622)
+10:38:19.902 [TestNG-method=logintest-1] INFO  org.carbonPool.User.loginTest - 准备开始---------
+10:38:46.136 [cluster-ClusterId{value='63f42e9b63c8e45b5a457e84', description='null'}-localhost:27017] INFO  org.mongodb.driver.cluster - Exception in monitor thread while connecting to server localhost:27017
+com.mongodb.MongoSocketOpenException: Exception opening socket
+	at com.mongodb.internal.connection.SocketStream.open(SocketStream.java:70)
+	at com.mongodb.internal.connection.InternalStreamConnection.open(InternalStreamConnection.java:128)
+	at com.mongodb.internal.connection.DefaultServerMonitor$ServerMonitorRunnable.run(DefaultServerMonitor.java:117)
+	at java.lang.Thread.run(Thread.java:748)
+Caused by: java.net.ConnectException: Connection refused: connect
+	at java.net.DualStackPlainSocketImpl.waitForConnect(Native Method)
+	at java.net.DualStackPlainSocketImpl.socketConnect(DualStackPlainSocketImpl.java:81)
+	at java.net.AbstractPlainSocketImpl.doConnect(AbstractPlainSocketImpl.java:476)
+	at java.net.AbstractPlainSocketImpl.connectToAddress(AbstractPlainSocketImpl.java:218)
+	at java.net.AbstractPlainSocketImpl.connect(AbstractPlainSocketImpl.java:200)
+	at java.net.PlainSocketImpl.connect(PlainSocketImpl.java:162)
+	at java.net.SocksSocketImpl.connect(SocksSocketImpl.java:394)
+	at java.net.Socket.connect(Socket.java:606)
+	at com.mongodb.internal.connection.SocketStreamHelper.initialize(SocketStreamHelper.java:64)
+	at com.mongodb.internal.connection.SocketStream.initializeSocket(SocketStream.java:79)
+	at com.mongodb.internal.connection.SocketStream.open(SocketStream.java:65)
+	... 3 common frames omitted
+10:38:53.639 [TestNG-method=logintest-1] INFO  org.carbonPool.Utils.HttprequestUtil - 这里是请求路径：：：http://web.corp-sit.lvtanlian.com/api/uaa/user/login
+10:38:53.639 [TestNG-method=logintest-1] INFO  org.carbonPool.Utils.HttprequestUtil - 这里是请求header：：：
+10:38:53.647 [TestNG-method=logintest-1] INFO  org.carbonPool.Utils.HttprequestUtil - 此处是请求参数：：：：{"username":"17800000001","password":"A147258"}
+10:39:04.982 [TestNG-method=logintest-1] INFO  org.carbonPool.Utils.JsonUtil - 转换结果:{"data":"Bearer eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiIxXzE3ODAwMDAwMDAxIiwiY3JlYXRlZCI6MTY3Njk0NzEzNTczNCwiZXhwIjoxNjc3NTUxOTM1fQ.J6SJpzYGVXLsuabMNXl7lhot0aevLsc72viy5yLF1GWdb9MZH0BV_R-16ceJRU1EmwgoJbjNtykrmaNuk2layA","error":"Access.success.general","message":"操作成功","status":200,"timestamp":"1676947135754"}
+10:39:32.318 [TestNG-method=logintest-1] INFO  org.carbonPool.User.loginTest - {"data":"Bearer eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiIxXzE3ODAwMDAwMDAxIiwiY3JlYXRlZCI6MTY3Njk0NzEzNTczNCwiZXhwIjoxNjc3NTUxOTM1fQ.J6SJpzYGVXLsuabMNXl7lhot0aevLsc72viy5yLF1GWdb9MZH0BV_R-16ceJRU1EmwgoJbjNtykrmaNuk2layA","error":"Access.success.general","message":"操作成功","status":200,"timestamp":"1676947135754"}
+10:39:37.569 [SpringContextShutdownHook] INFO  o.s.s.c.ThreadPoolTaskExecutor - Shutting down ExecutorService 'applicationTaskExecutor'
+10:39:39.682 [main] INFO  org.carbonPool.User.loginTest - Starting loginTest on DESKTOP-SPJKFLC with PID 4364 (D:\code\javacode\corbonPoolApiAuto\target\test-classes started by 65678 in D:\code\javacode\corbonPoolApiAuto)
+10:39:39.684 [main] INFO  org.carbonPool.User.loginTest - No active profile set, falling back to default profiles: default
+10:39:40.486 [main] INFO  o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker - Bean 'org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration' of type [org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+10:39:41.084 [main] INFO  org.carbonPool.Utils.EnvironmentUtil - 测试环境域名：http://web.corp-sit.lvtanlian.com
+10:39:41.818 [main] INFO  o.s.s.c.ThreadPoolTaskExecutor - Initializing ExecutorService 'applicationTaskExecutor'
+10:39:42.968 [main] INFO  org.mongodb.driver.cluster - Cluster created with settings {hosts=[localhost:27017], mode=SINGLE, requiredClusterType=UNKNOWN, serverSelectionTimeout='30000 ms', maxWaitQueueSize=500}
+10:39:43.077 [main] INFO  org.carbonPool.User.loginTest - Started loginTest in 3.668 seconds (JVM running for 4.839)
+10:39:43.166 [TestNG-method=logintest-1] INFO  org.carbonPool.User.loginTest - 准备开始---------
+10:39:50.714 [cluster-ClusterId{value='63f42eeee8fc51584aab37c0', description='null'}-localhost:27017] INFO  org.mongodb.driver.cluster - Exception in monitor thread while connecting to server localhost:27017
+com.mongodb.MongoSocketOpenException: Exception opening socket
+	at com.mongodb.internal.connection.SocketStream.open(SocketStream.java:70)
+	at com.mongodb.internal.connection.InternalStreamConnection.open(InternalStreamConnection.java:128)
+	at com.mongodb.internal.connection.DefaultServerMonitor$ServerMonitorRunnable.run(DefaultServerMonitor.java:117)
+	at java.lang.Thread.run(Thread.java:748)
+Caused by: java.net.ConnectException: Connection refused: connect
+	at java.net.DualStackPlainSocketImpl.waitForConnect(Native Method)
+	at java.net.DualStackPlainSocketImpl.socketConnect(DualStackPlainSocketImpl.java:81)
+	at java.net.AbstractPlainSocketImpl.doConnect(AbstractPlainSocketImpl.java:476)
+	at java.net.AbstractPlainSocketImpl.connectToAddress(AbstractPlainSocketImpl.java:218)
+	at java.net.AbstractPlainSocketImpl.connect(AbstractPlainSocketImpl.java:200)
+	at java.net.PlainSocketImpl.connect(PlainSocketImpl.java:162)
+	at java.net.SocksSocketImpl.connect(SocksSocketImpl.java:394)
+	at java.net.Socket.connect(Socket.java:606)
+	at com.mongodb.internal.connection.SocketStreamHelper.initialize(SocketStreamHelper.java:64)
+	at com.mongodb.internal.connection.SocketStream.initializeSocket(SocketStream.java:79)
+	at com.mongodb.internal.connection.SocketStream.open(SocketStream.java:65)
+	... 3 common frames omitted
+10:40:00.002 [TestNG-method=logintest-1] INFO  org.carbonPool.Utils.HttprequestUtil - 这里是请求路径：：：http://web.corp-sit.lvtanlian.com/api/uaa/user/login
+10:40:00.002 [TestNG-method=logintest-1] INFO  org.carbonPool.Utils.HttprequestUtil - 这里是请求header：：：
+10:40:00.008 [TestNG-method=logintest-1] INFO  org.carbonPool.Utils.HttprequestUtil - 此处是请求参数：：：：{"username":"17800000001","password":"A147258"}
+10:40:09.275 [TestNG-method=logintest-1] INFO  org.carbonPool.Utils.JsonUtil - 转换结果:{"data":"Bearer eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiIxXzE3ODAwMDAwMDAxIiwiY3JlYXRlZCI6MTY3Njk0NzIwMjE3NSwiZXhwIjoxNjc3NTUyMDAyfQ.sQTSsojwLhvWELusPfpBYGYrtQDHbmBGo1QBAEppxCJlKTXVKRiL-7c56vqAb3tpra2MsXyP036WXcdy5HHqrw","error":"Access.success.general","message":"操作成功","status":200,"timestamp":"1676947202201"}
+10:41:39.841 [TestNG-method=logintest-1] INFO  org.carbonPool.Utils.JsonUtil - 转换结果:{"data":"Bearer eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiIxXzE3ODAwMDAwMDAxIiwiY3JlYXRlZCI6MTY3Njk0NzIwMjE3NSwiZXhwIjoxNjc3NTUyMDAyfQ.sQTSsojwLhvWELusPfpBYGYrtQDHbmBGo1QBAEppxCJlKTXVKRiL-7c56vqAb3tpra2MsXyP036WXcdy5HHqrw","error":"Access.success.general","message":"操作成功","status":200,"timestamp":"1676947202201"}
+10:50:21.202 [TestNG-method=logintest-1] INFO  org.carbonPool.User.loginTest - {"data":"Bearer eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiIxXzE3ODAwMDAwMDAxIiwiY3JlYXRlZCI6MTY3Njk0NzIwMjE3NSwiZXhwIjoxNjc3NTUyMDAyfQ.sQTSsojwLhvWELusPfpBYGYrtQDHbmBGo1QBAEppxCJlKTXVKRiL-7c56vqAb3tpra2MsXyP036WXcdy5HHqrw","error":"Access.success.general","message":"操作成功","status":200,"timestamp":"1676947202201"}
+10:53:58.132 [SpringContextShutdownHook] INFO  o.s.s.c.ThreadPoolTaskExecutor - Shutting down ExecutorService 'applicationTaskExecutor'
+10:54:01.714 [main] INFO  org.carbonPool.User.loginTest - Starting loginTest on DESKTOP-SPJKFLC with PID 20484 (D:\code\javacode\corbonPoolApiAuto\target\test-classes started by 65678 in D:\code\javacode\corbonPoolApiAuto)
+10:54:01.715 [main] INFO  org.carbonPool.User.loginTest - No active profile set, falling back to default profiles: default
+10:54:02.570 [main] INFO  o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker - Bean 'org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration' of type [org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+10:54:03.131 [main] INFO  org.carbonPool.Utils.EnvironmentUtil - 测试环境域名：http://web.corp-sit.lvtanlian.com
+10:54:03.878 [main] INFO  o.s.s.c.ThreadPoolTaskExecutor - Initializing ExecutorService 'applicationTaskExecutor'
+10:54:05.004 [main] INFO  org.mongodb.driver.cluster - Cluster created with settings {hosts=[localhost:27017], mode=SINGLE, requiredClusterType=UNKNOWN, serverSelectionTimeout='30000 ms', maxWaitQueueSize=500}
+10:54:05.113 [main] INFO  org.carbonPool.User.loginTest - Started loginTest in 3.68 seconds (JVM running for 4.818)
+10:54:05.202 [TestNG-method=logintest-1] INFO  org.carbonPool.User.loginTest - 准备开始---------
+10:54:07.243 [cluster-ClusterId{value='63f4324c9a02d6103e6c8503', description='null'}-localhost:27017] INFO  org.mongodb.driver.cluster - Exception in monitor thread while connecting to server localhost:27017
+com.mongodb.MongoSocketOpenException: Exception opening socket
+	at com.mongodb.internal.connection.SocketStream.open(SocketStream.java:70)
+	at com.mongodb.internal.connection.InternalStreamConnection.open(InternalStreamConnection.java:128)
+	at com.mongodb.internal.connection.DefaultServerMonitor$ServerMonitorRunnable.run(DefaultServerMonitor.java:117)
+	at java.lang.Thread.run(Thread.java:748)
+Caused by: java.net.ConnectException: Connection refused: connect
+	at java.net.DualStackPlainSocketImpl.waitForConnect(Native Method)
+	at java.net.DualStackPlainSocketImpl.socketConnect(DualStackPlainSocketImpl.java:81)
+	at java.net.AbstractPlainSocketImpl.doConnect(AbstractPlainSocketImpl.java:476)
+	at java.net.AbstractPlainSocketImpl.connectToAddress(AbstractPlainSocketImpl.java:218)
+	at java.net.AbstractPlainSocketImpl.connect(AbstractPlainSocketImpl.java:200)
+	at java.net.PlainSocketImpl.connect(PlainSocketImpl.java:162)
+	at java.net.SocksSocketImpl.connect(SocksSocketImpl.java:394)
+	at java.net.Socket.connect(Socket.java:606)
+	at com.mongodb.internal.connection.SocketStreamHelper.initialize(SocketStreamHelper.java:64)
+	at com.mongodb.internal.connection.SocketStream.initializeSocket(SocketStream.java:79)
+	at com.mongodb.internal.connection.SocketStream.open(SocketStream.java:65)
+	... 3 common frames omitted
+10:54:07.590 [TestNG-method=logintest-1] INFO  org.carbonPool.Utils.HttprequestUtil - 这里是请求路径：：：http://web.corp-sit.lvtanlian.com/api/uaa/user/login
+10:54:07.591 [TestNG-method=logintest-1] INFO  org.carbonPool.Utils.HttprequestUtil - 这里是请求header：：：
+10:54:07.598 [TestNG-method=logintest-1] INFO  org.carbonPool.Utils.HttprequestUtil - 此处是请求参数：：：：{"username":"17800000001","password":"A147258"}
+10:54:07.953 [TestNG-method=logintest-1] INFO  org.carbonPool.Utils.JsonUtil - 转换结果:{"data":"Bearer eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiIxXzE3ODAwMDAwMDAxIiwiY3JlYXRlZCI6MTY3Njk0ODA0ODc3MiwiZXhwIjoxNjc3NTUyODQ4fQ.mTSl3C4HPRyEb4cpJ2VEB17dM98oHZvegeoPHzU3WPG1CxlB5XYMI3tsL0Qisfq4I5ronoAnkqlW8cDVxZmzRw","error":"Access.success.general","message":"操作成功","status":200,"timestamp":"1676948048786"}
+10:54:09.351 [TestNG-method=logintest-1] INFO  org.carbonPool.User.loginTest - {"data":"Bearer eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiIxXzE3ODAwMDAwMDAxIiwiY3JlYXRlZCI6MTY3Njk0ODA0ODc3MiwiZXhwIjoxNjc3NTUyODQ4fQ.mTSl3C4HPRyEb4cpJ2VEB17dM98oHZvegeoPHzU3WPG1CxlB5XYMI3tsL0Qisfq4I5ronoAnkqlW8cDVxZmzRw","error":"Access.success.general","message":"操作成功","status":200,"timestamp":"1676948048786"}
+10:54:27.266 [SpringContextShutdownHook] INFO  o.s.s.c.ThreadPoolTaskExecutor - Shutting down ExecutorService 'applicationTaskExecutor'
+10:54:32.829 [main] INFO  org.carbonPool.User.loginTest - Starting loginTest on DESKTOP-SPJKFLC with PID 7296 (D:\code\javacode\corbonPoolApiAuto\target\test-classes started by 65678 in D:\code\javacode\corbonPoolApiAuto)
+10:54:32.830 [main] INFO  org.carbonPool.User.loginTest - No active profile set, falling back to default profiles: default
+10:54:33.698 [main] INFO  o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker - Bean 'org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration' of type [org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+10:54:34.300 [main] INFO  org.carbonPool.Utils.EnvironmentUtil - 测试环境域名：http://web.corp-sit.lvtanlian.com
+10:54:35.043 [main] INFO  o.s.s.c.ThreadPoolTaskExecutor - Initializing ExecutorService 'applicationTaskExecutor'
+10:54:36.268 [main] INFO  org.mongodb.driver.cluster - Cluster created with settings {hosts=[localhost:27017], mode=SINGLE, requiredClusterType=UNKNOWN, serverSelectionTimeout='30000 ms', maxWaitQueueSize=500}
+10:54:36.430 [main] INFO  org.carbonPool.User.loginTest - Started loginTest in 3.869 seconds (JVM running for 4.858)
+10:54:36.548 [TestNG-method=logintest-1] INFO  org.carbonPool.User.loginTest - 准备开始---------
+10:54:39.621 [cluster-ClusterId{value='63f4326c8362b7680e867554', description='null'}-localhost:27017] INFO  org.mongodb.driver.cluster - Exception in monitor thread while connecting to server localhost:27017
+com.mongodb.MongoSocketOpenException: Exception opening socket
+	at com.mongodb.internal.connection.SocketStream.open(SocketStream.java:70)
+	at com.mongodb.internal.connection.InternalStreamConnection.open(InternalStreamConnection.java:128)
+	at com.mongodb.internal.connection.DefaultServerMonitor$ServerMonitorRunnable.run(DefaultServerMonitor.java:117)
+	at java.lang.Thread.run(Thread.java:748)
+Caused by: java.net.ConnectException: Connection refused: connect
+	at java.net.DualStackPlainSocketImpl.waitForConnect(Native Method)
+	at java.net.DualStackPlainSocketImpl.socketConnect(DualStackPlainSocketImpl.java:81)
+	at java.net.AbstractPlainSocketImpl.doConnect(AbstractPlainSocketImpl.java:476)
+	at java.net.AbstractPlainSocketImpl.connectToAddress(AbstractPlainSocketImpl.java:218)
+	at java.net.AbstractPlainSocketImpl.connect(AbstractPlainSocketImpl.java:200)
+	at java.net.PlainSocketImpl.connect(PlainSocketImpl.java:162)
+	at java.net.SocksSocketImpl.connect(SocksSocketImpl.java:394)
+	at java.net.Socket.connect(Socket.java:606)
+	at com.mongodb.internal.connection.SocketStreamHelper.initialize(SocketStreamHelper.java:64)
+	at com.mongodb.internal.connection.SocketStream.initializeSocket(SocketStream.java:79)
+	at com.mongodb.internal.connection.SocketStream.open(SocketStream.java:65)
+	... 3 common frames omitted
+10:54:39.975 [TestNG-method=logintest-1] INFO  org.carbonPool.Utils.HttprequestUtil - 这里是请求路径：：：http://web.corp-sit.lvtanlian.com/api/uaa/user/login
+10:54:39.975 [TestNG-method=logintest-1] INFO  org.carbonPool.Utils.HttprequestUtil - 这里是请求header：：：
+10:54:39.982 [TestNG-method=logintest-1] INFO  org.carbonPool.Utils.HttprequestUtil - 此处是请求参数：：：：{"username":"17800000001","password":"A147258"}
+10:54:40.348 [TestNG-method=logintest-1] INFO  org.carbonPool.Utils.JsonUtil - 转换结果:{"data":"Bearer eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiIxXzE3ODAwMDAwMDAxIiwiY3JlYXRlZCI6MTY3Njk0ODA4MTE2NSwiZXhwIjoxNjc3NTUyODgxfQ.WHwx3UVV7vLKgdsPLvzxi6O-ac4L57qmvUc2x3jrh8mU8fI1tUkrprzUT-IULl4FZoipcJpCMT_0p5GmavRl0Q","error":"Access.success.general","message":"操作成功","status":200,"timestamp":"1676948081180"}
+10:55:54.072 [TestNG-method=logintest-1] INFO  org.carbonPool.User.loginTest - {"data":"Bearer eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiIxXzE3ODAwMDAwMDAxIiwiY3JlYXRlZCI6MTY3Njk0ODA4MTE2NSwiZXhwIjoxNjc3NTUyODgxfQ.WHwx3UVV7vLKgdsPLvzxi6O-ac4L57qmvUc2x3jrh8mU8fI1tUkrprzUT-IULl4FZoipcJpCMT_0p5GmavRl0Q","error":"Access.success.general","message":"操作成功","status":200,"timestamp":"1676948081180"}
+10:55:54.105 [SpringContextShutdownHook] INFO  o.s.s.c.ThreadPoolTaskExecutor - Shutting down ExecutorService 'applicationTaskExecutor'
+10:55:58.870 [main] INFO  org.carbonPool.User.loginTest - Starting loginTest on DESKTOP-SPJKFLC with PID 10292 (D:\code\javacode\corbonPoolApiAuto\target\test-classes started by 65678 in D:\code\javacode\corbonPoolApiAuto)
+10:55:58.872 [main] INFO  org.carbonPool.User.loginTest - No active profile set, falling back to default profiles: default
+10:55:59.832 [main] INFO  o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker - Bean 'org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration' of type [org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+10:56:00.462 [main] INFO  org.carbonPool.Utils.EnvironmentUtil - 测试环境域名：http://web.corp-sit.lvtanlian.com
+10:56:01.315 [main] INFO  o.s.s.c.ThreadPoolTaskExecutor - Initializing ExecutorService 'applicationTaskExecutor'
+10:56:02.511 [main] INFO  org.mongodb.driver.cluster - Cluster created with settings {hosts=[localhost:27017], mode=SINGLE, requiredClusterType=UNKNOWN, serverSelectionTimeout='30000 ms', maxWaitQueueSize=500}
+10:56:02.613 [main] INFO  org.carbonPool.User.loginTest - Started loginTest in 4.044 seconds (JVM running for 5.186)
+10:56:02.788 [TestNG-method=logintest-1] INFO  org.carbonPool.User.loginTest - 准备开始---------
+10:56:04.582 [cluster-ClusterId{value='63f432c25325de2916692d7e', description='null'}-localhost:27017] INFO  org.mongodb.driver.cluster - Exception in monitor thread while connecting to server localhost:27017
+com.mongodb.MongoSocketOpenException: Exception opening socket
+	at com.mongodb.internal.connection.SocketStream.open(SocketStream.java:70)
+	at com.mongodb.internal.connection.InternalStreamConnection.open(InternalStreamConnection.java:128)
+	at com.mongodb.internal.connection.DefaultServerMonitor$ServerMonitorRunnable.run(DefaultServerMonitor.java:117)
+	at java.lang.Thread.run(Thread.java:748)
+Caused by: java.net.ConnectException: Connection refused: connect
+	at java.net.DualStackPlainSocketImpl.waitForConnect(Native Method)
+	at java.net.DualStackPlainSocketImpl.socketConnect(DualStackPlainSocketImpl.java:81)
+	at java.net.AbstractPlainSocketImpl.doConnect(AbstractPlainSocketImpl.java:476)
+	at java.net.AbstractPlainSocketImpl.connectToAddress(AbstractPlainSocketImpl.java:218)
+	at java.net.AbstractPlainSocketImpl.connect(AbstractPlainSocketImpl.java:200)
+	at java.net.PlainSocketImpl.connect(PlainSocketImpl.java:162)
+	at java.net.SocksSocketImpl.connect(SocksSocketImpl.java:394)
+	at java.net.Socket.connect(Socket.java:606)
+	at com.mongodb.internal.connection.SocketStreamHelper.initialize(SocketStreamHelper.java:64)
+	at com.mongodb.internal.connection.SocketStream.initializeSocket(SocketStream.java:79)
+	at com.mongodb.internal.connection.SocketStream.open(SocketStream.java:65)
+	... 3 common frames omitted
+10:56:04.949 [TestNG-method=logintest-1] INFO  org.carbonPool.Utils.HttprequestUtil - 这里是请求路径：：：http://web.corp-sit.lvtanlian.com/api/uaa/user/login
+10:56:04.950 [TestNG-method=logintest-1] INFO  org.carbonPool.Utils.HttprequestUtil - 这里是请求header：：：
+10:56:04.957 [TestNG-method=logintest-1] INFO  org.carbonPool.Utils.HttprequestUtil - 此处是请求参数：：：：{"username":"17800000001","password":"A147258"}
+10:56:05.451 [TestNG-method=logintest-1] INFO  org.carbonPool.Utils.JsonUtil - 转换结果:{"data":"Bearer eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiIxXzE3ODAwMDAwMDAxIiwiY3JlYXRlZCI6MTY3Njk0ODE2NjI3NywiZXhwIjoxNjc3NTUyOTY2fQ.0oDUEKj_6qzYiL68UMkmRcQd3jNgWKj3B4fVMK2Fa5zW6ren4S1bU32oQCNAPxryQf-Jos3WVOl-zGTj5KaRPw","error":"Access.success.general","message":"操作成功","status":200,"timestamp":"1676948166294"}
+10:56:06.261 [TestNG-method=logintest-1] INFO  org.carbonPool.User.loginTest - {"data":"Bearer eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiIxXzE3ODAwMDAwMDAxIiwiY3JlYXRlZCI6MTY3Njk0ODE2NjI3NywiZXhwIjoxNjc3NTUyOTY2fQ.0oDUEKj_6qzYiL68UMkmRcQd3jNgWKj3B4fVMK2Fa5zW6ren4S1bU32oQCNAPxryQf-Jos3WVOl-zGTj5KaRPw","error":"Access.success.general","message":"操作成功","status":200,"timestamp":"1676948166294"}
+10:56:23.135 [SpringContextShutdownHook] INFO  o.s.s.c.ThreadPoolTaskExecutor - Shutting down ExecutorService 'applicationTaskExecutor'
+10:57:17.963 [main] INFO  org.carbonPool.User.loginTest - Starting loginTest on DESKTOP-SPJKFLC with PID 18740 (D:\code\javacode\corbonPoolApiAuto\target\test-classes started by 65678 in D:\code\javacode\corbonPoolApiAuto)
+10:57:17.964 [main] INFO  org.carbonPool.User.loginTest - No active profile set, falling back to default profiles: default
+10:57:18.781 [main] INFO  o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker - Bean 'org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration' of type [org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+10:57:19.281 [main] INFO  org.carbonPool.Utils.EnvironmentUtil - 测试环境域名：http://web.corp-sit.lvtanlian.com
+10:57:19.837 [main] INFO  o.s.s.c.ThreadPoolTaskExecutor - Initializing ExecutorService 'applicationTaskExecutor'
+10:57:20.702 [main] INFO  org.mongodb.driver.cluster - Cluster created with settings {hosts=[localhost:27017], mode=SINGLE, requiredClusterType=UNKNOWN, serverSelectionTimeout='30000 ms', maxWaitQueueSize=500}
+10:57:20.851 [main] INFO  org.carbonPool.User.loginTest - Started loginTest in 3.172 seconds (JVM running for 4.038)
+10:57:21.045 [TestNG-method=logintest-1] INFO  org.carbonPool.User.loginTest - 准备开始---------
+10:57:21.173 [TestNG-method=logintest-1] INFO  org.carbonPool.Utils.HttprequestUtil - 这里是请求路径：：：http://web.corp-sit.lvtanlian.com/api/uaa/user/login
+10:57:21.174 [TestNG-method=logintest-1] INFO  org.carbonPool.Utils.HttprequestUtil - 这里是请求header：：：
+10:57:21.179 [TestNG-method=logintest-1] INFO  org.carbonPool.Utils.HttprequestUtil - 此处是请求参数：：：：{"username":"17800000001","password":"A147258"}
+10:57:21.614 [TestNG-method=logintest-1] INFO  org.carbonPool.Utils.JsonUtil - 转换结果:{"data":"Bearer eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiIxXzE3ODAwMDAwMDAxIiwiY3JlYXRlZCI6MTY3Njk0ODI0MjQ2MiwiZXhwIjoxNjc3NTUzMDQyfQ.PRsQPOX35FzsNJI2m1uuo-qQLpZufu7ihTj0uveyWhgkUuBGrDmDtH-IKljlOnAGSS1jmWanLaYjGHQQOXqGJw","error":"Access.success.general","message":"操作成功","status":200,"timestamp":"1676948242483"}
+10:57:21.615 [TestNG-method=logintest-1] INFO  org.carbonPool.User.loginTest - {"data":"Bearer eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiIxXzE3ODAwMDAwMDAxIiwiY3JlYXRlZCI6MTY3Njk0ODI0MjQ2MiwiZXhwIjoxNjc3NTUzMDQyfQ.PRsQPOX35FzsNJI2m1uuo-qQLpZufu7ihTj0uveyWhgkUuBGrDmDtH-IKljlOnAGSS1jmWanLaYjGHQQOXqGJw","error":"Access.success.general","message":"操作成功","status":200,"timestamp":"1676948242483"}
+10:57:21.869 [SpringContextShutdownHook] INFO  o.s.s.c.ThreadPoolTaskExecutor - Shutting down ExecutorService 'applicationTaskExecutor'
+10:58:41.827 [main] INFO  org.carbonPool.User.loginTest - Starting loginTest on DESKTOP-SPJKFLC with PID 16928 (D:\code\javacode\corbonPoolApiAuto\target\test-classes started by 65678 in D:\code\javacode\corbonPoolApiAuto)
+10:58:41.829 [main] INFO  org.carbonPool.User.loginTest - No active profile set, falling back to default profiles: default
+10:58:42.612 [main] INFO  o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker - Bean 'org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration' of type [org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+10:58:43.105 [main] INFO  org.carbonPool.Utils.EnvironmentUtil - 测试环境域名：http://web.corp-sit.lvtanlian.com
+10:58:43.729 [main] INFO  o.s.s.c.ThreadPoolTaskExecutor - Initializing ExecutorService 'applicationTaskExecutor'
+10:58:44.650 [main] INFO  org.mongodb.driver.cluster - Cluster created with settings {hosts=[localhost:27017], mode=SINGLE, requiredClusterType=UNKNOWN, serverSelectionTimeout='30000 ms', maxWaitQueueSize=500}
+10:58:44.809 [main] INFO  org.carbonPool.User.loginTest - Started loginTest in 3.284 seconds (JVM running for 4.172)
+10:58:44.984 [TestNG-method=logintest-1] INFO  org.carbonPool.User.loginTest - 准备开始---------
+10:58:45.108 [TestNG-method=logintest-1] INFO  org.carbonPool.Utils.HttprequestUtil - 这里是请求路径：：：http://web.corp-sit.lvtanlian.com/api/uaa/user/login
+10:58:45.109 [TestNG-method=logintest-1] INFO  org.carbonPool.Utils.HttprequestUtil - 这里是请求header：：：
+10:58:45.114 [TestNG-method=logintest-1] INFO  org.carbonPool.Utils.HttprequestUtil - 此处是请求参数：：：：{"username":"17800000001","password":"A147258"}
+10:58:45.610 [TestNG-method=logintest-1] INFO  org.carbonPool.Utils.JsonUtil - 转换结果:{"data":"Bearer eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiIxXzE3ODAwMDAwMDAxIiwiY3JlYXRlZCI6MTY3Njk0ODMyNjQ1MywiZXhwIjoxNjc3NTUzMTI2fQ.Xd9LQriwK7n5NquOLQs48U__u43qePjQ8NakOnYRdueylHvpTa_Gzofl2J4sceLg6iURUlK-cNOsvl2brIZkqQ","error":"Access.success.general","message":"操作成功","status":200,"timestamp":"1676948326478"}
+10:58:45.611 [TestNG-method=logintest-1] INFO  org.carbonPool.User.loginTest - {"data":"Bearer eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiIxXzE3ODAwMDAwMDAxIiwiY3JlYXRlZCI6MTY3Njk0ODMyNjQ1MywiZXhwIjoxNjc3NTUzMTI2fQ.Xd9LQriwK7n5NquOLQs48U__u43qePjQ8NakOnYRdueylHvpTa_Gzofl2J4sceLg6iURUlK-cNOsvl2brIZkqQ","error":"Access.success.general","message":"操作成功","status":200,"timestamp":"1676948326478"}
+10:58:45.879 [SpringContextShutdownHook] INFO  o.s.s.c.ThreadPoolTaskExecutor - Shutting down ExecutorService 'applicationTaskExecutor'
+11:12:10.588 [main] INFO  org.carbonPool.User.loginTest - Starting loginTest on DESKTOP-SPJKFLC with PID 3412 (D:\code\javacode\corbonPoolApiAuto\target\test-classes started by 65678 in D:\code\javacode\corbonPoolApiAuto)
+11:12:10.589 [main] INFO  org.carbonPool.User.loginTest - No active profile set, falling back to default profiles: default
+11:12:11.255 [main] INFO  o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker - Bean 'org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration' of type [org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+11:12:11.677 [main] INFO  org.carbonPool.Utils.EnvironmentUtil - 测试环境域名：http://web.corp-sit.lvtanlian.com
+11:12:12.181 [main] INFO  o.s.s.c.ThreadPoolTaskExecutor - Initializing ExecutorService 'applicationTaskExecutor'
+11:12:12.861 [main] INFO  org.mongodb.driver.cluster - Cluster created with settings {hosts=[localhost:27017], mode=SINGLE, requiredClusterType=UNKNOWN, serverSelectionTimeout='30000 ms', maxWaitQueueSize=500}
+11:12:12.970 [main] INFO  org.carbonPool.User.loginTest - Started loginTest in 2.648 seconds (JVM running for 3.47)
+11:12:13.121 [TestNG-method=logintest-1] INFO  org.carbonPool.User.loginTest - 准备开始---------
+11:12:13.235 [TestNG-method=logintest-1] INFO  org.carbonPool.Utils.HttprequestUtil - 这里是请求路径：：：http://web.corp-sit.lvtanlian.com/api/uaa/user/login
+11:12:13.235 [TestNG-method=logintest-1] INFO  org.carbonPool.Utils.HttprequestUtil - 这里是请求header：：：
+11:12:13.239 [TestNG-method=logintest-1] INFO  org.carbonPool.Utils.HttprequestUtil - 此处是请求参数：：：：{"username":"17800000001","password":"A147258"}
+11:12:13.732 [TestNG-method=logintest-1] INFO  org.carbonPool.Utils.JsonUtil - 转换结果:{"data":"Bearer eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiIxXzE3ODAwMDAwMDAxIiwiY3JlYXRlZCI6MTY3Njk0OTEzNDU5MywiZXhwIjoxNjc3NTUzOTM0fQ.KQRAxcHU9S7HRu14xEl0v9j7uSFAKzeJLujzGbVbVapstjXBzXMHrvx5fg82qzW6LT-IAOfdl4KASfjFhB9WuQ","error":"Access.success.general","message":"操作成功","status":200,"timestamp":"1676949134618"}
+11:12:13.733 [TestNG-method=logintest-1] INFO  org.carbonPool.User.loginTest - {"data":"Bearer eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiIxXzE3ODAwMDAwMDAxIiwiY3JlYXRlZCI6MTY3Njk0OTEzNDU5MywiZXhwIjoxNjc3NTUzOTM0fQ.KQRAxcHU9S7HRu14xEl0v9j7uSFAKzeJLujzGbVbVapstjXBzXMHrvx5fg82qzW6LT-IAOfdl4KASfjFhB9WuQ","error":"Access.success.general","message":"操作成功","status":200,"timestamp":"1676949134618"}
+11:12:13.734 [TestNG-method=logintest-1] INFO  org.carbonPool.User.loginTest - 此处为返回的data:Bearer eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiIxXzE3ODAwMDAwMDAxIiwiY3JlYXRlZCI6MTY3Njk0OTEzNDU5MywiZXhwIjoxNjc3NTUzOTM0fQ.KQRAxcHU9S7HRu14xEl0v9j7uSFAKzeJLujzGbVbVapstjXBzXMHrvx5fg82qzW6LT-IAOfdl4KASfjFhB9WuQ
+11:12:13.734 [TestNG-method=logintest-1] INFO  org.carbonPool.User.loginTest - token:Bearer eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiIxXzE3ODAwMDAwMDAxIiwiY3JlYXRlZCI6MTY3Njk0OTEzNDU5MywiZXhwIjoxNjc3NTUzOTM0fQ.KQRAxcHU9S7HRu14xEl0v9j7uSFAKzeJLujzGbVbVapstjXBzXMHrvx5fg82qzW6LT-IAOfdl4KASfjFhB9WuQ
+11:12:13.957 [SpringContextShutdownHook] INFO  o.s.s.c.ThreadPoolTaskExecutor - Shutting down ExecutorService 'applicationTaskExecutor'

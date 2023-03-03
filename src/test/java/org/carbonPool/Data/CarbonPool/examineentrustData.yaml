@@ -1,0 +1,8 @@
+normal:
+  expectedresult: 操作成功
+  params:
+    status: "1"
+    type: 1
+
+
+

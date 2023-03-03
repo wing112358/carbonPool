@@ -1,0 +1,29 @@
+normal:
+  expectedresult: 操作成功
+  params:
+      absorptionAccount: "543543"
+      absorptionTypeList:
+        - "parallel"
+      addressArea: "瓯海区"
+      addressCity: "温州市"
+      addressNum: "地方官梵蒂冈"
+      addressProvince: "浙江省"
+      addressStreet: "潘桥街道"
+      deliveryDate: "2023-02-26T05:19:29.714Z"
+      greenTransaction: "0"
+      gridConnectedVoltageType: "20"
+      holderName: "豆腐干地方"
+      powerAccount: "retre"
+      powerGridOperatorName: "士大夫士大夫但是"
+      projectAddress:
+        - "浙江省"
+        - "温州市"
+        - "瓯海区"
+        - "潘桥街道"
+      selfAbsorptionType: ""
+      siteAbsorptionName: "法国梵蒂冈地方"
+      technologyType: "shore"
+      type: "wind"
+
+
+

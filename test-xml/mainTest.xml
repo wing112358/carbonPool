@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite name="碳资源池主流程测试" verbose="10" time-out="600000" allow-return-values="true">
+    <test name="流程测试">
+        <classes>
+            <class name="org.carbonPool.carbonPool.addProjectTest">
+                <methods>
+                    <include name="addProjectTest" description="新增项目"></include>
+                </methods>
+            </class>
+            <class name="org.carbonPool.carbonPool.addEntrustTest">
+                <methods>
+                    <include name="addEntrustTest" description="发起委托"></include>
+                </methods>
+            </class>
+            <class name="org.carbonPool.carbonPool.examineEntrustTest">
+                <methods>
+                    <include name="examineEntrustTest" description="委托审核通过"></include>
+                </methods>
+            </class>
+            <class name="org.carbonPool.carbonPool.configEquityTest">
+                <methods>
+                    <include name="configEquityTest" description="配置权益"></include>
+                </methods>
+            </class>
+            <class name="org.carbonPool.carbonPool.updateEquityTest">
+                <methods>
+                    <include name="updateEquityTest" description="更新权益"></include>
+                </methods>
+            </class>
+            <class name="org.carbonPool.carbonPool.addAssetTest">
+                <methods>
+                    <include name="addAssetTest" description="新增资产"></include>
+                </methods>
+            </class>
+            <class name="org.carbonPool.carbonPool.addDemandTest">
+                <methods>
+                    <include name="addDemandTest" description="新增需求"></include>
+                </methods>
+            </class>
+            <class name="org.carbonPool.carbonPool.analysisDemandTest">
+                <methods>
+                    <include name="analysisDemandTest" description="分析需求"></include>
+                </methods>
+            </class>
+            <class name="org.carbonPool.carbonPool.confirmDemandTest">
+                <methods>
+                    <include name="confirmDemandTest" description="确认需求"></include>
+                </methods>
+            </class>
+            <class name="org.carbonPool.carbonPool.updatePriceTest">
+                <methods>
+                    <include name="updatePriceTest" description="金额回填"></include>
+                </methods>
+            </class>
+        </classes>
+    </test>
+</suite>

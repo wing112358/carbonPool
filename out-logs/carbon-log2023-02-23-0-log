@@ -1,0 +1,214 @@
+11:23:56.330 [main] INFO  o.c.carbonPool.addProjectTest - Starting addProjectTest on DESKTOP-SPJKFLC with PID 19236 (D:\code\javacode\corbonPoolApiAuto\target\test-classes started by 65678 in D:\code\javacode\corbonPoolApiAuto)
+11:23:56.331 [main] INFO  o.c.carbonPool.addProjectTest - No active profile set, falling back to default profiles: default
+11:23:57.279 [main] INFO  o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker - Bean 'org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration' of type [org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+11:23:57.873 [main] INFO  org.carbonPool.Utils.EnvironmentUtil - 测试环境域名：http://web.corp-sit.lvtanlian.com
+11:23:57.877 [main] INFO  org.carbonPool.Utils.EnvironmentUtil - 测试环境域名：http://web.corp-sit.lvtanlian.com
+11:23:57.879 [main] INFO  org.carbonPool.Utils.EnvironmentUtil - 测试环境域名：http://web.corp-sit.lvtanlian.com
+11:23:58.321 [main] INFO  o.s.s.c.ThreadPoolTaskExecutor - Initializing ExecutorService 'applicationTaskExecutor'
+11:23:59.274 [main] INFO  org.mongodb.driver.cluster - Cluster created with settings {hosts=[localhost:27017], mode=SINGLE, requiredClusterType=UNKNOWN, serverSelectionTimeout='30000 ms', maxWaitQueueSize=500}
+11:23:59.385 [main] INFO  o.c.carbonPool.addProjectTest - Started addProjectTest in 3.426 seconds (JVM running for 4.467)
+11:23:59.405 [main] INFO  o.s.b.t.c.SpringBootTestContextBootstrapper - Neither @ContextConfiguration nor @ContextHierarchy found for test class [org.carbonPool.BaseLoginTest], using SpringBootContextLoader
+11:23:59.406 [main] INFO  o.s.t.c.s.AbstractContextLoader - Could not detect default resource locations for test class [org.carbonPool.BaseLoginTest]: no resource found for suffixes {-context.xml, Context.groovy}.
+11:23:59.406 [main] INFO  o.s.t.c.s.AnnotationConfigContextLoaderUtils - Could not detect default configuration classes for test class [org.carbonPool.BaseLoginTest]: BaseLoginTest does not declare any static, non-private, non-final, nested classes annotated with @Configuration.
+11:23:59.409 [main] INFO  o.s.b.t.c.SpringBootTestContextBootstrapper - Found @SpringBootConfiguration org.carbonPool.CarbonPoolApplication for test class org.carbonPool.BaseLoginTest
+11:23:59.411 [main] INFO  o.s.b.t.c.SpringBootTestContextBootstrapper - Using TestExecutionListeners: [org.springframework.test.context.web.ServletTestExecutionListener@40fa8766, org.springframework.test.context.support.DirtiesContextBeforeModesTestExecutionListener@67774e29, org.springframework.test.context.support.DependencyInjectionTestExecutionListener@663f237a, org.springframework.test.context.support.DirtiesContextTestExecutionListener@5d7399f9]
+11:23:59.411 [main] INFO  org.carbonPool.BaseLoginTest - 准备开始---------
+11:23:59.411 [main] INFO  org.carbonPool.Utils.EnvironmentUtil - 测试环境域名：http://web.corp-sit.lvtanlian.com
+11:23:59.412 [main] INFO  org.carbonPool.Utils.EnvironmentUtil - 测试环境域名：http://web.corp-sit.lvtanlian.com
+11:23:59.531 [main] INFO  org.carbonPool.Utils.HttprequestUtil - 这里是请求路径：：：http://web.corp-sit.lvtanlian.com/api/uaa/user/login
+11:23:59.532 [main] INFO  org.carbonPool.Utils.HttprequestUtil - 这里是请求header：：：
+11:23:59.535 [main] INFO  org.carbonPool.Utils.HttprequestUtil - 此处是请求参数：：：：{"username":"17800000001","password":"A147258"}
+11:24:00.029 [main] INFO  org.carbonPool.Utils.JsonUtil - 转换结果:{"data":"Bearer eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiIxXzE3ODAwMDAwMDAxIiwiY3JlYXRlZCI6MTY3NzEyMjY0MTk0MCwiZXhwIjoxNjc3NzI3NDQxfQ.a0najBAy7_OGot-DFLoIMe0NO3Vik4Qf3nU1iYQeHHGHnBsnkPtPh4ypuftW2qFeW9pbcuDtHE1dLlDg2-JGYQ","error":"Access.success.general","message":"操作成功","status":200,"timestamp":"1677122641960"}
+11:24:00.030 [main] INFO  org.carbonPool.BaseLoginTest - {"data":"Bearer eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiIxXzE3ODAwMDAwMDAxIiwiY3JlYXRlZCI6MTY3NzEyMjY0MTk0MCwiZXhwIjoxNjc3NzI3NDQxfQ.a0najBAy7_OGot-DFLoIMe0NO3Vik4Qf3nU1iYQeHHGHnBsnkPtPh4ypuftW2qFeW9pbcuDtHE1dLlDg2-JGYQ","error":"Access.success.general","message":"操作成功","status":200,"timestamp":"1677122641960"}
+11:24:00.031 [main] INFO  org.carbonPool.BaseLoginTest - 此处为返回的data:Bearer eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiIxXzE3ODAwMDAwMDAxIiwiY3JlYXRlZCI6MTY3NzEyMjY0MTk0MCwiZXhwIjoxNjc3NzI3NDQxfQ.a0najBAy7_OGot-DFLoIMe0NO3Vik4Qf3nU1iYQeHHGHnBsnkPtPh4ypuftW2qFeW9pbcuDtHE1dLlDg2-JGYQ
+11:24:00.031 [main] INFO  org.carbonPool.BaseLoginTest - token:Bearer eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiIxXzE3ODAwMDAwMDAxIiwiY3JlYXRlZCI6MTY3NzEyMjY0MTk0MCwiZXhwIjoxNjc3NzI3NDQxfQ.a0najBAy7_OGot-DFLoIMe0NO3Vik4Qf3nU1iYQeHHGHnBsnkPtPh4ypuftW2qFeW9pbcuDtHE1dLlDg2-JGYQ
+11:24:00.075 [TestNG-method=addProjectTest-1] INFO  o.c.carbonPool.addProjectTest - 准备开始---------
+11:24:00.083 [TestNG-method=addProjectTest-1] INFO  org.carbonPool.Utils.HttprequestUtil - 这里是请求路径：：：http://web.corp-sit.lvtanlian.com/api/project/create
+11:24:00.083 [TestNG-method=addProjectTest-1] INFO  org.carbonPool.Utils.HttprequestUtil - 这里是请求header：：：
+11:24:00.083 [TestNG-method=addProjectTest-1] INFO  org.carbonPool.Utils.HttprequestUtil - 此处是请求参数：：：：{"absorptionAccount":"543543","absorptionTypeList":["parallel"],"addressArea":"瓯海区","addressCity":"温州市","addressNum":"地方官梵蒂冈","addressProvince":"浙江省","addressStreet":"潘桥街道","capacity":"156.235","deliveryDate":"2023-02-26T05:19:29.714Z","greenTransaction":"0","gridConnectedVoltageType":"20","holderName":"豆腐干地方","name":"自动化新增项目49930932","powerAccount":"retre","powerGridOperatorName":"士大夫士大夫但是","projectAddress":["浙江省","温州市","瓯海区","潘桥街道"],"selfAbsorptionType":null,"siteAbsorptionName":"法国梵蒂冈地方","technologyType":"shore","type":"wind"}
+11:24:00.238 [TestNG-method=addProjectTest-1] INFO  org.carbonPool.Utils.JsonUtil - 转换结果:{"data":true,"error":"Access.success.general","message":"操作成功","status":200,"timestamp":"1677122642228"}
+11:24:00.238 [TestNG-method=addProjectTest-1] INFO  o.c.carbonPool.addProjectTest - {"data":true,"error":"Access.success.general","message":"操作成功","status":200,"timestamp":"1677122642228"}
+11:24:00.336 [TestNG-method=addProjectTest-1] INFO  c.alibaba.druid.pool.DruidDataSource - {dataSource-1} inited
+11:24:00.663 [main] INFO  o.c.carbonPool.addProjectTest - 请求放置的项目id：87
+11:24:00.668 [main] INFO  o.s.b.t.c.SpringBootTestContextBootstrapper - Neither @ContextConfiguration nor @ContextHierarchy found for test class [org.carbonPool.BaseLoginTest], using SpringBootContextLoader
+11:24:00.669 [main] INFO  o.s.t.c.s.AbstractContextLoader - Could not detect default resource locations for test class [org.carbonPool.BaseLoginTest]: no resource found for suffixes {-context.xml, Context.groovy}.
+11:24:00.669 [main] INFO  o.s.t.c.s.AnnotationConfigContextLoaderUtils - Could not detect default configuration classes for test class [org.carbonPool.BaseLoginTest]: BaseLoginTest does not declare any static, non-private, non-final, nested classes annotated with @Configuration.
+11:24:00.670 [main] INFO  o.s.b.t.c.SpringBootTestContextBootstrapper - Found @SpringBootConfiguration org.carbonPool.CarbonPoolApplication for test class org.carbonPool.BaseLoginTest
+11:24:00.671 [main] INFO  o.s.b.t.c.SpringBootTestContextBootstrapper - Using TestExecutionListeners: [org.springframework.test.context.web.ServletTestExecutionListener@d7bbf12, org.springframework.test.context.support.DirtiesContextBeforeModesTestExecutionListener@1450131a, org.springframework.test.context.support.DependencyInjectionTestExecutionListener@5f7eee96, org.springframework.test.context.support.DirtiesContextTestExecutionListener@3a36cd5]
+11:24:00.671 [main] INFO  org.carbonPool.BaseLoginTest - 准备开始---------
+11:24:00.671 [main] INFO  org.carbonPool.Utils.EnvironmentUtil - 测试环境域名：http://web.corp-sit.lvtanlian.com
+11:24:00.671 [main] INFO  org.carbonPool.Utils.EnvironmentUtil - 测试环境域名：http://web.corp-sit.lvtanlian.com
+11:24:00.673 [main] INFO  org.carbonPool.Utils.HttprequestUtil - 这里是请求路径：：：http://web.corp-sit.lvtanlian.com/api/uaa/user/login
+11:24:00.673 [main] INFO  org.carbonPool.Utils.HttprequestUtil - 这里是请求header：：：
+11:24:00.673 [main] INFO  org.carbonPool.Utils.HttprequestUtil - 此处是请求参数：：：：{"username":"17800000001","password":"A147258"}
+11:24:00.863 [main] INFO  org.carbonPool.Utils.JsonUtil - 转换结果:{"data":"Bearer eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiIxXzE3ODAwMDAwMDAxIiwiY3JlYXRlZCI6MTY3NzEyMjY0Mjg0MCwiZXhwIjoxNjc3NzI3NDQyfQ.2lovw1_SdepmXiuxt3HvbogjJSV25_ZpWflzIGNOuz4xceAuSMLJCv5t8B9ty51T33xEUILdRaXQjzw_jXrHaw","error":"Access.success.general","message":"操作成功","status":200,"timestamp":"1677122642859"}
+11:24:00.863 [main] INFO  org.carbonPool.BaseLoginTest - {"data":"Bearer eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiIxXzE3ODAwMDAwMDAxIiwiY3JlYXRlZCI6MTY3NzEyMjY0Mjg0MCwiZXhwIjoxNjc3NzI3NDQyfQ.2lovw1_SdepmXiuxt3HvbogjJSV25_ZpWflzIGNOuz4xceAuSMLJCv5t8B9ty51T33xEUILdRaXQjzw_jXrHaw","error":"Access.success.general","message":"操作成功","status":200,"timestamp":"1677122642859"}
+11:24:00.863 [main] INFO  org.carbonPool.BaseLoginTest - 此处为返回的data:Bearer eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiIxXzE3ODAwMDAwMDAxIiwiY3JlYXRlZCI6MTY3NzEyMjY0Mjg0MCwiZXhwIjoxNjc3NzI3NDQyfQ.2lovw1_SdepmXiuxt3HvbogjJSV25_ZpWflzIGNOuz4xceAuSMLJCv5t8B9ty51T33xEUILdRaXQjzw_jXrHaw
+11:24:00.863 [main] INFO  org.carbonPool.BaseLoginTest - token:Bearer eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiIxXzE3ODAwMDAwMDAxIiwiY3JlYXRlZCI6MTY3NzEyMjY0Mjg0MCwiZXhwIjoxNjc3NzI3NDQyfQ.2lovw1_SdepmXiuxt3HvbogjJSV25_ZpWflzIGNOuz4xceAuSMLJCv5t8B9ty51T33xEUILdRaXQjzw_jXrHaw
+11:24:01.110 [SpringContextShutdownHook] INFO  o.s.s.c.ThreadPoolTaskExecutor - Shutting down ExecutorService 'applicationTaskExecutor'
+11:24:01.115 [SpringContextShutdownHook] INFO  c.alibaba.druid.pool.DruidDataSource - {dataSource-1} closed
+11:26:06.258 [main] INFO  o.c.carbonPool.addProjectTest - Starting addProjectTest on DESKTOP-SPJKFLC with PID 1328 (D:\code\javacode\corbonPoolApiAuto\target\test-classes started by 65678 in D:\code\javacode\corbonPoolApiAuto)
+11:26:06.259 [main] INFO  o.c.carbonPool.addProjectTest - No active profile set, falling back to default profiles: default
+11:26:06.947 [main] INFO  o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker - Bean 'org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration' of type [org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+11:26:07.438 [main] INFO  org.carbonPool.Utils.EnvironmentUtil - 测试环境域名：http://web.corp-sit.lvtanlian.com
+11:26:07.443 [main] INFO  org.carbonPool.Utils.EnvironmentUtil - 测试环境域名：http://web.corp-sit.lvtanlian.com
+11:26:07.444 [main] INFO  org.carbonPool.Utils.EnvironmentUtil - 测试环境域名：http://web.corp-sit.lvtanlian.com
+11:26:07.922 [main] INFO  o.s.s.c.ThreadPoolTaskExecutor - Initializing ExecutorService 'applicationTaskExecutor'
+11:26:08.671 [main] INFO  org.mongodb.driver.cluster - Cluster created with settings {hosts=[localhost:27017], mode=SINGLE, requiredClusterType=UNKNOWN, serverSelectionTimeout='30000 ms', maxWaitQueueSize=500}
+11:26:08.783 [main] INFO  o.c.carbonPool.addProjectTest - Started addProjectTest in 2.789 seconds (JVM running for 3.636)
+11:26:08.803 [main] INFO  o.s.b.t.c.SpringBootTestContextBootstrapper - Neither @ContextConfiguration nor @ContextHierarchy found for test class [org.carbonPool.BaseLoginTest], using SpringBootContextLoader
+11:26:08.804 [main] INFO  o.s.t.c.s.AbstractContextLoader - Could not detect default resource locations for test class [org.carbonPool.BaseLoginTest]: no resource found for suffixes {-context.xml, Context.groovy}.
+11:26:08.804 [main] INFO  o.s.t.c.s.AnnotationConfigContextLoaderUtils - Could not detect default configuration classes for test class [org.carbonPool.BaseLoginTest]: BaseLoginTest does not declare any static, non-private, non-final, nested classes annotated with @Configuration.
+11:26:08.808 [main] INFO  o.s.b.t.c.SpringBootTestContextBootstrapper - Found @SpringBootConfiguration org.carbonPool.CarbonPoolApplication for test class org.carbonPool.BaseLoginTest
+11:26:08.810 [main] INFO  o.s.b.t.c.SpringBootTestContextBootstrapper - Using TestExecutionListeners: [org.springframework.test.context.web.ServletTestExecutionListener@663f237a, org.springframework.test.context.support.DirtiesContextBeforeModesTestExecutionListener@5d7399f9, org.springframework.test.context.support.DependencyInjectionTestExecutionListener@49a6f486, org.springframework.test.context.support.DirtiesContextTestExecutionListener@14fded9d]
+11:26:08.810 [main] INFO  org.carbonPool.BaseLoginTest - 准备开始---------
+11:26:08.810 [main] INFO  org.carbonPool.Utils.EnvironmentUtil - 测试环境域名：http://web.corp-sit.lvtanlian.com
+11:26:08.810 [main] INFO  org.carbonPool.Utils.EnvironmentUtil - 测试环境域名：http://web.corp-sit.lvtanlian.com
+11:26:08.890 [main] INFO  org.carbonPool.Utils.HttprequestUtil - 这里是请求路径：：：http://web.corp-sit.lvtanlian.com/api/uaa/user/login
+11:26:08.891 [main] INFO  org.carbonPool.Utils.HttprequestUtil - 这里是请求header：：：
+11:26:08.896 [main] INFO  org.carbonPool.Utils.HttprequestUtil - 此处是请求参数：：：：{"username":"17800000001","password":"A147258"}
+11:26:09.042 [main] INFO  org.carbonPool.BaseLoginTest - 开始执行---------
+11:26:09.123 [main] INFO  o.s.b.t.c.SpringBootTestContextBootstrapper - Neither @ContextConfiguration nor @ContextHierarchy found for test class [org.carbonPool.BaseLoginTest], using SpringBootContextLoader
+11:26:09.123 [main] INFO  o.s.t.c.s.AbstractContextLoader - Could not detect default resource locations for test class [org.carbonPool.BaseLoginTest]: no resource found for suffixes {-context.xml, Context.groovy}.
+11:26:09.123 [main] INFO  o.s.t.c.s.AnnotationConfigContextLoaderUtils - Could not detect default configuration classes for test class [org.carbonPool.BaseLoginTest]: BaseLoginTest does not declare any static, non-private, non-final, nested classes annotated with @Configuration.
+11:26:09.124 [main] INFO  o.s.b.t.c.SpringBootTestContextBootstrapper - Found @SpringBootConfiguration org.carbonPool.CarbonPoolApplication for test class org.carbonPool.BaseLoginTest
+11:26:09.125 [main] INFO  o.s.b.t.c.SpringBootTestContextBootstrapper - Using TestExecutionListeners: [org.springframework.test.context.web.ServletTestExecutionListener@234c5e41, org.springframework.test.context.support.DirtiesContextBeforeModesTestExecutionListener@40ef0af8, org.springframework.test.context.support.DependencyInjectionTestExecutionListener@36790bec, org.springframework.test.context.support.DirtiesContextTestExecutionListener@461c3709]
+11:26:09.125 [main] INFO  org.carbonPool.BaseLoginTest - 准备开始---------
+11:26:09.126 [main] INFO  org.carbonPool.Utils.EnvironmentUtil - 测试环境域名：http://web.corp-sit.lvtanlian.com
+11:26:09.126 [main] INFO  org.carbonPool.Utils.EnvironmentUtil - 测试环境域名：http://web.corp-sit.lvtanlian.com
+11:26:09.127 [main] INFO  org.carbonPool.Utils.HttprequestUtil - 这里是请求路径：：：http://web.corp-sit.lvtanlian.com/api/uaa/user/login
+11:26:09.127 [main] INFO  org.carbonPool.Utils.HttprequestUtil - 这里是请求header：：：
+11:26:09.127 [main] INFO  org.carbonPool.Utils.HttprequestUtil - 此处是请求参数：：：：{"username":"17800000001","password":"A147258"}
+11:26:09.175 [main] INFO  org.carbonPool.BaseLoginTest - 开始执行---------
+11:26:09.422 [SpringContextShutdownHook] INFO  o.s.s.c.ThreadPoolTaskExecutor - Shutting down ExecutorService 'applicationTaskExecutor'
+13:19:45.669 [main] INFO  o.c.carbonPool.addProjectTest - Starting addProjectTest on DESKTOP-SPJKFLC with PID 22756 (D:\code\javacode\corbonPoolApiAuto\target\test-classes started by 65678 in D:\code\javacode\corbonPoolApiAuto)
+13:19:45.670 [main] INFO  o.c.carbonPool.addProjectTest - No active profile set, falling back to default profiles: default
+13:19:46.437 [main] INFO  o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker - Bean 'org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration' of type [org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+13:19:46.926 [main] INFO  org.carbonPool.Utils.EnvironmentUtil - 测试环境域名：http://web.corp-sit.lvtanlian.com
+13:19:46.930 [main] INFO  org.carbonPool.Utils.EnvironmentUtil - 测试环境域名：http://web.corp-sit.lvtanlian.com
+13:19:46.931 [main] INFO  org.carbonPool.Utils.EnvironmentUtil - 测试环境域名：http://web.corp-sit.lvtanlian.com
+13:19:47.331 [main] INFO  o.s.s.c.ThreadPoolTaskExecutor - Initializing ExecutorService 'applicationTaskExecutor'
+13:19:48.279 [main] INFO  org.mongodb.driver.cluster - Cluster created with settings {hosts=[localhost:27017], mode=SINGLE, requiredClusterType=UNKNOWN, serverSelectionTimeout='30000 ms', maxWaitQueueSize=500}
+13:19:48.380 [main] INFO  o.c.carbonPool.addProjectTest - Started addProjectTest in 2.94 seconds (JVM running for 5.128)
+13:19:48.401 [main] INFO  o.s.b.t.c.SpringBootTestContextBootstrapper - Neither @ContextConfiguration nor @ContextHierarchy found for test class [org.carbonPool.BaseLoginTest], using SpringBootContextLoader
+13:19:48.402 [main] INFO  o.s.t.c.s.AbstractContextLoader - Could not detect default resource locations for test class [org.carbonPool.BaseLoginTest]: no resource found for suffixes {-context.xml, Context.groovy}.
+13:19:48.403 [main] INFO  o.s.t.c.s.AnnotationConfigContextLoaderUtils - Could not detect default configuration classes for test class [org.carbonPool.BaseLoginTest]: BaseLoginTest does not declare any static, non-private, non-final, nested classes annotated with @Configuration.
+13:19:48.407 [main] INFO  o.s.b.t.c.SpringBootTestContextBootstrapper - Found @SpringBootConfiguration org.carbonPool.CarbonPoolApplication for test class org.carbonPool.BaseLoginTest
+13:19:48.410 [main] INFO  o.s.b.t.c.SpringBootTestContextBootstrapper - Using TestExecutionListeners: [org.springframework.test.context.web.ServletTestExecutionListener@3eb3232b, org.springframework.test.context.support.DirtiesContextBeforeModesTestExecutionListener@69cd1085, org.springframework.test.context.support.DependencyInjectionTestExecutionListener@60bb7995, org.springframework.test.context.support.DirtiesContextTestExecutionListener@40fa8766]
+13:19:48.410 [main] INFO  org.carbonPool.BaseLoginTest - 准备开始---------
+13:19:48.410 [main] INFO  org.carbonPool.Utils.EnvironmentUtil - 测试环境域名：http://web.corp-sit.lvtanlian.com
+13:19:48.410 [main] INFO  org.carbonPool.Utils.EnvironmentUtil - 测试环境域名：http://web.corp-sit.lvtanlian.com
+13:19:48.478 [main] INFO  org.carbonPool.Utils.HttprequestUtil - 这里是请求路径：：：http://web.corp-sit.lvtanlian.com/api/uaa/user/login
+13:19:48.478 [main] INFO  org.carbonPool.Utils.HttprequestUtil - 这里是请求header：：：
+13:19:48.480 [main] INFO  org.carbonPool.Utils.HttprequestUtil - 此处是请求参数：：：：{"username":"17800000001","password":"A147258"}
+13:19:50.360 [cluster-ClusterId{value='63f6f7745909a842718e784c', description='null'}-localhost:27017] INFO  org.mongodb.driver.cluster - Exception in monitor thread while connecting to server localhost:27017
+com.mongodb.MongoSocketOpenException: Exception opening socket
+	at com.mongodb.internal.connection.SocketStream.open(SocketStream.java:70)
+	at com.mongodb.internal.connection.InternalStreamConnection.open(InternalStreamConnection.java:128)
+	at com.mongodb.internal.connection.DefaultServerMonitor$ServerMonitorRunnable.run(DefaultServerMonitor.java:117)
+	at java.lang.Thread.run(Thread.java:748)
+Caused by: java.net.ConnectException: Connection refused: connect
+	at java.net.DualStackPlainSocketImpl.waitForConnect(Native Method)
+	at java.net.DualStackPlainSocketImpl.socketConnect(DualStackPlainSocketImpl.java:81)
+	at java.net.AbstractPlainSocketImpl.doConnect(AbstractPlainSocketImpl.java:476)
+	at java.net.AbstractPlainSocketImpl.connectToAddress(AbstractPlainSocketImpl.java:218)
+	at java.net.AbstractPlainSocketImpl.connect(AbstractPlainSocketImpl.java:200)
+	at java.net.PlainSocketImpl.connect(PlainSocketImpl.java:162)
+	at java.net.SocksSocketImpl.connect(SocksSocketImpl.java:394)
+	at java.net.Socket.connect(Socket.java:606)
+	at com.mongodb.internal.connection.SocketStreamHelper.initialize(SocketStreamHelper.java:64)
+	at com.mongodb.internal.connection.SocketStream.initializeSocket(SocketStream.java:79)
+	at com.mongodb.internal.connection.SocketStream.open(SocketStream.java:65)
+	... 3 common frames omitted
+13:19:54.453 [main] INFO  org.carbonPool.Utils.JsonUtil - 转换结果:{"data":"Bearer eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiIxXzE3ODAwMDAwMDAxIiwiY3JlYXRlZCI6MTY3NzEyOTU5NjI2MCwiZXhwIjoxNjc3NzM0Mzk2fQ.3plk59MVXklSElFFqBomrJKvmy_93qhJoyTSr8bHN7ChmEmZe85Sm6e_Qbh8ekQ6-XFWZwmSmzF4KO58T92vIg","error":"Access.success.general","message":"操作成功","status":200,"timestamp":"1677129596516"}
+13:19:54.454 [main] INFO  org.carbonPool.BaseLoginTest - {"data":"Bearer eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiIxXzE3ODAwMDAwMDAxIiwiY3JlYXRlZCI6MTY3NzEyOTU5NjI2MCwiZXhwIjoxNjc3NzM0Mzk2fQ.3plk59MVXklSElFFqBomrJKvmy_93qhJoyTSr8bHN7ChmEmZe85Sm6e_Qbh8ekQ6-XFWZwmSmzF4KO58T92vIg","error":"Access.success.general","message":"操作成功","status":200,"timestamp":"1677129596516"}
+13:19:54.454 [main] INFO  org.carbonPool.BaseLoginTest - 此处为返回的data:Bearer eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiIxXzE3ODAwMDAwMDAxIiwiY3JlYXRlZCI6MTY3NzEyOTU5NjI2MCwiZXhwIjoxNjc3NzM0Mzk2fQ.3plk59MVXklSElFFqBomrJKvmy_93qhJoyTSr8bHN7ChmEmZe85Sm6e_Qbh8ekQ6-XFWZwmSmzF4KO58T92vIg
+13:19:54.454 [main] INFO  org.carbonPool.BaseLoginTest - token:Bearer eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiIxXzE3ODAwMDAwMDAxIiwiY3JlYXRlZCI6MTY3NzEyOTU5NjI2MCwiZXhwIjoxNjc3NzM0Mzk2fQ.3plk59MVXklSElFFqBomrJKvmy_93qhJoyTSr8bHN7ChmEmZe85Sm6e_Qbh8ekQ6-XFWZwmSmzF4KO58T92vIg
+13:19:54.486 [TestNG-method=addProjectTest-1] INFO  o.c.carbonPool.addProjectTest - 准备开始---------
+13:19:54.494 [TestNG-method=addProjectTest-1] INFO  org.carbonPool.Utils.HttprequestUtil - 这里是请求路径：：：http://web.corp-sit.lvtanlian.com/api/project/create
+13:19:54.494 [TestNG-method=addProjectTest-1] INFO  org.carbonPool.Utils.HttprequestUtil - 这里是请求header：：：
+13:19:54.494 [TestNG-method=addProjectTest-1] INFO  org.carbonPool.Utils.HttprequestUtil - 此处是请求参数：：：：{"absorptionAccount":"543543","absorptionTypeList":["parallel"],"addressArea":"瓯海区","addressCity":"温州市","addressNum":"地方官梵蒂冈","addressProvince":"浙江省","addressStreet":"潘桥街道","capacity":"156.235","deliveryDate":"2023-02-26T05:19:29.714Z","greenTransaction":"0","gridConnectedVoltageType":"20","holderName":"豆腐干地方","name":"自动化新增项目62411922","powerAccount":"retre","powerGridOperatorName":"士大夫士大夫但是","projectAddress":["浙江省","温州市","瓯海区","潘桥街道"],"selfAbsorptionType":null,"siteAbsorptionName":"法国梵蒂冈地方","technologyType":"shore","type":"wind"}
+13:19:54.737 [TestNG-method=addProjectTest-1] INFO  org.carbonPool.Utils.JsonUtil - 转换结果:{"data":true,"error":"Access.success.general","message":"操作成功","status":200,"timestamp":"1677129596844"}
+13:19:54.738 [TestNG-method=addProjectTest-1] INFO  o.c.carbonPool.addProjectTest - {"data":true,"error":"Access.success.general","message":"操作成功","status":200,"timestamp":"1677129596844"}
+13:19:54.812 [TestNG-method=addProjectTest-1] INFO  c.alibaba.druid.pool.DruidDataSource - {dataSource-1} inited
+13:19:55.087 [main] INFO  o.c.carbonPool.addProjectTest - 请求放置的项目id：88
+13:19:55.091 [main] INFO  o.s.b.t.c.SpringBootTestContextBootstrapper - Neither @ContextConfiguration nor @ContextHierarchy found for test class [org.carbonPool.BaseLoginTest], using SpringBootContextLoader
+13:19:55.092 [main] INFO  o.s.t.c.s.AbstractContextLoader - Could not detect default resource locations for test class [org.carbonPool.BaseLoginTest]: no resource found for suffixes {-context.xml, Context.groovy}.
+13:19:55.092 [main] INFO  o.s.t.c.s.AnnotationConfigContextLoaderUtils - Could not detect default configuration classes for test class [org.carbonPool.BaseLoginTest]: BaseLoginTest does not declare any static, non-private, non-final, nested classes annotated with @Configuration.
+13:19:55.093 [main] INFO  o.s.b.t.c.SpringBootTestContextBootstrapper - Found @SpringBootConfiguration org.carbonPool.CarbonPoolApplication for test class org.carbonPool.BaseLoginTest
+13:19:55.093 [main] INFO  o.s.b.t.c.SpringBootTestContextBootstrapper - Using TestExecutionListeners: [org.springframework.test.context.web.ServletTestExecutionListener@43cb5f38, org.springframework.test.context.support.DirtiesContextBeforeModesTestExecutionListener@6435fa1c, org.springframework.test.context.support.DependencyInjectionTestExecutionListener@7944b8b4, org.springframework.test.context.support.DirtiesContextTestExecutionListener@d7bbf12]
+13:19:55.093 [main] INFO  org.carbonPool.BaseLoginTest - 准备开始---------
+13:19:55.093 [main] INFO  org.carbonPool.Utils.EnvironmentUtil - 测试环境域名：http://web.corp-sit.lvtanlian.com
+13:19:55.093 [main] INFO  org.carbonPool.Utils.EnvironmentUtil - 测试环境域名：http://web.corp-sit.lvtanlian.com
+13:19:55.094 [main] INFO  org.carbonPool.Utils.HttprequestUtil - 这里是请求路径：：：http://web.corp-sit.lvtanlian.com/api/uaa/user/login
+13:19:55.094 [main] INFO  org.carbonPool.Utils.HttprequestUtil - 这里是请求header：：：
+13:19:55.094 [main] INFO  org.carbonPool.Utils.HttprequestUtil - 此处是请求参数：：：：{"username":"17800000001","password":"A147258"}
+13:19:55.314 [main] INFO  org.carbonPool.Utils.JsonUtil - 转换结果:{"data":"Bearer eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiIxXzE3ODAwMDAwMDAxIiwiY3JlYXRlZCI6MTY3NzEyOTU5NzM5MiwiZXhwIjoxNjc3NzM0Mzk3fQ.IKSxuvfWTgyPhyeDJ67vP86OcdUqBt8FLALwCdsa9N_gkLHxutGj4kTKM-awMKFf2DNDw1ksZKAWKOnKKmouHA","error":"Access.success.general","message":"操作成功","status":200,"timestamp":"1677129597421"}
+13:19:55.315 [main] INFO  org.carbonPool.BaseLoginTest - {"data":"Bearer eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiIxXzE3ODAwMDAwMDAxIiwiY3JlYXRlZCI6MTY3NzEyOTU5NzM5MiwiZXhwIjoxNjc3NzM0Mzk3fQ.IKSxuvfWTgyPhyeDJ67vP86OcdUqBt8FLALwCdsa9N_gkLHxutGj4kTKM-awMKFf2DNDw1ksZKAWKOnKKmouHA","error":"Access.success.general","message":"操作成功","status":200,"timestamp":"1677129597421"}
+13:19:55.315 [main] INFO  org.carbonPool.BaseLoginTest - 此处为返回的data:Bearer eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiIxXzE3ODAwMDAwMDAxIiwiY3JlYXRlZCI6MTY3NzEyOTU5NzM5MiwiZXhwIjoxNjc3NzM0Mzk3fQ.IKSxuvfWTgyPhyeDJ67vP86OcdUqBt8FLALwCdsa9N_gkLHxutGj4kTKM-awMKFf2DNDw1ksZKAWKOnKKmouHA
+13:19:55.315 [main] INFO  org.carbonPool.BaseLoginTest - token:Bearer eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiIxXzE3ODAwMDAwMDAxIiwiY3JlYXRlZCI6MTY3NzEyOTU5NzM5MiwiZXhwIjoxNjc3NzM0Mzk3fQ.IKSxuvfWTgyPhyeDJ67vP86OcdUqBt8FLALwCdsa9N_gkLHxutGj4kTKM-awMKFf2DNDw1ksZKAWKOnKKmouHA
+13:19:55.324 [TestNG-method=addEntrustTest-1] INFO  o.c.carbonPool.addEntrustTest - 准备开始---------
+13:19:55.327 [TestNG-method=addEntrustTest-1] INFO  org.carbonPool.Utils.HttprequestUtil - 这里是请求路径：：：http://web.corp-sit.lvtanlian.com/api/entrust/create
+13:19:55.327 [TestNG-method=addEntrustTest-1] INFO  org.carbonPool.Utils.HttprequestUtil - 这里是请求header：：：
+13:19:55.327 [TestNG-method=addEntrustTest-1] INFO  org.carbonPool.Utils.HttprequestUtil - 此处是请求参数：：：：{"dataIdList":[0],"entrustCustomerId":21,"limitTime":"1y","projectType":"风电","type":1}
+13:19:55.824 [TestNG-method=addEntrustTest-1] INFO  org.carbonPool.Utils.JsonUtil - 转换结果:{"data":true,"error":"Access.success.general","message":"操作成功","status":200,"timestamp":"1677129597934"}
+13:19:55.825 [TestNG-method=addEntrustTest-1] INFO  o.c.carbonPool.addEntrustTest - {"data":true,"error":"Access.success.general","message":"操作成功","status":200,"timestamp":"1677129597934"}
+13:19:55.847 [main] INFO  o.c.carbonPool.addEntrustTest - 请求放置的项目id：0
+13:19:56.044 [SpringContextShutdownHook] INFO  o.s.s.c.ThreadPoolTaskExecutor - Shutting down ExecutorService 'applicationTaskExecutor'
+13:19:56.052 [SpringContextShutdownHook] INFO  c.alibaba.druid.pool.DruidDataSource - {dataSource-1} closed
+13:21:15.538 [main] INFO  o.c.carbonPool.addProjectTest - Starting addProjectTest on DESKTOP-SPJKFLC with PID 7008 (D:\code\javacode\corbonPoolApiAuto\target\test-classes started by 65678 in D:\code\javacode\corbonPoolApiAuto)
+13:21:15.539 [main] INFO  o.c.carbonPool.addProjectTest - No active profile set, falling back to default profiles: default
+13:21:16.228 [main] INFO  o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker - Bean 'org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration' of type [org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+13:21:16.710 [main] INFO  org.carbonPool.Utils.EnvironmentUtil - 测试环境域名：http://web.corp-sit.lvtanlian.com
+13:21:16.715 [main] INFO  org.carbonPool.Utils.EnvironmentUtil - 测试环境域名：http://web.corp-sit.lvtanlian.com
+13:21:16.716 [main] INFO  org.carbonPool.Utils.EnvironmentUtil - 测试环境域名：http://web.corp-sit.lvtanlian.com
+13:21:17.131 [main] INFO  o.s.s.c.ThreadPoolTaskExecutor - Initializing ExecutorService 'applicationTaskExecutor'
+13:21:17.971 [main] INFO  org.mongodb.driver.cluster - Cluster created with settings {hosts=[localhost:27017], mode=SINGLE, requiredClusterType=UNKNOWN, serverSelectionTimeout='30000 ms', maxWaitQueueSize=500}
+13:21:18.084 [main] INFO  o.c.carbonPool.addProjectTest - Started addProjectTest in 2.786 seconds (JVM running for 3.583)
+13:21:18.101 [main] INFO  o.s.b.t.c.SpringBootTestContextBootstrapper - Neither @ContextConfiguration nor @ContextHierarchy found for test class [org.carbonPool.BaseLoginTest], using SpringBootContextLoader
+13:21:18.102 [main] INFO  o.s.t.c.s.AbstractContextLoader - Could not detect default resource locations for test class [org.carbonPool.BaseLoginTest]: no resource found for suffixes {-context.xml, Context.groovy}.
+13:21:18.102 [main] INFO  o.s.t.c.s.AnnotationConfigContextLoaderUtils - Could not detect default configuration classes for test class [org.carbonPool.BaseLoginTest]: BaseLoginTest does not declare any static, non-private, non-final, nested classes annotated with @Configuration.
+13:21:18.105 [main] INFO  o.s.b.t.c.SpringBootTestContextBootstrapper - Found @SpringBootConfiguration org.carbonPool.CarbonPoolApplication for test class org.carbonPool.BaseLoginTest
+13:21:18.108 [main] INFO  o.s.b.t.c.SpringBootTestContextBootstrapper - Using TestExecutionListeners: [org.springframework.test.context.web.ServletTestExecutionListener@67774e29, org.springframework.test.context.support.DirtiesContextBeforeModesTestExecutionListener@663f237a, org.springframework.test.context.support.DependencyInjectionTestExecutionListener@5d7399f9, org.springframework.test.context.support.DirtiesContextTestExecutionListener@49a6f486]
+13:21:18.109 [main] INFO  org.carbonPool.BaseLoginTest - 准备开始---------
+13:21:18.109 [main] INFO  org.carbonPool.Utils.EnvironmentUtil - 测试环境域名：http://web.corp-sit.lvtanlian.com
+13:21:18.109 [main] INFO  org.carbonPool.Utils.EnvironmentUtil - 测试环境域名：http://web.corp-sit.lvtanlian.com
+13:21:18.200 [main] INFO  org.carbonPool.Utils.HttprequestUtil - 这里是请求路径：：：http://web.corp-sit.lvtanlian.com/api/uaa/user/login
+13:21:18.201 [main] INFO  org.carbonPool.Utils.HttprequestUtil - 这里是请求header：：：
+13:21:18.207 [main] INFO  org.carbonPool.Utils.HttprequestUtil - 此处是请求参数：：：：{"username":"17800000001","password":"A147258"}
+13:21:18.664 [main] INFO  org.carbonPool.Utils.JsonUtil - 转换结果:{"data":"Bearer eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiIxXzE3ODAwMDAwMDAxIiwiY3JlYXRlZCI6MTY3NzEyOTY4MDcwNSwiZXhwIjoxNjc3NzM0NDgwfQ.YqwXWou3V8P4pF_s13Csn_1HprcnyOiu8Q2_ZwCqUAmgZNKgc1WVQvc_TDaXvNV94UHgo0uFe9KC1OaQM6hgqQ","error":"Access.success.general","message":"操作成功","status":200,"timestamp":"1677129680728"}
+13:21:18.666 [main] INFO  org.carbonPool.BaseLoginTest - {"data":"Bearer eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiIxXzE3ODAwMDAwMDAxIiwiY3JlYXRlZCI6MTY3NzEyOTY4MDcwNSwiZXhwIjoxNjc3NzM0NDgwfQ.YqwXWou3V8P4pF_s13Csn_1HprcnyOiu8Q2_ZwCqUAmgZNKgc1WVQvc_TDaXvNV94UHgo0uFe9KC1OaQM6hgqQ","error":"Access.success.general","message":"操作成功","status":200,"timestamp":"1677129680728"}
+13:21:18.666 [main] INFO  org.carbonPool.BaseLoginTest - 此处为返回的data:Bearer eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiIxXzE3ODAwMDAwMDAxIiwiY3JlYXRlZCI6MTY3NzEyOTY4MDcwNSwiZXhwIjoxNjc3NzM0NDgwfQ.YqwXWou3V8P4pF_s13Csn_1HprcnyOiu8Q2_ZwCqUAmgZNKgc1WVQvc_TDaXvNV94UHgo0uFe9KC1OaQM6hgqQ
+13:21:18.666 [main] INFO  org.carbonPool.BaseLoginTest - token:Bearer eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiIxXzE3ODAwMDAwMDAxIiwiY3JlYXRlZCI6MTY3NzEyOTY4MDcwNSwiZXhwIjoxNjc3NzM0NDgwfQ.YqwXWou3V8P4pF_s13Csn_1HprcnyOiu8Q2_ZwCqUAmgZNKgc1WVQvc_TDaXvNV94UHgo0uFe9KC1OaQM6hgqQ
+13:21:18.699 [TestNG-method=addProjectTest-1] INFO  o.c.carbonPool.addProjectTest - 准备开始---------
+13:21:18.706 [TestNG-method=addProjectTest-1] INFO  org.carbonPool.Utils.HttprequestUtil - 这里是请求路径：：：http://web.corp-sit.lvtanlian.com/api/project/create
+13:21:18.706 [TestNG-method=addProjectTest-1] INFO  org.carbonPool.Utils.HttprequestUtil - 这里是请求header：：：
+13:21:18.706 [TestNG-method=addProjectTest-1] INFO  org.carbonPool.Utils.HttprequestUtil - 此处是请求参数：：：：{"absorptionAccount":"543543","absorptionTypeList":["parallel"],"addressArea":"瓯海区","addressCity":"温州市","addressNum":"地方官梵蒂冈","addressProvince":"浙江省","addressStreet":"潘桥街道","capacity":"156.235","deliveryDate":"2023-02-26T05:19:29.714Z","greenTransaction":"0","gridConnectedVoltageType":"20","holderName":"豆腐干地方","name":"自动化新增项目28510264","powerAccount":"retre","powerGridOperatorName":"士大夫士大夫但是","projectAddress":["浙江省","温州市","瓯海区","潘桥街道"],"selfAbsorptionType":null,"siteAbsorptionName":"法国梵蒂冈地方","technologyType":"shore","type":"wind"}
+13:21:18.843 [TestNG-method=addProjectTest-1] INFO  org.carbonPool.Utils.JsonUtil - 转换结果:{"data":true,"error":"Access.success.general","message":"操作成功","status":200,"timestamp":"1677129680952"}
+13:21:18.843 [TestNG-method=addProjectTest-1] INFO  o.c.carbonPool.addProjectTest - {"data":true,"error":"Access.success.general","message":"操作成功","status":200,"timestamp":"1677129680952"}
+13:21:18.913 [TestNG-method=addProjectTest-1] INFO  c.alibaba.druid.pool.DruidDataSource - {dataSource-1} inited
+13:21:19.172 [main] INFO  o.c.carbonPool.addProjectTest - 请求放置的项目id：89
+13:21:19.176 [main] INFO  o.s.b.t.c.SpringBootTestContextBootstrapper - Neither @ContextConfiguration nor @ContextHierarchy found for test class [org.carbonPool.BaseLoginTest], using SpringBootContextLoader
+13:21:19.177 [main] INFO  o.s.t.c.s.AbstractContextLoader - Could not detect default resource locations for test class [org.carbonPool.BaseLoginTest]: no resource found for suffixes {-context.xml, Context.groovy}.
+13:21:19.177 [main] INFO  o.s.t.c.s.AnnotationConfigContextLoaderUtils - Could not detect default configuration classes for test class [org.carbonPool.BaseLoginTest]: BaseLoginTest does not declare any static, non-private, non-final, nested classes annotated with @Configuration.
+13:21:19.178 [main] INFO  o.s.b.t.c.SpringBootTestContextBootstrapper - Found @SpringBootConfiguration org.carbonPool.CarbonPoolApplication for test class org.carbonPool.BaseLoginTest
+13:21:19.179 [main] INFO  o.s.b.t.c.SpringBootTestContextBootstrapper - Using TestExecutionListeners: [org.springframework.test.context.web.ServletTestExecutionListener@5f7eee96, org.springframework.test.context.support.DirtiesContextBeforeModesTestExecutionListener@3a36cd5, org.springframework.test.context.support.DependencyInjectionTestExecutionListener@53f0d09c, org.springframework.test.context.support.DirtiesContextTestExecutionListener@47acd13b]
+13:21:19.179 [main] INFO  org.carbonPool.BaseLoginTest - 准备开始---------
+13:21:19.179 [main] INFO  org.carbonPool.Utils.EnvironmentUtil - 测试环境域名：http://web.corp-sit.lvtanlian.com
+13:21:19.179 [main] INFO  org.carbonPool.Utils.EnvironmentUtil - 测试环境域名：http://web.corp-sit.lvtanlian.com
+13:21:19.179 [main] INFO  org.carbonPool.Utils.HttprequestUtil - 这里是请求路径：：：http://web.corp-sit.lvtanlian.com/api/uaa/user/login
+13:21:19.180 [main] INFO  org.carbonPool.Utils.HttprequestUtil - 这里是请求header：：：
+13:21:19.180 [main] INFO  org.carbonPool.Utils.HttprequestUtil - 此处是请求参数：：：：{"username":"17800000001","password":"A147258"}
+13:21:19.386 [main] INFO  org.carbonPool.Utils.JsonUtil - 转换结果:{"data":"Bearer eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiIxXzE3ODAwMDAwMDAxIiwiY3JlYXRlZCI6MTY3NzEyOTY4MTQ3NCwiZXhwIjoxNjc3NzM0NDgxfQ.BoXudkaP9AAy4ySXaWzQNVXAhmvP93ixsy4Y6lq0fYXJn3k_1ZIcvS7uw9JjqwpMFf8Csrh_jPuPt3SnNGkIaQ","error":"Access.success.general","message":"操作成功","status":200,"timestamp":"1677129681495"}
+13:21:19.386 [main] INFO  org.carbonPool.BaseLoginTest - {"data":"Bearer eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiIxXzE3ODAwMDAwMDAxIiwiY3JlYXRlZCI6MTY3NzEyOTY4MTQ3NCwiZXhwIjoxNjc3NzM0NDgxfQ.BoXudkaP9AAy4ySXaWzQNVXAhmvP93ixsy4Y6lq0fYXJn3k_1ZIcvS7uw9JjqwpMFf8Csrh_jPuPt3SnNGkIaQ","error":"Access.success.general","message":"操作成功","status":200,"timestamp":"1677129681495"}
+13:21:19.386 [main] INFO  org.carbonPool.BaseLoginTest - 此处为返回的data:Bearer eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiIxXzE3ODAwMDAwMDAxIiwiY3JlYXRlZCI6MTY3NzEyOTY4MTQ3NCwiZXhwIjoxNjc3NzM0NDgxfQ.BoXudkaP9AAy4ySXaWzQNVXAhmvP93ixsy4Y6lq0fYXJn3k_1ZIcvS7uw9JjqwpMFf8Csrh_jPuPt3SnNGkIaQ
+13:21:19.386 [main] INFO  org.carbonPool.BaseLoginTest - token:Bearer eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiIxXzE3ODAwMDAwMDAxIiwiY3JlYXRlZCI6MTY3NzEyOTY4MTQ3NCwiZXhwIjoxNjc3NzM0NDgxfQ.BoXudkaP9AAy4ySXaWzQNVXAhmvP93ixsy4Y6lq0fYXJn3k_1ZIcvS7uw9JjqwpMFf8Csrh_jPuPt3SnNGkIaQ
+13:21:19.394 [TestNG-method=addEntrustTest-1] INFO  o.c.carbonPool.addEntrustTest - 准备开始---------
+13:21:19.397 [TestNG-method=addEntrustTest-1] INFO  org.carbonPool.Utils.HttprequestUtil - 这里是请求路径：：：http://web.corp-sit.lvtanlian.com/api/entrust/create
+13:21:19.397 [TestNG-method=addEntrustTest-1] INFO  org.carbonPool.Utils.HttprequestUtil - 这里是请求header：：：
+13:21:19.397 [TestNG-method=addEntrustTest-1] INFO  org.carbonPool.Utils.HttprequestUtil - 此处是请求参数：：：：{"dataIdList":[89],"entrustCustomerId":21,"limitTime":"1y","projectType":"风电","type":1}
+13:21:19.773 [TestNG-method=addEntrustTest-1] INFO  org.carbonPool.Utils.JsonUtil - 转换结果:{"data":true,"error":"Access.success.general","message":"操作成功","status":200,"timestamp":"1677129681881"}
+13:21:19.773 [TestNG-method=addEntrustTest-1] INFO  o.c.carbonPool.addEntrustTest - {"data":true,"error":"Access.success.general","message":"操作成功","status":200,"timestamp":"1677129681881"}
+13:21:19.796 [main] INFO  o.c.carbonPool.addEntrustTest - 请求放置的项目id：60
+13:21:20.001 [SpringContextShutdownHook] INFO  o.s.s.c.ThreadPoolTaskExecutor - Shutting down ExecutorService 'applicationTaskExecutor'
+13:21:20.008 [SpringContextShutdownHook] INFO  c.alibaba.druid.pool.DruidDataSource - {dataSource-1} closed

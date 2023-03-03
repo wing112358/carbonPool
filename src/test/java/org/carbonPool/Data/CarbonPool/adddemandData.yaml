@@ -1,0 +1,15 @@
+normal:
+  expectedresult: 操作成功
+  params:
+      assetsType: "green"
+      closeTime: "2024-03-31T06:34:16.361Z"
+      energyType: "wind"
+      quantity: "8"
+      time:
+        - "2022-04-02T06:33:52.524Z"
+        - "2022-09-02T06:33:52.524Z"
+      timeEnd: "2022-09-02T06:33:52.524Z"
+      timeStart: "2022-04-02T06:33:52.524Z"
+
+
+

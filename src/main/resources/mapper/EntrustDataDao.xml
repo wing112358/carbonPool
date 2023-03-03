@@ -1,0 +1,141 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="org.carbonPool.dao.EntrustDataDao">
+
+    <resultMap type="org.carbonPool.entity.EntrustData" id="EntrustDataMap">
+        <result property="id" column="id" jdbcType="INTEGER"/>
+        <result property="entrustId" column="entrust_id" jdbcType="INTEGER"/>
+        <result property="dataId" column="data_id" jdbcType="INTEGER"/>
+        <result property="isDelete" column="is_delete" jdbcType="INTEGER"/>
+        <result property="updatedAt" column="updated_at" jdbcType="TIMESTAMP"/>
+        <result property="createdAt" column="created_at" jdbcType="TIMESTAMP"/>
+    </resultMap>
+
+    <!--查询单个-->
+    <select id="queryById" resultMap="EntrustDataMap">
+        select
+          id, entrust_id, data_id, is_delete, updated_at, created_at
+        from entrust_data
+        where id = #{id}
+    </select>
+
+    <!--查询单个-->
+    <select id="queryByDataId" resultMap="EntrustDataMap">
+        select
+            id, entrust_id, data_id, is_delete, updated_at, created_at
+        from entrust_data
+        where  data_id= #{dataId}
+    </select>
+
+    <!--查询指定行数据-->
+    <select id="queryAllByLimit" resultMap="EntrustDataMap">
+        select
+          id, entrust_id, data_id, is_delete, updated_at, created_at
+        from entrust_data
+        <where>
+            <if test="id != null">
+                and id = #{id}
+            </if>
+            <if test="entrustId != null">
+                and entrust_id = #{entrustId}
+            </if>
+            <if test="dataId != null">
+                and data_id = #{dataId}
+            </if>
+            <if test="isDelete != null">
+                and is_delete = #{isDelete}
+            </if>
+            <if test="updatedAt != null">
+                and updated_at = #{updatedAt}
+            </if>
+            <if test="createdAt != null">
+                and created_at = #{createdAt}
+            </if>
+        </where>
+        limit #{pageable.offset}, #{pageable.pageSize}
+    </select>
+
+    <!--统计总行数-->
+    <select id="count" resultType="java.lang.Long">
+        select count(1)
+        from entrust_data
+        <where>
+            <if test="id != null">
+                and id = #{id}
+            </if>
+            <if test="entrustId != null">
+                and entrust_id = #{entrustId}
+            </if>
+            <if test="dataId != null">
+                and data_id = #{dataId}
+            </if>
+            <if test="isDelete != null">
+                and is_delete = #{isDelete}
+            </if>
+            <if test="updatedAt != null">
+                and updated_at = #{updatedAt}
+            </if>
+            <if test="createdAt != null">
+                and created_at = #{createdAt}
+            </if>
+        </where>
+    </select>
+
+    <!--新增所有列-->
+    <insert id="insert" keyProperty="id" useGeneratedKeys="true">
+        insert into entrust_data(entrust_id, data_id, is_delete, updated_at, created_at)
+        values (#{entrustId}, #{dataId}, #{isDelete}, #{updatedAt}, #{createdAt})
+    </insert>
+
+    <insert id="insertBatch" keyProperty="id" useGeneratedKeys="true">
+        insert into entrust_data(entrust_id, data_id, is_delete, updated_at, created_at)
+        values
+        <foreach collection="entities" item="entity" separator=",">
+        (#{entity.entrustId}, #{entity.dataId}, #{entity.isDelete}, #{entity.updatedAt}, #{entity.createdAt})
+        </foreach>
+    </insert>
+
+    <insert id="insertOrUpdateBatch" keyProperty="id" useGeneratedKeys="true">
+        insert into entrust_data(entrust_id, data_id, is_delete, updated_at, created_at)
+        values
+        <foreach collection="entities" item="entity" separator=",">
+            (#{entity.entrustId}, #{entity.dataId}, #{entity.isDelete}, #{entity.updatedAt}, #{entity.createdAt})
+        </foreach>
+        on duplicate key update
+        entrust_id = values(entrust_id),
+        data_id = values(data_id),
+        is_delete = values(is_delete),
+        updated_at = values(updated_at),
+        created_at = values(created_at)
+    </insert>
+
+    <!--通过主键修改数据-->
+    <update id="update">
+        update entrust_data
+        <set>
+            <if test="entrustId != null">
+                entrust_id = #{entrustId},
+            </if>
+            <if test="dataId != null">
+                data_id = #{dataId},
+            </if>
+            <if test="isDelete != null">
+                is_delete = #{isDelete},
+            </if>
+            <if test="updatedAt != null">
+                updated_at = #{updatedAt},
+            </if>
+            <if test="createdAt != null">
+                created_at = #{createdAt},
+            </if>
+        </set>
+        where id = #{id}
+    </update>
+
+    <!--通过主键删除-->
+    <delete id="deleteById">
+        delete from entrust_data where id = #{id}
+    </delete>
+
+</mapper>
+

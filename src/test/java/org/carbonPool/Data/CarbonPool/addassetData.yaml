@@ -1,0 +1,15 @@
+normal:
+  expectedresult: 操作成功
+  params:
+      equity:
+        - "2022-05-01T09:26:39.013Z"
+        - "2022-07-01T09:26:39.013Z"
+      equityQuantityTypeList:
+        - "parallel"
+      timeEnd: "2022-07-01T09:26:39.013Z"
+      timeStart: "2022-05-01T09:26:39.013Z"
+      totalQuantity: "15"
+      type: "green"
+
+
+

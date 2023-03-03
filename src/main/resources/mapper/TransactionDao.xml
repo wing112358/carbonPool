@@ -1,0 +1,262 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="org.carbonPool.dao.TransactionDao">
+
+    <resultMap type="org.carbonPool.entity.Transaction" id="TransactionMap">
+        <result property="id" column="id" jdbcType="INTEGER"/>
+        <result property="serialnumber" column="serialnumber" jdbcType="VARCHAR"/>
+        <result property="demandId" column="demand_id" jdbcType="INTEGER"/>
+        <result property="demandSerialnumber" column="demand_serialnumber" jdbcType="VARCHAR"/>
+        <result property="closeTime" column="close_time" jdbcType="TIMESTAMP"/>
+        <result property="transactionTime" column="transaction_time" jdbcType="TIMESTAMP"/>
+        <result property="quantity" column="quantity" jdbcType="NUMERIC"/>
+        <result property="unitPrice" column="unit_price" jdbcType="NUMERIC"/>
+        <result property="price" column="price" jdbcType="NUMERIC"/>
+        <result property="status" column="status" jdbcType="INTEGER"/>
+        <result property="unit" column="unit" jdbcType="VARCHAR"/>
+        <result property="customerId" column="customer_id" jdbcType="INTEGER"/>
+        <result property="creatorUserId" column="creator_user_id" jdbcType="INTEGER"/>
+        <result property="creatorUserName" column="creator_user_name" jdbcType="VARCHAR"/>
+        <result property="isDelete" column="is_delete" jdbcType="INTEGER"/>
+        <result property="updatedAt" column="updated_at" jdbcType="TIMESTAMP"/>
+        <result property="createdAt" column="created_at" jdbcType="TIMESTAMP"/>
+    </resultMap>
+
+    <!--查询单个-->
+    <select id="queryById" resultMap="TransactionMap">
+        select
+          id, serialnumber, demand_id, demand_serialnumber, close_time, transaction_time, quantity, unit_price, price, status, unit, customer_id, creator_user_id, creator_user_name, is_delete, updated_at, created_at
+        from transaction
+        where id = #{id}
+    </select>
+
+    <!--查询单个-->
+    <select id="queryByDemandId" resultMap="TransactionMap">
+        select
+            id, serialnumber, demand_id, demand_serialnumber, close_time, transaction_time, quantity, unit_price, price, status, unit, customer_id, creator_user_id, creator_user_name, is_delete, updated_at, created_at
+        from transaction
+        where demand_id = #{demandId} and is_delete=0 and status=0
+    </select>
+
+    <!--查询指定行数据-->
+    <select id="queryAllByLimit" resultMap="TransactionMap">
+        select
+          id, serialnumber, demand_id, demand_serialnumber, close_time, transaction_time, quantity, unit_price, price, status, unit, customer_id, creator_user_id, creator_user_name, is_delete, updated_at, created_at
+        from transaction
+        <where>
+            <if test="id != null">
+                and id = #{id}
+            </if>
+            <if test="serialnumber != null and serialnumber != ''">
+                and serialnumber = #{serialnumber}
+            </if>
+            <if test="demandId != null">
+                and demand_id = #{demandId}
+            </if>
+            <if test="demandSerialnumber != null and demandSerialnumber != ''">
+                and demand_serialnumber = #{demandSerialnumber}
+            </if>
+            <if test="closeTime != null">
+                and close_time = #{closeTime}
+            </if>
+            <if test="transactionTime != null">
+                and transaction_time = #{transactionTime}
+            </if>
+            <if test="quantity != null">
+                and quantity = #{quantity}
+            </if>
+            <if test="unitPrice != null">
+                and unit_price = #{unitPrice}
+            </if>
+            <if test="price != null">
+                and price = #{price}
+            </if>
+            <if test="status != null">
+                and status = #{status}
+            </if>
+            <if test="unit != null and unit != ''">
+                and unit = #{unit}
+            </if>
+            <if test="customerId != null">
+                and customer_id = #{customerId}
+            </if>
+            <if test="creatorUserId != null">
+                and creator_user_id = #{creatorUserId}
+            </if>
+            <if test="creatorUserName != null and creatorUserName != ''">
+                and creator_user_name = #{creatorUserName}
+            </if>
+            <if test="isDelete != null">
+                and is_delete = #{isDelete}
+            </if>
+            <if test="updatedAt != null">
+                and updated_at = #{updatedAt}
+            </if>
+            <if test="createdAt != null">
+                and created_at = #{createdAt}
+            </if>
+        </where>
+        limit #{pageable.offset}, #{pageable.pageSize}
+    </select>
+
+    <!--统计总行数-->
+    <select id="count" resultType="java.lang.Long">
+        select count(1)
+        from transaction
+        <where>
+            <if test="id != null">
+                and id = #{id}
+            </if>
+            <if test="serialnumber != null and serialnumber != ''">
+                and serialnumber = #{serialnumber}
+            </if>
+            <if test="demandId != null">
+                and demand_id = #{demandId}
+            </if>
+            <if test="demandSerialnumber != null and demandSerialnumber != ''">
+                and demand_serialnumber = #{demandSerialnumber}
+            </if>
+            <if test="closeTime != null">
+                and close_time = #{closeTime}
+            </if>
+            <if test="transactionTime != null">
+                and transaction_time = #{transactionTime}
+            </if>
+            <if test="quantity != null">
+                and quantity = #{quantity}
+            </if>
+            <if test="unitPrice != null">
+                and unit_price = #{unitPrice}
+            </if>
+            <if test="price != null">
+                and price = #{price}
+            </if>
+            <if test="status != null">
+                and status = #{status}
+            </if>
+            <if test="unit != null and unit != ''">
+                and unit = #{unit}
+            </if>
+            <if test="customerId != null">
+                and customer_id = #{customerId}
+            </if>
+            <if test="creatorUserId != null">
+                and creator_user_id = #{creatorUserId}
+            </if>
+            <if test="creatorUserName != null and creatorUserName != ''">
+                and creator_user_name = #{creatorUserName}
+            </if>
+            <if test="isDelete != null">
+                and is_delete = #{isDelete}
+            </if>
+            <if test="updatedAt != null">
+                and updated_at = #{updatedAt}
+            </if>
+            <if test="createdAt != null">
+                and created_at = #{createdAt}
+            </if>
+        </where>
+    </select>
+
+    <!--新增所有列-->
+    <insert id="insert" keyProperty="id" useGeneratedKeys="true">
+        insert into transaction(serialnumber, demand_id, demand_serialnumber, close_time, transaction_time, quantity, unit_price, price, status, unit, customer_id, creator_user_id, creator_user_name, is_delete, updated_at, created_at)
+        values (#{serialnumber}, #{demandId}, #{demandSerialnumber}, #{closeTime}, #{transactionTime}, #{quantity}, #{unitPrice}, #{price}, #{status}, #{unit}, #{customerId}, #{creatorUserId}, #{creatorUserName}, #{isDelete}, #{updatedAt}, #{createdAt})
+    </insert>
+
+    <insert id="insertBatch" keyProperty="id" useGeneratedKeys="true">
+        insert into transaction(serialnumber, demand_id, demand_serialnumber, close_time, transaction_time, quantity, unit_price, price, status, unit, customer_id, creator_user_id, creator_user_name, is_delete, updated_at, created_at)
+        values
+        <foreach collection="entities" item="entity" separator=",">
+        (#{entity.serialnumber}, #{entity.demandId}, #{entity.demandSerialnumber}, #{entity.closeTime}, #{entity.transactionTime}, #{entity.quantity}, #{entity.unitPrice}, #{entity.price}, #{entity.status}, #{entity.unit}, #{entity.customerId}, #{entity.creatorUserId}, #{entity.creatorUserName}, #{entity.isDelete}, #{entity.updatedAt}, #{entity.createdAt})
+        </foreach>
+    </insert>
+
+    <insert id="insertOrUpdateBatch" keyProperty="id" useGeneratedKeys="true">
+        insert into transaction(serialnumber, demand_id, demand_serialnumber, close_time, transaction_time, quantity, unit_price, price, status, unit, customer_id, creator_user_id, creator_user_name, is_delete, updated_at, created_at)
+        values
+        <foreach collection="entities" item="entity" separator=",">
+            (#{entity.serialnumber}, #{entity.demandId}, #{entity.demandSerialnumber}, #{entity.closeTime}, #{entity.transactionTime}, #{entity.quantity}, #{entity.unitPrice}, #{entity.price}, #{entity.status}, #{entity.unit}, #{entity.customerId}, #{entity.creatorUserId}, #{entity.creatorUserName}, #{entity.isDelete}, #{entity.updatedAt}, #{entity.createdAt})
+        </foreach>
+        on duplicate key update
+        serialnumber = values(serialnumber),
+        demand_id = values(demand_id),
+        demand_serialnumber = values(demand_serialnumber),
+        close_time = values(close_time),
+        transaction_time = values(transaction_time),
+        quantity = values(quantity),
+        unit_price = values(unit_price),
+        price = values(price),
+        status = values(status),
+        unit = values(unit),
+        customer_id = values(customer_id),
+        creator_user_id = values(creator_user_id),
+        creator_user_name = values(creator_user_name),
+        is_delete = values(is_delete),
+        updated_at = values(updated_at),
+        created_at = values(created_at)
+    </insert>
+
+    <!--通过主键修改数据-->
+    <update id="update">
+        update transaction
+        <set>
+            <if test="serialnumber != null and serialnumber != ''">
+                serialnumber = #{serialnumber},
+            </if>
+            <if test="demandId != null">
+                demand_id = #{demandId},
+            </if>
+            <if test="demandSerialnumber != null and demandSerialnumber != ''">
+                demand_serialnumber = #{demandSerialnumber},
+            </if>
+            <if test="closeTime != null">
+                close_time = #{closeTime},
+            </if>
+            <if test="transactionTime != null">
+                transaction_time = #{transactionTime},
+            </if>
+            <if test="quantity != null">
+                quantity = #{quantity},
+            </if>
+            <if test="unitPrice != null">
+                unit_price = #{unitPrice},
+            </if>
+            <if test="price != null">
+                price = #{price},
+            </if>
+            <if test="status != null">
+                status = #{status},
+            </if>
+            <if test="unit != null and unit != ''">
+                unit = #{unit},
+            </if>
+            <if test="customerId != null">
+                customer_id = #{customerId},
+            </if>
+            <if test="creatorUserId != null">
+                creator_user_id = #{creatorUserId},
+            </if>
+            <if test="creatorUserName != null and creatorUserName != ''">
+                creator_user_name = #{creatorUserName},
+            </if>
+            <if test="isDelete != null">
+                is_delete = #{isDelete},
+            </if>
+            <if test="updatedAt != null">
+                updated_at = #{updatedAt},
+            </if>
+            <if test="createdAt != null">
+                created_at = #{createdAt},
+            </if>
+        </set>
+        where id = #{id}
+    </update>
+
+    <!--通过主键删除-->
+    <delete id="deleteById">
+        delete from transaction where id = #{id}
+    </delete>
+
+</mapper>
+

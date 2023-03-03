@@ -1,0 +1,360 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="org.carbonPool.dao.AssetsDao">
+
+    <resultMap type="org.carbonPool.entity.Assets" id="AssetsMap">
+        <result property="id" column="id" jdbcType="INTEGER"/>
+        <result property="serialnumber" column="serialnumber" jdbcType="VARCHAR"/>
+        <result property="projectId" column="project_id" jdbcType="INTEGER"/>
+        <result property="projectName" column="project_name" jdbcType="VARCHAR"/>
+        <result property="timeStart" column="time_start" jdbcType="TIMESTAMP"/>
+        <result property="timeEnd" column="time_end" jdbcType="TIMESTAMP"/>
+        <result property="type" column="type" jdbcType="VARCHAR"/>
+        <result property="energyType" column="energy_type" jdbcType="VARCHAR"/>
+        <result property="status" column="status" jdbcType="INTEGER"/>
+        <result property="entrustStatus" column="entrust_status" jdbcType="INTEGER"/>
+        <result property="totalQuantity" column="total_quantity" jdbcType="NUMERIC"/>
+        <result property="availableQuantity" column="available_quantity" jdbcType="NUMERIC"/>
+        <result property="frozenQuantity" column="frozen_quantity" jdbcType="NUMERIC"/>
+        <result property="expiredQuantity" column="expired_quantity" jdbcType="NUMERIC"/>
+        <result property="transactionQuantity" column="transaction_quantity" jdbcType="NUMERIC"/>
+        <result property="transactionIncome" column="transaction_income" jdbcType="NUMERIC"/>
+        <result property="equityQuantityType" column="equity_quantity_type" jdbcType="VARCHAR"/>
+        <result property="unit" column="unit" jdbcType="VARCHAR"/>
+        <result property="closeTime" column="close_time" jdbcType="TIMESTAMP"/>
+        <result property="customerId" column="customer_id" jdbcType="INTEGER"/>
+        <result property="entrustCustomerId" column="entrust_customer_id" jdbcType="INTEGER"/>
+        <result property="creatorUserId" column="creator_user_id" jdbcType="INTEGER"/>
+        <result property="creatorUserName" column="creator_user_name" jdbcType="VARCHAR"/>
+        <result property="isDelete" column="is_delete" jdbcType="INTEGER"/>
+        <result property="updatedAt" column="updated_at" jdbcType="TIMESTAMP"/>
+        <result property="createdAt" column="created_at" jdbcType="TIMESTAMP"/>
+    </resultMap>
+
+    <!--查询单个-->
+    <select id="queryById" resultMap="AssetsMap">
+        select
+          id, serialnumber, project_id, project_name, time_start, time_end, type, energy_type, status, entrust_status, total_quantity, available_quantity, frozen_quantity, expired_quantity, transaction_quantity, transaction_income, equity_quantity_type, unit, close_time, customer_id, entrust_customer_id, creator_user_id, creator_user_name, is_delete, updated_at, created_at
+        from assets
+        where id = #{id}
+    </select>
+
+    <select id="queryByProjectId" resultMap="AssetsMap">
+        select
+            id, serialnumber, project_id, project_name, time_start, time_end, type, energy_type, status, entrust_status, total_quantity, available_quantity, frozen_quantity, expired_quantity, transaction_quantity, transaction_income, equity_quantity_type, unit, close_time, customer_id, entrust_customer_id, creator_user_id, creator_user_name, is_delete, updated_at, created_at
+        from assets
+        where project_id=#{projectId} and time_start =#{startTime} and time_end=#{endTime}
+    </select>
+
+    <!--查询指定行数据-->
+    <select id="queryAllByLimit" resultMap="AssetsMap">
+        select
+          id, serialnumber, project_id, project_name, time_start, time_end, type, energy_type, status, entrust_status, total_quantity, available_quantity, frozen_quantity, expired_quantity, transaction_quantity, transaction_income, equity_quantity_type, unit, close_time, customer_id, entrust_customer_id, creator_user_id, creator_user_name, is_delete, updated_at, created_at
+        from assets
+        <where>
+            <if test="id != null">
+                and id = #{id}
+            </if>
+            <if test="serialnumber != null and serialnumber != ''">
+                and serialnumber = #{serialnumber}
+            </if>
+            <if test="projectId != null">
+                and project_id = #{projectId}
+            </if>
+            <if test="projectName != null and projectName != ''">
+                and project_name = #{projectName}
+            </if>
+            <if test="timeStart != null">
+                and time_start = #{timeStart}
+            </if>
+            <if test="timeEnd != null">
+                and time_end = #{timeEnd}
+            </if>
+            <if test="type != null and type != ''">
+                and type = #{type}
+            </if>
+            <if test="energyType != null and energyType != ''">
+                and energy_type = #{energyType}
+            </if>
+            <if test="status != null">
+                and status = #{status}
+            </if>
+            <if test="entrustStatus != null">
+                and entrust_status = #{entrustStatus}
+            </if>
+            <if test="totalQuantity != null">
+                and total_quantity = #{totalQuantity}
+            </if>
+            <if test="availableQuantity != null">
+                and available_quantity = #{availableQuantity}
+            </if>
+            <if test="frozenQuantity != null">
+                and frozen_quantity = #{frozenQuantity}
+            </if>
+            <if test="expiredQuantity != null">
+                and expired_quantity = #{expiredQuantity}
+            </if>
+            <if test="transactionQuantity != null">
+                and transaction_quantity = #{transactionQuantity}
+            </if>
+            <if test="transactionIncome != null">
+                and transaction_income = #{transactionIncome}
+            </if>
+            <if test="equityQuantityType != null and equityQuantityType != ''">
+                and equity_quantity_type = #{equityQuantityType}
+            </if>
+            <if test="unit != null and unit != ''">
+                and unit = #{unit}
+            </if>
+            <if test="closeTime != null">
+                and close_time = #{closeTime}
+            </if>
+            <if test="customerId != null">
+                and customer_id = #{customerId}
+            </if>
+            <if test="entrustCustomerId != null">
+                and entrust_customer_id = #{entrustCustomerId}
+            </if>
+            <if test="creatorUserId != null">
+                and creator_user_id = #{creatorUserId}
+            </if>
+            <if test="creatorUserName != null and creatorUserName != ''">
+                and creator_user_name = #{creatorUserName}
+            </if>
+            <if test="isDelete != null">
+                and is_delete = #{isDelete}
+            </if>
+            <if test="updatedAt != null">
+                and updated_at = #{updatedAt}
+            </if>
+            <if test="createdAt != null">
+                and created_at = #{createdAt}
+            </if>
+        </where>
+        limit #{pageable.offset}, #{pageable.pageSize}
+    </select>
+
+    <!--统计总行数-->
+    <select id="count" resultType="java.lang.Long">
+        select count(1)
+        from assets
+        <where>
+            <if test="id != null">
+                and id = #{id}
+            </if>
+            <if test="serialnumber != null and serialnumber != ''">
+                and serialnumber = #{serialnumber}
+            </if>
+            <if test="projectId != null">
+                and project_id = #{projectId}
+            </if>
+            <if test="projectName != null and projectName != ''">
+                and project_name = #{projectName}
+            </if>
+            <if test="timeStart != null">
+                and time_start = #{timeStart}
+            </if>
+            <if test="timeEnd != null">
+                and time_end = #{timeEnd}
+            </if>
+            <if test="type != null and type != ''">
+                and type = #{type}
+            </if>
+            <if test="energyType != null and energyType != ''">
+                and energy_type = #{energyType}
+            </if>
+            <if test="status != null">
+                and status = #{status}
+            </if>
+            <if test="entrustStatus != null">
+                and entrust_status = #{entrustStatus}
+            </if>
+            <if test="totalQuantity != null">
+                and total_quantity = #{totalQuantity}
+            </if>
+            <if test="availableQuantity != null">
+                and available_quantity = #{availableQuantity}
+            </if>
+            <if test="frozenQuantity != null">
+                and frozen_quantity = #{frozenQuantity}
+            </if>
+            <if test="expiredQuantity != null">
+                and expired_quantity = #{expiredQuantity}
+            </if>
+            <if test="transactionQuantity != null">
+                and transaction_quantity = #{transactionQuantity}
+            </if>
+            <if test="transactionIncome != null">
+                and transaction_income = #{transactionIncome}
+            </if>
+            <if test="equityQuantityType != null and equityQuantityType != ''">
+                and equity_quantity_type = #{equityQuantityType}
+            </if>
+            <if test="unit != null and unit != ''">
+                and unit = #{unit}
+            </if>
+            <if test="closeTime != null">
+                and close_time = #{closeTime}
+            </if>
+            <if test="customerId != null">
+                and customer_id = #{customerId}
+            </if>
+            <if test="entrustCustomerId != null">
+                and entrust_customer_id = #{entrustCustomerId}
+            </if>
+            <if test="creatorUserId != null">
+                and creator_user_id = #{creatorUserId}
+            </if>
+            <if test="creatorUserName != null and creatorUserName != ''">
+                and creator_user_name = #{creatorUserName}
+            </if>
+            <if test="isDelete != null">
+                and is_delete = #{isDelete}
+            </if>
+            <if test="updatedAt != null">
+                and updated_at = #{updatedAt}
+            </if>
+            <if test="createdAt != null">
+                and created_at = #{createdAt}
+            </if>
+        </where>
+    </select>
+
+    <!--新增所有列-->
+    <insert id="insert" keyProperty="id" useGeneratedKeys="true">
+        insert into assets(serialnumber, project_id, project_name, time_start, time_end, type, energy_type, status, entrust_status, total_quantity, available_quantity, frozen_quantity, expired_quantity, transaction_quantity, transaction_income, equity_quantity_type, unit, close_time, customer_id, entrust_customer_id, creator_user_id, creator_user_name, is_delete, updated_at, created_at)
+        values (#{serialnumber}, #{projectId}, #{projectName}, #{timeStart}, #{timeEnd}, #{type}, #{energyType}, #{status}, #{entrustStatus}, #{totalQuantity}, #{availableQuantity}, #{frozenQuantity}, #{expiredQuantity}, #{transactionQuantity}, #{transactionIncome}, #{equityQuantityType}, #{unit}, #{closeTime}, #{customerId}, #{entrustCustomerId}, #{creatorUserId}, #{creatorUserName}, #{isDelete}, #{updatedAt}, #{createdAt})
+    </insert>
+
+    <insert id="insertBatch" keyProperty="id" useGeneratedKeys="true">
+        insert into assets(serialnumber, project_id, project_name, time_start, time_end, type, energy_type, status, entrust_status, total_quantity, available_quantity, frozen_quantity, expired_quantity, transaction_quantity, transaction_income, equity_quantity_type, unit, close_time, customer_id, entrust_customer_id, creator_user_id, creator_user_name, is_delete, updated_at, created_at)
+        values
+        <foreach collection="entities" item="entity" separator=",">
+        (#{entity.serialnumber}, #{entity.projectId}, #{entity.projectName}, #{entity.timeStart}, #{entity.timeEnd}, #{entity.type}, #{entity.energyType}, #{entity.status}, #{entity.entrustStatus}, #{entity.totalQuantity}, #{entity.availableQuantity}, #{entity.frozenQuantity}, #{entity.expiredQuantity}, #{entity.transactionQuantity}, #{entity.transactionIncome}, #{entity.equityQuantityType}, #{entity.unit}, #{entity.closeTime}, #{entity.customerId}, #{entity.entrustCustomerId}, #{entity.creatorUserId}, #{entity.creatorUserName}, #{entity.isDelete}, #{entity.updatedAt}, #{entity.createdAt})
+        </foreach>
+    </insert>
+
+    <insert id="insertOrUpdateBatch" keyProperty="id" useGeneratedKeys="true">
+        insert into assets(serialnumber, project_id, project_name, time_start, time_end, type, energy_type, status, entrust_status, total_quantity, available_quantity, frozen_quantity, expired_quantity, transaction_quantity, transaction_income, equity_quantity_type, unit, close_time, customer_id, entrust_customer_id, creator_user_id, creator_user_name, is_delete, updated_at, created_at)
+        values
+        <foreach collection="entities" item="entity" separator=",">
+            (#{entity.serialnumber}, #{entity.projectId}, #{entity.projectName}, #{entity.timeStart}, #{entity.timeEnd}, #{entity.type}, #{entity.energyType}, #{entity.status}, #{entity.entrustStatus}, #{entity.totalQuantity}, #{entity.availableQuantity}, #{entity.frozenQuantity}, #{entity.expiredQuantity}, #{entity.transactionQuantity}, #{entity.transactionIncome}, #{entity.equityQuantityType}, #{entity.unit}, #{entity.closeTime}, #{entity.customerId}, #{entity.entrustCustomerId}, #{entity.creatorUserId}, #{entity.creatorUserName}, #{entity.isDelete}, #{entity.updatedAt}, #{entity.createdAt})
+        </foreach>
+        on duplicate key update
+        serialnumber = values(serialnumber),
+        project_id = values(project_id),
+        project_name = values(project_name),
+        time_start = values(time_start),
+        time_end = values(time_end),
+        type = values(type),
+        energy_type = values(energy_type),
+        status = values(status),
+        entrust_status = values(entrust_status),
+        total_quantity = values(total_quantity),
+        available_quantity = values(available_quantity),
+        frozen_quantity = values(frozen_quantity),
+        expired_quantity = values(expired_quantity),
+        transaction_quantity = values(transaction_quantity),
+        transaction_income = values(transaction_income),
+        equity_quantity_type = values(equity_quantity_type),
+        unit = values(unit),
+        close_time = values(close_time),
+        customer_id = values(customer_id),
+        entrust_customer_id = values(entrust_customer_id),
+        creator_user_id = values(creator_user_id),
+        creator_user_name = values(creator_user_name),
+        is_delete = values(is_delete),
+        updated_at = values(updated_at),
+        created_at = values(created_at)
+    </insert>
+
+    <!--通过主键修改数据-->
+    <update id="update">
+        update assets
+        <set>
+            <if test="serialnumber != null and serialnumber != ''">
+                serialnumber = #{serialnumber},
+            </if>
+            <if test="projectId != null">
+                project_id = #{projectId},
+            </if>
+            <if test="projectName != null and projectName != ''">
+                project_name = #{projectName},
+            </if>
+            <if test="timeStart != null">
+                time_start = #{timeStart},
+            </if>
+            <if test="timeEnd != null">
+                time_end = #{timeEnd},
+            </if>
+            <if test="type != null and type != ''">
+                type = #{type},
+            </if>
+            <if test="energyType != null and energyType != ''">
+                energy_type = #{energyType},
+            </if>
+            <if test="status != null">
+                status = #{status},
+            </if>
+            <if test="entrustStatus != null">
+                entrust_status = #{entrustStatus},
+            </if>
+            <if test="totalQuantity != null">
+                total_quantity = #{totalQuantity},
+            </if>
+            <if test="availableQuantity != null">
+                available_quantity = #{availableQuantity},
+            </if>
+            <if test="frozenQuantity != null">
+                frozen_quantity = #{frozenQuantity},
+            </if>
+            <if test="expiredQuantity != null">
+                expired_quantity = #{expiredQuantity},
+            </if>
+            <if test="transactionQuantity != null">
+                transaction_quantity = #{transactionQuantity},
+            </if>
+            <if test="transactionIncome != null">
+                transaction_income = #{transactionIncome},
+            </if>
+            <if test="equityQuantityType != null and equityQuantityType != ''">
+                equity_quantity_type = #{equityQuantityType},
+            </if>
+            <if test="unit != null and unit != ''">
+                unit = #{unit},
+            </if>
+            <if test="closeTime != null">
+                close_time = #{closeTime},
+            </if>
+            <if test="customerId != null">
+                customer_id = #{customerId},
+            </if>
+            <if test="entrustCustomerId != null">
+                entrust_customer_id = #{entrustCustomerId},
+            </if>
+            <if test="creatorUserId != null">
+                creator_user_id = #{creatorUserId},
+            </if>
+            <if test="creatorUserName != null and creatorUserName != ''">
+                creator_user_name = #{creatorUserName},
+            </if>
+            <if test="isDelete != null">
+                is_delete = #{isDelete},
+            </if>
+            <if test="updatedAt != null">
+                updated_at = #{updatedAt},
+            </if>
+            <if test="createdAt != null">
+                created_at = #{createdAt},
+            </if>
+        </set>
+        where id = #{id}
+    </update>
+
+    <!--通过主键删除-->
+    <delete id="deleteById">
+        delete from assets where id = #{id}
+    </delete>
+
+</mapper>
+

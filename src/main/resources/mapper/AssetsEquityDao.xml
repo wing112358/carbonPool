@@ -1,0 +1,133 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="org.carbonPool.dao.AssetsEquityDao">
+
+    <resultMap type="org.carbonPool.entity.AssetsEquity" id="AssetsEquityMap">
+        <result property="id" column="id" jdbcType="INTEGER"/>
+        <result property="assetsId" column="assets_id" jdbcType="INTEGER"/>
+        <result property="equityId" column="equity_id" jdbcType="INTEGER"/>
+        <result property="isDelete" column="is_delete" jdbcType="INTEGER"/>
+        <result property="updatedAt" column="updated_at" jdbcType="TIMESTAMP"/>
+        <result property="createdAt" column="created_at" jdbcType="TIMESTAMP"/>
+    </resultMap>
+
+    <!--查询单个-->
+    <select id="queryById" resultMap="AssetsEquityMap">
+        select
+          id, assets_id, equity_id, is_delete, updated_at, created_at
+        from assets_equity
+        where id = #{id}
+    </select>
+
+    <!--查询指定行数据-->
+    <select id="queryAllByLimit" resultMap="AssetsEquityMap">
+        select
+          id, assets_id, equity_id, is_delete, updated_at, created_at
+        from assets_equity
+        <where>
+            <if test="id != null">
+                and id = #{id}
+            </if>
+            <if test="assetsId != null">
+                and assets_id = #{assetsId}
+            </if>
+            <if test="equityId != null">
+                and equity_id = #{equityId}
+            </if>
+            <if test="isDelete != null">
+                and is_delete = #{isDelete}
+            </if>
+            <if test="updatedAt != null">
+                and updated_at = #{updatedAt}
+            </if>
+            <if test="createdAt != null">
+                and created_at = #{createdAt}
+            </if>
+        </where>
+        limit #{pageable.offset}, #{pageable.pageSize}
+    </select>
+
+    <!--统计总行数-->
+    <select id="count" resultType="java.lang.Long">
+        select count(1)
+        from assets_equity
+        <where>
+            <if test="id != null">
+                and id = #{id}
+            </if>
+            <if test="assetsId != null">
+                and assets_id = #{assetsId}
+            </if>
+            <if test="equityId != null">
+                and equity_id = #{equityId}
+            </if>
+            <if test="isDelete != null">
+                and is_delete = #{isDelete}
+            </if>
+            <if test="updatedAt != null">
+                and updated_at = #{updatedAt}
+            </if>
+            <if test="createdAt != null">
+                and created_at = #{createdAt}
+            </if>
+        </where>
+    </select>
+
+    <!--新增所有列-->
+    <insert id="insert" keyProperty="id" useGeneratedKeys="true">
+        insert into assets_equity(assets_id, equity_id, is_delete, updated_at, created_at)
+        values (#{assetsId}, #{equityId}, #{isDelete}, #{updatedAt}, #{createdAt})
+    </insert>
+
+    <insert id="insertBatch" keyProperty="id" useGeneratedKeys="true">
+        insert into assets_equity(assets_id, equity_id, is_delete, updated_at, created_at)
+        values
+        <foreach collection="entities" item="entity" separator=",">
+        (#{entity.assetsId}, #{entity.equityId}, #{entity.isDelete}, #{entity.updatedAt}, #{entity.createdAt})
+        </foreach>
+    </insert>
+
+    <insert id="insertOrUpdateBatch" keyProperty="id" useGeneratedKeys="true">
+        insert into assets_equity(assets_id, equity_id, is_delete, updated_at, created_at)
+        values
+        <foreach collection="entities" item="entity" separator=",">
+            (#{entity.assetsId}, #{entity.equityId}, #{entity.isDelete}, #{entity.updatedAt}, #{entity.createdAt})
+        </foreach>
+        on duplicate key update
+        assets_id = values(assets_id),
+        equity_id = values(equity_id),
+        is_delete = values(is_delete),
+        updated_at = values(updated_at),
+        created_at = values(created_at)
+    </insert>
+
+    <!--通过主键修改数据-->
+    <update id="update">
+        update assets_equity
+        <set>
+            <if test="assetsId != null">
+                assets_id = #{assetsId},
+            </if>
+            <if test="equityId != null">
+                equity_id = #{equityId},
+            </if>
+            <if test="isDelete != null">
+                is_delete = #{isDelete},
+            </if>
+            <if test="updatedAt != null">
+                updated_at = #{updatedAt},
+            </if>
+            <if test="createdAt != null">
+                created_at = #{createdAt},
+            </if>
+        </set>
+        where id = #{id}
+    </update>
+
+    <!--通过主键删除-->
+    <delete id="deleteById">
+        delete from assets_equity where id = #{id}
+    </delete>
+
+</mapper>
+

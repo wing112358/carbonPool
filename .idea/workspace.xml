@@ -1,0 +1,348 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="AutoImportSettings">
+    <option name="autoReloadType" value="SELECTIVE" />
+  </component>
+  <component name="ChangeListManager">
+    <list default="true" id="a1f9d140-8187-41e6-8f2c-8ba58b134f08" name="Changes" comment="碳资源池主流程初始版本">
+      <change afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/dataSources.local.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/dataSources.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/dataSources/4093d6bd-3cf6-4cf6-b54c-7435e7052ec0.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/dataSources/4093d6bd-3cf6-4cf6-b54c-7435e7052ec0/storage_v2/_src_/schema/information_schema.FNRwLQ.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/dataSources/4093d6bd-3cf6-4cf6-b54c-7435e7052ec0/storage_v2/_src_/schema/mysql.osA4Bg.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/dataSources/4093d6bd-3cf6-4cf6-b54c-7435e7052ec0/storage_v2/_src_/schema/performance_schema.kIw0nw.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/dataSources/4093d6bd-3cf6-4cf6-b54c-7435e7052ec0/storage_v2/_src_/schema/sys.zb4BAA.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/easyCodeTableSetting.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/encodings.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/uiDesigner.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out-logs/carbon-log2023-02-21-0-log" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out-logs/carbon-log2023-02-22-0-log" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out-logs/carbon-log2023-02-23-0-log" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out-logs/carbon-log2023-02-24-0-log" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out-logs/carbon-log2023-02-27-0-log" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out-logs/carbon-log2023-03-01-0-log" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out-logs/carbon-log2023-03-02-0-log" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out-logs/carbon-log2023-03-03-0-log" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/org/carbonPool/Bean/CarbonPool/AddAssetBean.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/org/carbonPool/Bean/CarbonPool/AddDemandBean.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/org/carbonPool/Bean/CarbonPool/AddEntrustBean.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/org/carbonPool/Bean/CarbonPool/AddProjectBean.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/org/carbonPool/Bean/CarbonPool/AnalysisDemandBean.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/org/carbonPool/Bean/CarbonPool/ConfigEquityBean.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/org/carbonPool/Bean/CarbonPool/ConfirmDemandBean.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/org/carbonPool/Bean/CarbonPool/ExamineEntrustBean.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/org/carbonPool/Bean/CarbonPool/UpdateEquityBean.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/org/carbonPool/Bean/CarbonPool/UpdatePriceBean.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/org/carbonPool/Bean/User/LoginBean.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/org/carbonPool/Bean/User/RegiesterBean.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/org/carbonPool/Bean/User/UpdateCustomerBean.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/org/carbonPool/Bean/common/Environment.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/org/carbonPool/Bean/common/Request.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/org/carbonPool/Bean/common/Response.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/org/carbonPool/CarbonPoolApplication.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/org/carbonPool/DSconfig/CarbonDataSourceConfig.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/org/carbonPool/Utils/AESUtil.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/org/carbonPool/Utils/Base64Util.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/org/carbonPool/Utils/EnvironmentUtil.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/org/carbonPool/Utils/HttprequestUtil.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/org/carbonPool/Utils/JsonUtil.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/org/carbonPool/Utils/MybatisUtil.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/org/carbonPool/Utils/RSAUtil.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/org/carbonPool/Utils/RandomUtil.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/org/carbonPool/Utils/SignUtil.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/org/carbonPool/Utils/TestngListener.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/org/carbonPool/Utils/YamlDataHelper.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/org/carbonPool/controller/AssetsController.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/org/carbonPool/controller/AssetsEquityController.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/org/carbonPool/controller/DemandController.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/org/carbonPool/controller/EntrustController.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/org/carbonPool/controller/EntrustDataController.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/org/carbonPool/controller/EquityController.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/org/carbonPool/controller/ProjectController.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/org/carbonPool/controller/TransactionAssetsController.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/org/carbonPool/controller/TransactionController.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/org/carbonPool/controller/TransactionPriceController.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/org/carbonPool/dao/AssetsDao.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/org/carbonPool/dao/AssetsEquityDao.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/org/carbonPool/dao/DemandDao.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/org/carbonPool/dao/EntrustDao.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/org/carbonPool/dao/EntrustDataDao.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/org/carbonPool/dao/EquityDao.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/org/carbonPool/dao/ProjectDao.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/org/carbonPool/dao/TransactionAssetsDao.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/org/carbonPool/dao/TransactionDao.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/org/carbonPool/dao/TransactionPriceDao.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/org/carbonPool/entity/Assets.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/org/carbonPool/entity/AssetsEquity.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/org/carbonPool/entity/Demand.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/org/carbonPool/entity/Entrust.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/org/carbonPool/entity/EntrustData.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/org/carbonPool/entity/Equity.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/org/carbonPool/entity/Project.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/org/carbonPool/entity/Transaction.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/org/carbonPool/entity/TransactionAssets.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/org/carbonPool/entity/TransactionPrice.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/org/carbonPool/service/AssetsEquityService.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/org/carbonPool/service/AssetsService.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/org/carbonPool/service/BaseService.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/org/carbonPool/service/DemandService.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/org/carbonPool/service/EntrustDataService.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/org/carbonPool/service/EntrustService.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/org/carbonPool/service/EquityService.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/org/carbonPool/service/ProjectService.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/org/carbonPool/service/TransactionAssetsService.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/org/carbonPool/service/TransactionPriceService.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/org/carbonPool/service/TransactionService.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/org/carbonPool/service/carbonPool/assetWorkService.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/org/carbonPool/service/carbonPool/entrustWorkService.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/org/carbonPool/service/carbonPool/equityWorkService.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/org/carbonPool/service/carbonPool/projectWorkService.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/org/carbonPool/service/carbonPool/transactionWorkService.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/org/carbonPool/service/impl/AssetsEquityServiceImpl.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/org/carbonPool/service/impl/AssetsServiceImpl.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/org/carbonPool/service/impl/DemandServiceImpl.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/org/carbonPool/service/impl/EntrustDataServiceImpl.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/org/carbonPool/service/impl/EntrustServiceImpl.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/org/carbonPool/service/impl/EquityServiceImpl.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/org/carbonPool/service/impl/ProjectServiceImpl.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/org/carbonPool/service/impl/TransactionAssetsServiceImpl.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/org/carbonPool/service/impl/TransactionPriceServiceImpl.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/org/carbonPool/service/impl/TransactionServiceImpl.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/org/carbonPool/service/user/loginService.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/application.properties" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/log-config.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/mapper/AssetsDao.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/mapper/AssetsEquityDao.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/mapper/DemandDao.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/mapper/EntrustDao.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/mapper/EntrustDataDao.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/mapper/EquityDao.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/mapper/ProjectDao.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/mapper/TransactionAssetsDao.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/mapper/TransactionDao.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/mapper/TransactionPriceDao.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/test/java/org/carbonPool/BaseLoginTest.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/test/java/org/carbonPool/BaseTest.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/test/java/org/carbonPool/Data/CarbonPool/addassetData.yaml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/test/java/org/carbonPool/Data/CarbonPool/adddemandData.yaml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/test/java/org/carbonPool/Data/CarbonPool/addentrustData.yaml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/test/java/org/carbonPool/Data/CarbonPool/addprojectData.yaml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/test/java/org/carbonPool/Data/CarbonPool/analysisdemandData.yaml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/test/java/org/carbonPool/Data/CarbonPool/configequityData.yaml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/test/java/org/carbonPool/Data/CarbonPool/confirmdemandData.yaml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/test/java/org/carbonPool/Data/CarbonPool/examineentrustData.yaml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/test/java/org/carbonPool/Data/CarbonPool/updatePriceData.yaml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/test/java/org/carbonPool/Data/CarbonPool/updateequityData.yaml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/test/java/org/carbonPool/Data/User/loginData.yaml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/test/java/org/carbonPool/User/loginTest.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/test/java/org/carbonPool/carbonPool/addAssetTest.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/test/java/org/carbonPool/carbonPool/addDemandTest.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/test/java/org/carbonPool/carbonPool/addEntrustTest.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/test/java/org/carbonPool/carbonPool/addProjectTest.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/test/java/org/carbonPool/carbonPool/analysisDemandTest.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/test/java/org/carbonPool/carbonPool/configEquityTest.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/test/java/org/carbonPool/carbonPool/confirmDemandTest.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/test/java/org/carbonPool/carbonPool/examineEntrustTest.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/test/java/org/carbonPool/carbonPool/updateEquityTest.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/test/java/org/carbonPool/carbonPool/updatePriceTest.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/test-output/index-report.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/test-xml/mainTest.xml" afterDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="Class" />
+      </list>
+    </option>
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="MarkdownSettingsMigration">
+    <option name="stateVersion" value="1" />
+  </component>
+  <component name="ProjectId" id="2LzsD9gRu9RUYygAKXMGoSCormF" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true">
+    <ConfirmationsSetting value="2" id="Add" />
+  </component>
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;ASKED_ADD_EXTERNAL_FILES&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;SHARE_PROJECT_CONFIGURATION_FILES&quot;: &quot;true&quot;,
+    &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
+    &quot;last_opened_file_path&quot;: &quot;D:/code/javacode/corbonPoolApiAuto/src/test/java/org/carbonPool/Data/CarbonPool&quot;,
+    &quot;spring.configuration.checksum&quot;: &quot;ef7bcf60decb5707ad07a40d0c4f7078&quot;
+  },
+  &quot;keyToStringList&quot;: {
+    &quot;DatabaseDriversLRU&quot;: [
+      &quot;mysql&quot;
+    ]
+  }
+}</component>
+  <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="D:\code\javacode\corbonPoolApiAuto\src\test\java\org\carbonPool\Data\CarbonPool" />
+      <recent name="D:\code\javacode\corbonPoolApiAuto\src\test\java\org\carbonpool\Data\CarbonPool" />
+      <recent name="D:\code\javacode\corbonPoolApiAuto\src\main\resources\mapper" />
+      <recent name="D:\code\javacode\corbonPoolApiAuto\src\test\java\org\carbonpool\Data\Project" />
+      <recent name="D:\code\javacode\corbonPoolApiAuto\src\test\java\org\carbonpool\User" />
+    </key>
+    <key name="MoveClassesOrPackagesDialog.RECENTS_KEY">
+      <recent name="org.carbonpool" />
+    </key>
+    <key name="CopyClassDialog.RECENTS_KEY">
+      <recent name="org.carbonPool.carbonPool" />
+      <recent name="org.carbonPool.Bean.CarbonPool" />
+      <recent name="org.carbonPool.service.carbonPool" />
+      <recent name="org.carbonpool.carbonPool" />
+      <recent name="org.carbonpool.Bean.CarbonPool" />
+    </key>
+  </component>
+  <component name="RunManager" selected="TestNG.D:/code/javacode/corbonPoolApiAuto/test-xml/mainTest.xml">
+    <configuration name="CarbonPoolApplication" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot">
+      <module name="carbonPoolApiAuto" />
+      <option name="SPRING_BOOT_MAIN_CLASS" value="org.carbonPool.CarbonPoolApplication" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="D:/code/javacode/corbonPoolApiAuto/test-xml/mainTest.xml" type="TestNG" temporary="true" nameIsGenerated="true">
+      <module name="carbonPoolApiAuto" />
+      <option name="SUITE_NAME" value="$PROJECT_DIR$/test-xml/mainTest.xml" />
+      <option name="TEST_OBJECT" value="SUITE" />
+      <properties />
+      <listeners />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="addProjectTest" type="TestNG" temporary="true" nameIsGenerated="true">
+      <module name="carbonPoolApiAuto" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="org.carbonPool.carbonPool.addProjectTest" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="org.carbonpool.Project" />
+      <option name="MAIN_CLASS_NAME" value="org.carbonPool.carbonPool.addProjectTest" />
+      <option name="TEST_OBJECT" value="CLASS" />
+      <properties />
+      <listeners />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="addProjectTest.addprojecttest" type="TestNG" temporary="true" nameIsGenerated="true">
+      <module name="carbonPoolApiAuto" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="org.carbonPool.carbonPool.addProjectTest" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="org.carbonpool.Project" />
+      <option name="MAIN_CLASS_NAME" value="org.carbonPool.carbonPool.addProjectTest" />
+      <option name="METHOD_NAME" value="addprojecttest" />
+      <option name="TEST_OBJECT" value="METHOD" />
+      <properties />
+      <listeners />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="analysisDemandTest" type="TestNG" temporary="true" nameIsGenerated="true">
+      <module name="carbonPoolApiAuto" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="org.carbonPool.carbonPool.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="org.carbonPool.carbonPool" />
+      <option name="MAIN_CLASS_NAME" value="org.carbonPool.carbonPool.analysisDemandTest" />
+      <option name="TEST_OBJECT" value="CLASS" />
+      <properties />
+      <listeners />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="analysisDemandTest.analysisDemandTest" type="TestNG" temporary="true" nameIsGenerated="true">
+      <module name="carbonPoolApiAuto" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="org.carbonPool.carbonPool.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="org.carbonPool.carbonPool" />
+      <option name="MAIN_CLASS_NAME" value="org.carbonPool.carbonPool.analysisDemandTest" />
+      <option name="METHOD_NAME" value="analysisDemandTest" />
+      <option name="TEST_OBJECT" value="METHOD" />
+      <properties />
+      <listeners />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <recent_temporary>
+      <list>
+        <item itemvalue="TestNG.D:/code/javacode/corbonPoolApiAuto/test-xml/mainTest.xml" />
+        <item itemvalue="TestNG.analysisDemandTest.analysisDemandTest" />
+        <item itemvalue="TestNG.analysisDemandTest" />
+        <item itemvalue="TestNG.addProjectTest.addprojecttest" />
+        <item itemvalue="TestNG.addProjectTest" />
+      </list>
+    </recent_temporary>
+  </component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="a1f9d140-8187-41e6-8f2c-8ba58b134f08" name="Changes" comment="" />
+      <created>1676885125995</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1676885125995</updated>
+      <workItem from="1676885129239" duration="9103000" />
+      <workItem from="1677036457400" duration="10786000" />
+      <workItem from="1677052874118" duration="16419000" />
+      <workItem from="1677475467908" duration="36481000" />
+    </task>
+    <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="3" />
+  </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State />
+          </value>
+        </entry>
+      </map>
+    </option>
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="碳资源池主流程初始版本" />
+    <option name="LAST_COMMIT_MESSAGE" value="碳资源池主流程初始版本" />
+  </component>
+</project>

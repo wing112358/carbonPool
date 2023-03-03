@@ -1,0 +1,7 @@
+normal:
+  expectedresult: 操作成功
+  params:
+    quantity: "5000"
+
+
+

@@ -1,0 +1,8 @@
+normal:
+  expectedresult: 操作成功
+  params:
+    username: '17800000001'
+    password: 'A147258'
+
+
+

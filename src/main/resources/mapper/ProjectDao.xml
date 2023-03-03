@@ -1,0 +1,449 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="org.carbonPool.dao.ProjectDao">
+
+    <resultMap type="org.carbonPool.entity.Project" id="ProjectMap">
+        <result property="id" column="id" jdbcType="INTEGER"/>
+        <result property="serialnumber" column="serialnumber" jdbcType="VARCHAR"/>
+        <result property="name" column="name" jdbcType="VARCHAR"/>
+        <result property="holderName" column="holder_name" jdbcType="VARCHAR"/>
+        <result property="addressProvince" column="address_province" jdbcType="VARCHAR"/>
+        <result property="addressCity" column="address_city" jdbcType="VARCHAR"/>
+        <result property="addressArea" column="address_area" jdbcType="VARCHAR"/>
+        <result property="addressStreet" column="address_street" jdbcType="VARCHAR"/>
+        <result property="addressNum" column="address_num" jdbcType="VARCHAR"/>
+        <result property="type" column="type" jdbcType="VARCHAR"/>
+        <result property="technologyType" column="technology_type" jdbcType="VARCHAR"/>
+        <result property="status" column="status" jdbcType="INTEGER"/>
+        <result property="entrustStatus" column="entrust_status" jdbcType="INTEGER"/>
+        <result property="deliveryDate" column="delivery_date" jdbcType="TIMESTAMP"/>
+        <result property="capacity" column="capacity" jdbcType="NUMERIC"/>
+        <result property="absorptionType" column="absorption_type" jdbcType="VARCHAR"/>
+        <result property="gridConnectedFlag" column="grid_connected_flag" jdbcType="INTEGER"/>
+        <result property="gridConnectedVoltageType" column="grid_connected_voltage_type" jdbcType="VARCHAR"/>
+        <result property="powerGridOperatorName" column="power_grid_operator_name" jdbcType="VARCHAR"/>
+        <result property="selfAbsorptionType" column="self_absorption_type" jdbcType="VARCHAR"/>
+        <result property="siteAbsorptionName" column="site_absorption_name" jdbcType="VARCHAR"/>
+        <result property="absorptionAccount" column="absorption_account" jdbcType="VARCHAR"/>
+        <result property="powerAccount" column="power_account" jdbcType="VARCHAR"/>
+        <result property="greenTransaction" column="green_transaction" jdbcType="INTEGER"/>
+        <result property="equityStartTime" column="equity_start_time" jdbcType="TIMESTAMP"/>
+        <result property="equityEnableCustomerId" column="equity_enable_customer_id" jdbcType="INTEGER"/>
+        <result property="developedTime" column="developed_time" jdbcType="TIMESTAMP"/>
+        <result property="customerId" column="customer_id" jdbcType="INTEGER"/>
+        <result property="entrustCustomerId" column="entrust_customer_id" jdbcType="INTEGER"/>
+        <result property="creatorUserId" column="creator_user_id" jdbcType="INTEGER"/>
+        <result property="creatorUserName" column="creator_user_name" jdbcType="VARCHAR"/>
+        <result property="isDelete" column="is_delete" jdbcType="INTEGER"/>
+        <result property="updatedAt" column="updated_at" jdbcType="TIMESTAMP"/>
+        <result property="createdAt" column="created_at" jdbcType="TIMESTAMP"/>
+    </resultMap>
+
+    <!--查询单个-->
+    <select id="queryById" resultMap="ProjectMap">
+        select
+          id, serialnumber, name, holder_name, address_province, address_city, address_area, address_street, address_num, type, technology_type, status, entrust_status, delivery_date, capacity, absorption_type, grid_connected_flag, grid_connected_voltage_type, power_grid_operator_name, self_absorption_type, site_absorption_name, absorption_account, power_account, green_transaction, equity_start_time, equity_enable_customer_id, developed_time, customer_id, entrust_customer_id, creator_user_id, creator_user_name, is_delete, updated_at, created_at
+        from project
+        where id = #{id}
+    </select>
+
+    <!--查询单个-->
+    <select id="queryByName" resultMap="ProjectMap">
+        select
+            id, serialnumber, name, holder_name, address_province, address_city, address_area, address_street, address_num, type, technology_type, status, entrust_status, delivery_date, capacity, absorption_type, grid_connected_flag, grid_connected_voltage_type, power_grid_operator_name, self_absorption_type, site_absorption_name, absorption_account, power_account, green_transaction, equity_start_time, equity_enable_customer_id, developed_time, customer_id, entrust_customer_id, creator_user_id, creator_user_name, is_delete, updated_at, created_at
+        from project
+        where name = #{name}
+    </select>
+
+    <!--查询指定行数据-->
+    <select id="queryAllByLimit" resultMap="ProjectMap">
+        select
+          id, serialnumber, name, holder_name, address_province, address_city, address_area, address_street, address_num, type, technology_type, status, entrust_status, delivery_date, capacity, absorption_type, grid_connected_flag, grid_connected_voltage_type, power_grid_operator_name, self_absorption_type, site_absorption_name, absorption_account, power_account, green_transaction, equity_start_time, equity_enable_customer_id, developed_time, customer_id, entrust_customer_id, creator_user_id, creator_user_name, is_delete, updated_at, created_at
+        from project
+        <where>
+            <if test="id != null">
+                and id = #{id}
+            </if>
+            <if test="serialnumber != null and serialnumber != ''">
+                and serialnumber = #{serialnumber}
+            </if>
+            <if test="name != null and name != ''">
+                and name = #{name}
+            </if>
+            <if test="holderName != null and holderName != ''">
+                and holder_name = #{holderName}
+            </if>
+            <if test="addressProvince != null and addressProvince != ''">
+                and address_province = #{addressProvince}
+            </if>
+            <if test="addressCity != null and addressCity != ''">
+                and address_city = #{addressCity}
+            </if>
+            <if test="addressArea != null and addressArea != ''">
+                and address_area = #{addressArea}
+            </if>
+            <if test="addressStreet != null and addressStreet != ''">
+                and address_street = #{addressStreet}
+            </if>
+            <if test="addressNum != null and addressNum != ''">
+                and address_num = #{addressNum}
+            </if>
+            <if test="type != null and type != ''">
+                and type = #{type}
+            </if>
+            <if test="technologyType != null and technologyType != ''">
+                and technology_type = #{technologyType}
+            </if>
+            <if test="status != null">
+                and status = #{status}
+            </if>
+            <if test="entrustStatus != null">
+                and entrust_status = #{entrustStatus}
+            </if>
+            <if test="deliveryDate != null">
+                and delivery_date = #{deliveryDate}
+            </if>
+            <if test="capacity != null">
+                and capacity = #{capacity}
+            </if>
+            <if test="absorptionType != null and absorptionType != ''">
+                and absorption_type = #{absorptionType}
+            </if>
+            <if test="gridConnectedFlag != null">
+                and grid_connected_flag = #{gridConnectedFlag}
+            </if>
+            <if test="gridConnectedVoltageType != null and gridConnectedVoltageType != ''">
+                and grid_connected_voltage_type = #{gridConnectedVoltageType}
+            </if>
+            <if test="powerGridOperatorName != null and powerGridOperatorName != ''">
+                and power_grid_operator_name = #{powerGridOperatorName}
+            </if>
+            <if test="selfAbsorptionType != null and selfAbsorptionType != ''">
+                and self_absorption_type = #{selfAbsorptionType}
+            </if>
+            <if test="siteAbsorptionName != null and siteAbsorptionName != ''">
+                and site_absorption_name = #{siteAbsorptionName}
+            </if>
+            <if test="absorptionAccount != null and absorptionAccount != ''">
+                and absorption_account = #{absorptionAccount}
+            </if>
+            <if test="powerAccount != null and powerAccount != ''">
+                and power_account = #{powerAccount}
+            </if>
+            <if test="greenTransaction != null">
+                and green_transaction = #{greenTransaction}
+            </if>
+            <if test="equityStartTime != null">
+                and equity_start_time = #{equityStartTime}
+            </if>
+            <if test="equityEnableCustomerId != null">
+                and equity_enable_customer_id = #{equityEnableCustomerId}
+            </if>
+            <if test="developedTime != null">
+                and developed_time = #{developedTime}
+            </if>
+            <if test="customerId != null">
+                and customer_id = #{customerId}
+            </if>
+            <if test="entrustCustomerId != null">
+                and entrust_customer_id = #{entrustCustomerId}
+            </if>
+            <if test="creatorUserId != null">
+                and creator_user_id = #{creatorUserId}
+            </if>
+            <if test="creatorUserName != null and creatorUserName != ''">
+                and creator_user_name = #{creatorUserName}
+            </if>
+            <if test="isDelete != null">
+                and is_delete = #{isDelete}
+            </if>
+            <if test="updatedAt != null">
+                and updated_at = #{updatedAt}
+            </if>
+            <if test="createdAt != null">
+                and created_at = #{createdAt}
+            </if>
+        </where>
+        limit #{pageable.offset}, #{pageable.pageSize}
+    </select>
+
+    <!--统计总行数-->
+    <select id="count" resultType="java.lang.Long">
+        select count(1)
+        from project
+        <where>
+            <if test="id != null">
+                and id = #{id}
+            </if>
+            <if test="serialnumber != null and serialnumber != ''">
+                and serialnumber = #{serialnumber}
+            </if>
+            <if test="name != null and name != ''">
+                and name = #{name}
+            </if>
+            <if test="holderName != null and holderName != ''">
+                and holder_name = #{holderName}
+            </if>
+            <if test="addressProvince != null and addressProvince != ''">
+                and address_province = #{addressProvince}
+            </if>
+            <if test="addressCity != null and addressCity != ''">
+                and address_city = #{addressCity}
+            </if>
+            <if test="addressArea != null and addressArea != ''">
+                and address_area = #{addressArea}
+            </if>
+            <if test="addressStreet != null and addressStreet != ''">
+                and address_street = #{addressStreet}
+            </if>
+            <if test="addressNum != null and addressNum != ''">
+                and address_num = #{addressNum}
+            </if>
+            <if test="type != null and type != ''">
+                and type = #{type}
+            </if>
+            <if test="technologyType != null and technologyType != ''">
+                and technology_type = #{technologyType}
+            </if>
+            <if test="status != null">
+                and status = #{status}
+            </if>
+            <if test="entrustStatus != null">
+                and entrust_status = #{entrustStatus}
+            </if>
+            <if test="deliveryDate != null">
+                and delivery_date = #{deliveryDate}
+            </if>
+            <if test="capacity != null">
+                and capacity = #{capacity}
+            </if>
+            <if test="absorptionType != null and absorptionType != ''">
+                and absorption_type = #{absorptionType}
+            </if>
+            <if test="gridConnectedFlag != null">
+                and grid_connected_flag = #{gridConnectedFlag}
+            </if>
+            <if test="gridConnectedVoltageType != null and gridConnectedVoltageType != ''">
+                and grid_connected_voltage_type = #{gridConnectedVoltageType}
+            </if>
+            <if test="powerGridOperatorName != null and powerGridOperatorName != ''">
+                and power_grid_operator_name = #{powerGridOperatorName}
+            </if>
+            <if test="selfAbsorptionType != null and selfAbsorptionType != ''">
+                and self_absorption_type = #{selfAbsorptionType}
+            </if>
+            <if test="siteAbsorptionName != null and siteAbsorptionName != ''">
+                and site_absorption_name = #{siteAbsorptionName}
+            </if>
+            <if test="absorptionAccount != null and absorptionAccount != ''">
+                and absorption_account = #{absorptionAccount}
+            </if>
+            <if test="powerAccount != null and powerAccount != ''">
+                and power_account = #{powerAccount}
+            </if>
+            <if test="greenTransaction != null">
+                and green_transaction = #{greenTransaction}
+            </if>
+            <if test="equityStartTime != null">
+                and equity_start_time = #{equityStartTime}
+            </if>
+            <if test="equityEnableCustomerId != null">
+                and equity_enable_customer_id = #{equityEnableCustomerId}
+            </if>
+            <if test="developedTime != null">
+                and developed_time = #{developedTime}
+            </if>
+            <if test="customerId != null">
+                and customer_id = #{customerId}
+            </if>
+            <if test="entrustCustomerId != null">
+                and entrust_customer_id = #{entrustCustomerId}
+            </if>
+            <if test="creatorUserId != null">
+                and creator_user_id = #{creatorUserId}
+            </if>
+            <if test="creatorUserName != null and creatorUserName != ''">
+                and creator_user_name = #{creatorUserName}
+            </if>
+            <if test="isDelete != null">
+                and is_delete = #{isDelete}
+            </if>
+            <if test="updatedAt != null">
+                and updated_at = #{updatedAt}
+            </if>
+            <if test="createdAt != null">
+                and created_at = #{createdAt}
+            </if>
+        </where>
+    </select>
+
+    <!--新增所有列-->
+    <insert id="insert" keyProperty="id" useGeneratedKeys="true">
+        insert into project(serialnumber, name, holder_name, address_province, address_city, address_area, address_street, address_num, type, technology_type, status, entrust_status, delivery_date, capacity, absorption_type, grid_connected_flag, grid_connected_voltage_type, power_grid_operator_name, self_absorption_type, site_absorption_name, absorption_account, power_account, green_transaction, equity_start_time, equity_enable_customer_id, developed_time, customer_id, entrust_customer_id, creator_user_id, creator_user_name, is_delete, updated_at, created_at)
+        values (#{serialnumber}, #{name}, #{holderName}, #{addressProvince}, #{addressCity}, #{addressArea}, #{addressStreet}, #{addressNum}, #{type}, #{technologyType}, #{status}, #{entrustStatus}, #{deliveryDate}, #{capacity}, #{absorptionType}, #{gridConnectedFlag}, #{gridConnectedVoltageType}, #{powerGridOperatorName}, #{selfAbsorptionType}, #{siteAbsorptionName}, #{absorptionAccount}, #{powerAccount}, #{greenTransaction}, #{equityStartTime}, #{equityEnableCustomerId}, #{developedTime}, #{customerId}, #{entrustCustomerId}, #{creatorUserId}, #{creatorUserName}, #{isDelete}, #{updatedAt}, #{createdAt})
+    </insert>
+
+    <insert id="insertBatch" keyProperty="id" useGeneratedKeys="true">
+        insert into project(serialnumber, name, holder_name, address_province, address_city, address_area, address_street, address_num, type, technology_type, status, entrust_status, delivery_date, capacity, absorption_type, grid_connected_flag, grid_connected_voltage_type, power_grid_operator_name, self_absorption_type, site_absorption_name, absorption_account, power_account, green_transaction, equity_start_time, equity_enable_customer_id, developed_time, customer_id, entrust_customer_id, creator_user_id, creator_user_name, is_delete, updated_at, created_at)
+        values
+        <foreach collection="entities" item="entity" separator=",">
+        (#{entity.serialnumber}, #{entity.name}, #{entity.holderName}, #{entity.addressProvince}, #{entity.addressCity}, #{entity.addressArea}, #{entity.addressStreet}, #{entity.addressNum}, #{entity.type}, #{entity.technologyType}, #{entity.status}, #{entity.entrustStatus}, #{entity.deliveryDate}, #{entity.capacity}, #{entity.absorptionType}, #{entity.gridConnectedFlag}, #{entity.gridConnectedVoltageType}, #{entity.powerGridOperatorName}, #{entity.selfAbsorptionType}, #{entity.siteAbsorptionName}, #{entity.absorptionAccount}, #{entity.powerAccount}, #{entity.greenTransaction}, #{entity.equityStartTime}, #{entity.equityEnableCustomerId}, #{entity.developedTime}, #{entity.customerId}, #{entity.entrustCustomerId}, #{entity.creatorUserId}, #{entity.creatorUserName}, #{entity.isDelete}, #{entity.updatedAt}, #{entity.createdAt})
+        </foreach>
+    </insert>
+
+    <insert id="insertOrUpdateBatch" keyProperty="id" useGeneratedKeys="true">
+        insert into project(serialnumber, name, holder_name, address_province, address_city, address_area, address_street, address_num, type, technology_type, status, entrust_status, delivery_date, capacity, absorption_type, grid_connected_flag, grid_connected_voltage_type, power_grid_operator_name, self_absorption_type, site_absorption_name, absorption_account, power_account, green_transaction, equity_start_time, equity_enable_customer_id, developed_time, customer_id, entrust_customer_id, creator_user_id, creator_user_name, is_delete, updated_at, created_at)
+        values
+        <foreach collection="entities" item="entity" separator=",">
+            (#{entity.serialnumber}, #{entity.name}, #{entity.holderName}, #{entity.addressProvince}, #{entity.addressCity}, #{entity.addressArea}, #{entity.addressStreet}, #{entity.addressNum}, #{entity.type}, #{entity.technologyType}, #{entity.status}, #{entity.entrustStatus}, #{entity.deliveryDate}, #{entity.capacity}, #{entity.absorptionType}, #{entity.gridConnectedFlag}, #{entity.gridConnectedVoltageType}, #{entity.powerGridOperatorName}, #{entity.selfAbsorptionType}, #{entity.siteAbsorptionName}, #{entity.absorptionAccount}, #{entity.powerAccount}, #{entity.greenTransaction}, #{entity.equityStartTime}, #{entity.equityEnableCustomerId}, #{entity.developedTime}, #{entity.customerId}, #{entity.entrustCustomerId}, #{entity.creatorUserId}, #{entity.creatorUserName}, #{entity.isDelete}, #{entity.updatedAt}, #{entity.createdAt})
+        </foreach>
+        on duplicate key update
+        serialnumber = values(serialnumber),
+        name = values(name),
+        holder_name = values(holder_name),
+        address_province = values(address_province),
+        address_city = values(address_city),
+        address_area = values(address_area),
+        address_street = values(address_street),
+        address_num = values(address_num),
+        type = values(type),
+        technology_type = values(technology_type),
+        status = values(status),
+        entrust_status = values(entrust_status),
+        delivery_date = values(delivery_date),
+        capacity = values(capacity),
+        absorption_type = values(absorption_type),
+        grid_connected_flag = values(grid_connected_flag),
+        grid_connected_voltage_type = values(grid_connected_voltage_type),
+        power_grid_operator_name = values(power_grid_operator_name),
+        self_absorption_type = values(self_absorption_type),
+        site_absorption_name = values(site_absorption_name),
+        absorption_account = values(absorption_account),
+        power_account = values(power_account),
+        green_transaction = values(green_transaction),
+        equity_start_time = values(equity_start_time),
+        equity_enable_customer_id = values(equity_enable_customer_id),
+        developed_time = values(developed_time),
+        customer_id = values(customer_id),
+        entrust_customer_id = values(entrust_customer_id),
+        creator_user_id = values(creator_user_id),
+        creator_user_name = values(creator_user_name),
+        is_delete = values(is_delete),
+        updated_at = values(updated_at),
+        created_at = values(created_at)
+    </insert>
+
+    <!--通过主键修改数据-->
+    <update id="update">
+        update project
+        <set>
+            <if test="serialnumber != null and serialnumber != ''">
+                serialnumber = #{serialnumber},
+            </if>
+            <if test="name != null and name != ''">
+                name = #{name},
+            </if>
+            <if test="holderName != null and holderName != ''">
+                holder_name = #{holderName},
+            </if>
+            <if test="addressProvince != null and addressProvince != ''">
+                address_province = #{addressProvince},
+            </if>
+            <if test="addressCity != null and addressCity != ''">
+                address_city = #{addressCity},
+            </if>
+            <if test="addressArea != null and addressArea != ''">
+                address_area = #{addressArea},
+            </if>
+            <if test="addressStreet != null and addressStreet != ''">
+                address_street = #{addressStreet},
+            </if>
+            <if test="addressNum != null and addressNum != ''">
+                address_num = #{addressNum},
+            </if>
+            <if test="type != null and type != ''">
+                type = #{type},
+            </if>
+            <if test="technologyType != null and technologyType != ''">
+                technology_type = #{technologyType},
+            </if>
+            <if test="status != null">
+                status = #{status},
+            </if>
+            <if test="entrustStatus != null">
+                entrust_status = #{entrustStatus},
+            </if>
+            <if test="deliveryDate != null">
+                delivery_date = #{deliveryDate},
+            </if>
+            <if test="capacity != null">
+                capacity = #{capacity},
+            </if>
+            <if test="absorptionType != null and absorptionType != ''">
+                absorption_type = #{absorptionType},
+            </if>
+            <if test="gridConnectedFlag != null">
+                grid_connected_flag = #{gridConnectedFlag},
+            </if>
+            <if test="gridConnectedVoltageType != null and gridConnectedVoltageType != ''">
+                grid_connected_voltage_type = #{gridConnectedVoltageType},
+            </if>
+            <if test="powerGridOperatorName != null and powerGridOperatorName != ''">
+                power_grid_operator_name = #{powerGridOperatorName},
+            </if>
+            <if test="selfAbsorptionType != null and selfAbsorptionType != ''">
+                self_absorption_type = #{selfAbsorptionType},
+            </if>
+            <if test="siteAbsorptionName != null and siteAbsorptionName != ''">
+                site_absorption_name = #{siteAbsorptionName},
+            </if>
+            <if test="absorptionAccount != null and absorptionAccount != ''">
+                absorption_account = #{absorptionAccount},
+            </if>
+            <if test="powerAccount != null and powerAccount != ''">
+                power_account = #{powerAccount},
+            </if>
+            <if test="greenTransaction != null">
+                green_transaction = #{greenTransaction},
+            </if>
+            <if test="equityStartTime != null">
+                equity_start_time = #{equityStartTime},
+            </if>
+            <if test="equityEnableCustomerId != null">
+                equity_enable_customer_id = #{equityEnableCustomerId},
+            </if>
+            <if test="developedTime != null">
+                developed_time = #{developedTime},
+            </if>
+            <if test="customerId != null">
+                customer_id = #{customerId},
+            </if>
+            <if test="entrustCustomerId != null">
+                entrust_customer_id = #{entrustCustomerId},
+            </if>
+            <if test="creatorUserId != null">
+                creator_user_id = #{creatorUserId},
+            </if>
+            <if test="creatorUserName != null and creatorUserName != ''">
+                creator_user_name = #{creatorUserName},
+            </if>
+            <if test="isDelete != null">
+                is_delete = #{isDelete},
+            </if>
+            <if test="updatedAt != null">
+                updated_at = #{updatedAt},
+            </if>
+            <if test="createdAt != null">
+                created_at = #{createdAt},
+            </if>
+        </set>
+        where id = #{id}
+    </update>
+
+    <!--通过主键删除-->
+    <delete id="deleteById">
+        delete from project where id = #{id}
+    </delete>
+
+</mapper>
+

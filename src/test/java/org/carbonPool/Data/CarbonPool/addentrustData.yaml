@@ -1,0 +1,10 @@
+normal:
+  expectedresult: 操作成功
+  params:
+      entrustCustomerId: 21
+      limitTime: "1y"
+      projectType: "风电"
+      type: 1
+
+
+

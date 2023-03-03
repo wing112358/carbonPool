@@ -1,0 +1,232 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="org.carbonPool.dao.EntrustDao">
+
+    <resultMap type="org.carbonPool.entity.Entrust" id="EntrustMap">
+        <result property="id" column="id" jdbcType="INTEGER"/>
+        <result property="serialnumber" column="serialnumber" jdbcType="VARCHAR"/>
+        <result property="type" column="type" jdbcType="INTEGER"/>
+        <result property="status" column="status" jdbcType="INTEGER"/>
+        <result property="limitTime" column="limit_time" jdbcType="VARCHAR"/>
+        <result property="closeTime" column="close_time" jdbcType="TIMESTAMP"/>
+        <result property="customerId" column="customer_id" jdbcType="INTEGER"/>
+        <result property="customerName" column="customer_name" jdbcType="VARCHAR"/>
+        <result property="entrustCustomerId" column="entrust_customer_id" jdbcType="INTEGER"/>
+        <result property="entrustCustomerName" column="entrust_customer_name" jdbcType="VARCHAR"/>
+        <result property="creatorUserId" column="creator_user_id" jdbcType="INTEGER"/>
+        <result property="creatorUserName" column="creator_user_name" jdbcType="VARCHAR"/>
+        <result property="isDelete" column="is_delete" jdbcType="INTEGER"/>
+        <result property="updatedAt" column="updated_at" jdbcType="TIMESTAMP"/>
+        <result property="createdAt" column="created_at" jdbcType="TIMESTAMP"/>
+    </resultMap>
+
+    <!--查询单个-->
+    <select id="queryById" resultMap="EntrustMap">
+        select
+          id, serialnumber, type, status, limit_time, close_time, customer_id, customer_name, entrust_customer_id, entrust_customer_name, creator_user_id, creator_user_name, is_delete, updated_at, created_at
+        from entrust
+        where id = #{id}
+    </select>
+
+    <!--查询指定行数据-->
+    <select id="queryAllByLimit" resultMap="EntrustMap">
+        select
+          id, serialnumber, type, status, limit_time, close_time, customer_id, customer_name, entrust_customer_id, entrust_customer_name, creator_user_id, creator_user_name, is_delete, updated_at, created_at
+        from entrust
+        <where>
+            <if test="id != null">
+                and id = #{id}
+            </if>
+            <if test="serialnumber != null and serialnumber != ''">
+                and serialnumber = #{serialnumber}
+            </if>
+            <if test="type != null">
+                and type = #{type}
+            </if>
+            <if test="status != null">
+                and status = #{status}
+            </if>
+            <if test="limitTime != null and limitTime != ''">
+                and limit_time = #{limitTime}
+            </if>
+            <if test="closeTime != null">
+                and close_time = #{closeTime}
+            </if>
+            <if test="customerId != null">
+                and customer_id = #{customerId}
+            </if>
+            <if test="customerName != null and customerName != ''">
+                and customer_name = #{customerName}
+            </if>
+            <if test="entrustCustomerId != null">
+                and entrust_customer_id = #{entrustCustomerId}
+            </if>
+            <if test="entrustCustomerName != null and entrustCustomerName != ''">
+                and entrust_customer_name = #{entrustCustomerName}
+            </if>
+            <if test="creatorUserId != null">
+                and creator_user_id = #{creatorUserId}
+            </if>
+            <if test="creatorUserName != null and creatorUserName != ''">
+                and creator_user_name = #{creatorUserName}
+            </if>
+            <if test="isDelete != null">
+                and is_delete = #{isDelete}
+            </if>
+            <if test="updatedAt != null">
+                and updated_at = #{updatedAt}
+            </if>
+            <if test="createdAt != null">
+                and created_at = #{createdAt}
+            </if>
+        </where>
+        limit #{pageable.offset}, #{pageable.pageSize}
+    </select>
+
+    <!--统计总行数-->
+    <select id="count" resultType="java.lang.Long">
+        select count(1)
+        from entrust
+        <where>
+            <if test="id != null">
+                and id = #{id}
+            </if>
+            <if test="serialnumber != null and serialnumber != ''">
+                and serialnumber = #{serialnumber}
+            </if>
+            <if test="type != null">
+                and type = #{type}
+            </if>
+            <if test="status != null">
+                and status = #{status}
+            </if>
+            <if test="limitTime != null and limitTime != ''">
+                and limit_time = #{limitTime}
+            </if>
+            <if test="closeTime != null">
+                and close_time = #{closeTime}
+            </if>
+            <if test="customerId != null">
+                and customer_id = #{customerId}
+            </if>
+            <if test="customerName != null and customerName != ''">
+                and customer_name = #{customerName}
+            </if>
+            <if test="entrustCustomerId != null">
+                and entrust_customer_id = #{entrustCustomerId}
+            </if>
+            <if test="entrustCustomerName != null and entrustCustomerName != ''">
+                and entrust_customer_name = #{entrustCustomerName}
+            </if>
+            <if test="creatorUserId != null">
+                and creator_user_id = #{creatorUserId}
+            </if>
+            <if test="creatorUserName != null and creatorUserName != ''">
+                and creator_user_name = #{creatorUserName}
+            </if>
+            <if test="isDelete != null">
+                and is_delete = #{isDelete}
+            </if>
+            <if test="updatedAt != null">
+                and updated_at = #{updatedAt}
+            </if>
+            <if test="createdAt != null">
+                and created_at = #{createdAt}
+            </if>
+        </where>
+    </select>
+
+    <!--新增所有列-->
+    <insert id="insert" keyProperty="id" useGeneratedKeys="true">
+        insert into entrust(serialnumber, type, status, limit_time, close_time, customer_id, customer_name, entrust_customer_id, entrust_customer_name, creator_user_id, creator_user_name, is_delete, updated_at, created_at)
+        values (#{serialnumber}, #{type}, #{status}, #{limitTime}, #{closeTime}, #{customerId}, #{customerName}, #{entrustCustomerId}, #{entrustCustomerName}, #{creatorUserId}, #{creatorUserName}, #{isDelete}, #{updatedAt}, #{createdAt})
+    </insert>
+
+    <insert id="insertBatch" keyProperty="id" useGeneratedKeys="true">
+        insert into entrust(serialnumber, type, status, limit_time, close_time, customer_id, customer_name, entrust_customer_id, entrust_customer_name, creator_user_id, creator_user_name, is_delete, updated_at, created_at)
+        values
+        <foreach collection="entities" item="entity" separator=",">
+        (#{entity.serialnumber}, #{entity.type}, #{entity.status}, #{entity.limitTime}, #{entity.closeTime}, #{entity.customerId}, #{entity.customerName}, #{entity.entrustCustomerId}, #{entity.entrustCustomerName}, #{entity.creatorUserId}, #{entity.creatorUserName}, #{entity.isDelete}, #{entity.updatedAt}, #{entity.createdAt})
+        </foreach>
+    </insert>
+
+    <insert id="insertOrUpdateBatch" keyProperty="id" useGeneratedKeys="true">
+        insert into entrust(serialnumber, type, status, limit_time, close_time, customer_id, customer_name, entrust_customer_id, entrust_customer_name, creator_user_id, creator_user_name, is_delete, updated_at, created_at)
+        values
+        <foreach collection="entities" item="entity" separator=",">
+            (#{entity.serialnumber}, #{entity.type}, #{entity.status}, #{entity.limitTime}, #{entity.closeTime}, #{entity.customerId}, #{entity.customerName}, #{entity.entrustCustomerId}, #{entity.entrustCustomerName}, #{entity.creatorUserId}, #{entity.creatorUserName}, #{entity.isDelete}, #{entity.updatedAt}, #{entity.createdAt})
+        </foreach>
+        on duplicate key update
+        serialnumber = values(serialnumber),
+        type = values(type),
+        status = values(status),
+        limit_time = values(limit_time),
+        close_time = values(close_time),
+        customer_id = values(customer_id),
+        customer_name = values(customer_name),
+        entrust_customer_id = values(entrust_customer_id),
+        entrust_customer_name = values(entrust_customer_name),
+        creator_user_id = values(creator_user_id),
+        creator_user_name = values(creator_user_name),
+        is_delete = values(is_delete),
+        updated_at = values(updated_at),
+        created_at = values(created_at)
+    </insert>
+
+    <!--通过主键修改数据-->
+    <update id="update">
+        update entrust
+        <set>
+            <if test="serialnumber != null and serialnumber != ''">
+                serialnumber = #{serialnumber},
+            </if>
+            <if test="type != null">
+                type = #{type},
+            </if>
+            <if test="status != null">
+                status = #{status},
+            </if>
+            <if test="limitTime != null and limitTime != ''">
+                limit_time = #{limitTime},
+            </if>
+            <if test="closeTime != null">
+                close_time = #{closeTime},
+            </if>
+            <if test="customerId != null">
+                customer_id = #{customerId},
+            </if>
+            <if test="customerName != null and customerName != ''">
+                customer_name = #{customerName},
+            </if>
+            <if test="entrustCustomerId != null">
+                entrust_customer_id = #{entrustCustomerId},
+            </if>
+            <if test="entrustCustomerName != null and entrustCustomerName != ''">
+                entrust_customer_name = #{entrustCustomerName},
+            </if>
+            <if test="creatorUserId != null">
+                creator_user_id = #{creatorUserId},
+            </if>
+            <if test="creatorUserName != null and creatorUserName != ''">
+                creator_user_name = #{creatorUserName},
+            </if>
+            <if test="isDelete != null">
+                is_delete = #{isDelete},
+            </if>
+            <if test="updatedAt != null">
+                updated_at = #{updatedAt},
+            </if>
+            <if test="createdAt != null">
+                created_at = #{createdAt},
+            </if>
+        </set>
+        where id = #{id}
+    </update>
+
+    <!--通过主键删除-->
+    <delete id="deleteById">
+        delete from entrust where id = #{id}
+    </delete>
+
+</mapper>
+

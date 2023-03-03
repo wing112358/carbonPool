@@ -1,0 +1,262 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="org.carbonPool.dao.DemandDao">
+
+    <resultMap type="org.carbonPool.entity.Demand" id="DemandMap">
+        <result property="id" column="id" jdbcType="INTEGER"/>
+        <result property="serialnumber" column="serialnumber" jdbcType="VARCHAR"/>
+        <result property="customerName" column="customer_name" jdbcType="VARCHAR"/>
+        <result property="assetsType" column="assets_type" jdbcType="VARCHAR"/>
+        <result property="energyType" column="energy_type" jdbcType="VARCHAR"/>
+        <result property="status" column="status" jdbcType="INTEGER"/>
+        <result property="quantity" column="quantity" jdbcType="NUMERIC"/>
+        <result property="timeStart" column="time_start" jdbcType="TIMESTAMP"/>
+        <result property="timeEnd" column="time_end" jdbcType="TIMESTAMP"/>
+        <result property="closeTime" column="close_time" jdbcType="TIMESTAMP"/>
+        <result property="unit" column="unit" jdbcType="VARCHAR"/>
+        <result property="customerId" column="customer_id" jdbcType="INTEGER"/>
+        <result property="creatorUserId" column="creator_user_id" jdbcType="INTEGER"/>
+        <result property="creatorUserName" column="creator_user_name" jdbcType="VARCHAR"/>
+        <result property="isDelete" column="is_delete" jdbcType="INTEGER"/>
+        <result property="updatedAt" column="updated_at" jdbcType="TIMESTAMP"/>
+        <result property="createdAt" column="created_at" jdbcType="TIMESTAMP"/>
+    </resultMap>
+
+    <!--查询单个-->
+    <select id="queryById" resultMap="DemandMap">
+        select
+          id, serialnumber, customer_name, assets_type, energy_type, status, quantity, time_start, time_end, close_time, unit, customer_id, creator_user_id, creator_user_name, is_delete, updated_at, created_at
+        from demand
+        where id = #{id}
+    </select>
+
+    <select id="queryByDate" resultMap="DemandMap">
+        select
+            id, serialnumber, customer_name, assets_type, energy_type, status, quantity, time_start, time_end, close_time, unit, customer_id, creator_user_id, creator_user_name, is_delete, updated_at, created_at
+        from demand
+        where customer_id=#{customerId} and time_start=#{startTime} and time_end=#{endTime} and status=0 and assets_type=#{assetType} and energy_type=#{energyType} and customer_name=#{customerName}
+        limit 1
+    </select>
+
+    <!--查询指定行数据-->
+    <select id="queryAllByLimit" resultMap="DemandMap">
+        select
+          id, serialnumber, customer_name, assets_type, energy_type, status, quantity, time_start, time_end, close_time, unit, customer_id, creator_user_id, creator_user_name, is_delete, updated_at, created_at
+        from demand
+        <where>
+            <if test="id != null">
+                and id = #{id}
+            </if>
+            <if test="serialnumber != null and serialnumber != ''">
+                and serialnumber = #{serialnumber}
+            </if>
+            <if test="customerName != null and customerName != ''">
+                and customer_name = #{customerName}
+            </if>
+            <if test="assetsType != null and assetsType != ''">
+                and assets_type = #{assetsType}
+            </if>
+            <if test="energyType != null and energyType != ''">
+                and energy_type = #{energyType}
+            </if>
+            <if test="status != null">
+                and status = #{status}
+            </if>
+            <if test="quantity != null">
+                and quantity = #{quantity}
+            </if>
+            <if test="timeStart != null">
+                and time_start = #{timeStart}
+            </if>
+            <if test="timeEnd != null">
+                and time_end = #{timeEnd}
+            </if>
+            <if test="closeTime != null">
+                and close_time = #{closeTime}
+            </if>
+            <if test="unit != null and unit != ''">
+                and unit = #{unit}
+            </if>
+            <if test="customerId != null">
+                and customer_id = #{customerId}
+            </if>
+            <if test="creatorUserId != null">
+                and creator_user_id = #{creatorUserId}
+            </if>
+            <if test="creatorUserName != null and creatorUserName != ''">
+                and creator_user_name = #{creatorUserName}
+            </if>
+            <if test="isDelete != null">
+                and is_delete = #{isDelete}
+            </if>
+            <if test="updatedAt != null">
+                and updated_at = #{updatedAt}
+            </if>
+            <if test="createdAt != null">
+                and created_at = #{createdAt}
+            </if>
+        </where>
+        limit #{pageable.offset}, #{pageable.pageSize}
+    </select>
+
+    <!--统计总行数-->
+    <select id="count" resultType="java.lang.Long">
+        select count(1)
+        from demand
+        <where>
+            <if test="id != null">
+                and id = #{id}
+            </if>
+            <if test="serialnumber != null and serialnumber != ''">
+                and serialnumber = #{serialnumber}
+            </if>
+            <if test="customerName != null and customerName != ''">
+                and customer_name = #{customerName}
+            </if>
+            <if test="assetsType != null and assetsType != ''">
+                and assets_type = #{assetsType}
+            </if>
+            <if test="energyType != null and energyType != ''">
+                and energy_type = #{energyType}
+            </if>
+            <if test="status != null">
+                and status = #{status}
+            </if>
+            <if test="quantity != null">
+                and quantity = #{quantity}
+            </if>
+            <if test="timeStart != null">
+                and time_start = #{timeStart}
+            </if>
+            <if test="timeEnd != null">
+                and time_end = #{timeEnd}
+            </if>
+            <if test="closeTime != null">
+                and close_time = #{closeTime}
+            </if>
+            <if test="unit != null and unit != ''">
+                and unit = #{unit}
+            </if>
+            <if test="customerId != null">
+                and customer_id = #{customerId}
+            </if>
+            <if test="creatorUserId != null">
+                and creator_user_id = #{creatorUserId}
+            </if>
+            <if test="creatorUserName != null and creatorUserName != ''">
+                and creator_user_name = #{creatorUserName}
+            </if>
+            <if test="isDelete != null">
+                and is_delete = #{isDelete}
+            </if>
+            <if test="updatedAt != null">
+                and updated_at = #{updatedAt}
+            </if>
+            <if test="createdAt != null">
+                and created_at = #{createdAt}
+            </if>
+        </where>
+    </select>
+
+    <!--新增所有列-->
+    <insert id="insert" keyProperty="id" useGeneratedKeys="true">
+        insert into demand(serialnumber, customer_name, assets_type, energy_type, status, quantity, time_start, time_end, close_time, unit, customer_id, creator_user_id, creator_user_name, is_delete, updated_at, created_at)
+        values (#{serialnumber}, #{customerName}, #{assetsType}, #{energyType}, #{status}, #{quantity}, #{timeStart}, #{timeEnd}, #{closeTime}, #{unit}, #{customerId}, #{creatorUserId}, #{creatorUserName}, #{isDelete}, #{updatedAt}, #{createdAt})
+    </insert>
+
+    <insert id="insertBatch" keyProperty="id" useGeneratedKeys="true">
+        insert into demand(serialnumber, customer_name, assets_type, energy_type, status, quantity, time_start, time_end, close_time, unit, customer_id, creator_user_id, creator_user_name, is_delete, updated_at, created_at)
+        values
+        <foreach collection="entities" item="entity" separator=",">
+        (#{entity.serialnumber}, #{entity.customerName}, #{entity.assetsType}, #{entity.energyType}, #{entity.status}, #{entity.quantity}, #{entity.timeStart}, #{entity.timeEnd}, #{entity.closeTime}, #{entity.unit}, #{entity.customerId}, #{entity.creatorUserId}, #{entity.creatorUserName}, #{entity.isDelete}, #{entity.updatedAt}, #{entity.createdAt})
+        </foreach>
+    </insert>
+
+    <insert id="insertOrUpdateBatch" keyProperty="id" useGeneratedKeys="true">
+        insert into demand(serialnumber, customer_name, assets_type, energy_type, status, quantity, time_start, time_end, close_time, unit, customer_id, creator_user_id, creator_user_name, is_delete, updated_at, created_at)
+        values
+        <foreach collection="entities" item="entity" separator=",">
+            (#{entity.serialnumber}, #{entity.customerName}, #{entity.assetsType}, #{entity.energyType}, #{entity.status}, #{entity.quantity}, #{entity.timeStart}, #{entity.timeEnd}, #{entity.closeTime}, #{entity.unit}, #{entity.customerId}, #{entity.creatorUserId}, #{entity.creatorUserName}, #{entity.isDelete}, #{entity.updatedAt}, #{entity.createdAt})
+        </foreach>
+        on duplicate key update
+        serialnumber = values(serialnumber),
+        customer_name = values(customer_name),
+        assets_type = values(assets_type),
+        energy_type = values(energy_type),
+        status = values(status),
+        quantity = values(quantity),
+        time_start = values(time_start),
+        time_end = values(time_end),
+        close_time = values(close_time),
+        unit = values(unit),
+        customer_id = values(customer_id),
+        creator_user_id = values(creator_user_id),
+        creator_user_name = values(creator_user_name),
+        is_delete = values(is_delete),
+        updated_at = values(updated_at),
+        created_at = values(created_at)
+    </insert>
+
+    <!--通过主键修改数据-->
+    <update id="update">
+        update demand
+        <set>
+            <if test="serialnumber != null and serialnumber != ''">
+                serialnumber = #{serialnumber},
+            </if>
+            <if test="customerName != null and customerName != ''">
+                customer_name = #{customerName},
+            </if>
+            <if test="assetsType != null and assetsType != ''">
+                assets_type = #{assetsType},
+            </if>
+            <if test="energyType != null and energyType != ''">
+                energy_type = #{energyType},
+            </if>
+            <if test="status != null">
+                status = #{status},
+            </if>
+            <if test="quantity != null">
+                quantity = #{quantity},
+            </if>
+            <if test="timeStart != null">
+                time_start = #{timeStart},
+            </if>
+            <if test="timeEnd != null">
+                time_end = #{timeEnd},
+            </if>
+            <if test="closeTime != null">
+                close_time = #{closeTime},
+            </if>
+            <if test="unit != null and unit != ''">
+                unit = #{unit},
+            </if>
+            <if test="customerId != null">
+                customer_id = #{customerId},
+            </if>
+            <if test="creatorUserId != null">
+                creator_user_id = #{creatorUserId},
+            </if>
+            <if test="creatorUserName != null and creatorUserName != ''">
+                creator_user_name = #{creatorUserName},
+            </if>
+            <if test="isDelete != null">
+                is_delete = #{isDelete},
+            </if>
+            <if test="updatedAt != null">
+                updated_at = #{updatedAt},
+            </if>
+            <if test="createdAt != null">
+                created_at = #{createdAt},
+            </if>
+        </set>
+        where id = #{id}
+    </update>
+
+    <!--通过主键删除-->
+    <delete id="deleteById">
+        delete from demand where id = #{id}
+    </delete>
+
+</mapper>
+

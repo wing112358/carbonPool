@@ -1,0 +1,373 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="org.carbonPool.dao.EquityDao">
+
+    <resultMap type="org.carbonPool.entity.Equity" id="EquityMap">
+        <result property="id" column="id" jdbcType="INTEGER"/>
+        <result property="serialnumber" column="serialnumber" jdbcType="VARCHAR"/>
+        <result property="projectId" column="project_id" jdbcType="INTEGER"/>
+        <result property="projectName" column="project_name" jdbcType="VARCHAR"/>
+        <result property="date" column="date" jdbcType="TIMESTAMP"/>
+        <result property="reductionQuantity" column="reduction_quantity" jdbcType="NUMERIC"/>
+        <result property="type" column="type" jdbcType="VARCHAR"/>
+        <result property="quantityType" column="quantity_type" jdbcType="VARCHAR"/>
+        <result property="status" column="status" jdbcType="INTEGER"/>
+        <result property="entrustStatus" column="entrust_status" jdbcType="INTEGER"/>
+        <result property="estimatedQuantity" column="estimated_quantity" jdbcType="NUMERIC"/>
+        <result property="quantity" column="quantity" jdbcType="NUMERIC"/>
+        <result property="relationAssetType" column="relation_asset_type" jdbcType="VARCHAR"/>
+        <result property="relationAssetQuantity" column="relation_asset_quantity" jdbcType="NUMERIC"/>
+        <result property="holderName" column="holder_name" jdbcType="VARCHAR"/>
+        <result property="unit" column="unit" jdbcType="VARCHAR"/>
+        <result property="developedTime" column="developed_time" jdbcType="TIMESTAMP"/>
+        <result property="consumerName" column="consumer_name" jdbcType="VARCHAR"/>
+        <result property="customerId" column="customer_id" jdbcType="INTEGER"/>
+        <result property="entrustCustomerId" column="entrust_customer_id" jdbcType="INTEGER"/>
+        <result property="creatorUserId" column="creator_user_id" jdbcType="INTEGER"/>
+        <result property="creatorUserName" column="creator_user_name" jdbcType="VARCHAR"/>
+        <result property="isDelete" column="is_delete" jdbcType="INTEGER"/>
+        <result property="updatedAt" column="updated_at" jdbcType="TIMESTAMP"/>
+        <result property="createdAt" column="created_at" jdbcType="TIMESTAMP"/>
+    </resultMap>
+
+    <!--查询单个-->
+    <select id="queryById" resultMap="EquityMap">
+        select
+          id, serialnumber, project_id, project_name, date, reduction_quantity, type, quantity_type, status, entrust_status, estimated_quantity, quantity, relation_asset_type, relation_asset_quantity, holder_name, unit, developed_time, consumer_name, customer_id, entrust_customer_id, creator_user_id, creator_user_name, is_delete, updated_at, created_at
+        from equity
+        where id = #{id}
+    </select>
+
+    <!--查询多个-->
+    <select id="queryIdById"  resultType="java.lang.Long">
+        select
+            id
+        from equity
+        where  project_id= #{projectId}
+        and is_delete=0
+    </select>
+
+    <!--查询多个-->
+    <select id="queryIdByLimit"  resultType="java.lang.Long">
+        SELECT
+            id
+        FROM
+            equity
+        WHERE
+            project_id = #{projectId}
+          AND is_delete = 0
+          and status in (0,1)
+        order by date
+            limit #{limit};
+    </select>
+
+    <!--查询指定行数据-->
+    <select id="queryAllByLimit" resultMap="EquityMap">
+        select
+          id, serialnumber, project_id, project_name, date, reduction_quantity, type, quantity_type, status, entrust_status, estimated_quantity, quantity, relation_asset_type, relation_asset_quantity, holder_name, unit, developed_time, consumer_name, customer_id, entrust_customer_id, creator_user_id, creator_user_name, is_delete, updated_at, created_at
+        from equity
+        <where>
+            <if test="id != null">
+                and id = #{id}
+            </if>
+            <if test="serialnumber != null and serialnumber != ''">
+                and serialnumber = #{serialnumber}
+            </if>
+            <if test="projectId != null">
+                and project_id = #{projectId}
+            </if>
+            <if test="projectName != null and projectName != ''">
+                and project_name = #{projectName}
+            </if>
+            <if test="date != null">
+                and date = #{date}
+            </if>
+            <if test="reductionQuantity != null">
+                and reduction_quantity = #{reductionQuantity}
+            </if>
+            <if test="type != null and type != ''">
+                and type = #{type}
+            </if>
+            <if test="quantityType != null and quantityType != ''">
+                and quantity_type = #{quantityType}
+            </if>
+            <if test="status != null">
+                and status = #{status}
+            </if>
+            <if test="entrustStatus != null">
+                and entrust_status = #{entrustStatus}
+            </if>
+            <if test="estimatedQuantity != null">
+                and estimated_quantity = #{estimatedQuantity}
+            </if>
+            <if test="quantity != null">
+                and quantity = #{quantity}
+            </if>
+            <if test="relationAssetType != null and relationAssetType != ''">
+                and relation_asset_type = #{relationAssetType}
+            </if>
+            <if test="relationAssetQuantity != null">
+                and relation_asset_quantity = #{relationAssetQuantity}
+            </if>
+            <if test="holderName != null and holderName != ''">
+                and holder_name = #{holderName}
+            </if>
+            <if test="unit != null and unit != ''">
+                and unit = #{unit}
+            </if>
+            <if test="developedTime != null">
+                and developed_time = #{developedTime}
+            </if>
+            <if test="consumerName != null and consumerName != ''">
+                and consumer_name = #{consumerName}
+            </if>
+            <if test="customerId != null">
+                and customer_id = #{customerId}
+            </if>
+            <if test="entrustCustomerId != null">
+                and entrust_customer_id = #{entrustCustomerId}
+            </if>
+            <if test="creatorUserId != null">
+                and creator_user_id = #{creatorUserId}
+            </if>
+            <if test="creatorUserName != null and creatorUserName != ''">
+                and creator_user_name = #{creatorUserName}
+            </if>
+            <if test="isDelete != null">
+                and is_delete = #{isDelete}
+            </if>
+            <if test="updatedAt != null">
+                and updated_at = #{updatedAt}
+            </if>
+            <if test="createdAt != null">
+                and created_at = #{createdAt}
+            </if>
+        </where>
+        limit #{pageable.offset}, #{pageable.pageSize}
+    </select>
+
+    <!--统计总行数-->
+    <select id="count" resultType="java.lang.Long">
+        select count(1)
+        from equity
+        <where>
+            <if test="id != null">
+                and id = #{id}
+            </if>
+            <if test="serialnumber != null and serialnumber != ''">
+                and serialnumber = #{serialnumber}
+            </if>
+            <if test="projectId != null">
+                and project_id = #{projectId}
+            </if>
+            <if test="projectName != null and projectName != ''">
+                and project_name = #{projectName}
+            </if>
+            <if test="date != null">
+                and date = #{date}
+            </if>
+            <if test="reductionQuantity != null">
+                and reduction_quantity = #{reductionQuantity}
+            </if>
+            <if test="type != null and type != ''">
+                and type = #{type}
+            </if>
+            <if test="quantityType != null and quantityType != ''">
+                and quantity_type = #{quantityType}
+            </if>
+            <if test="status != null">
+                and status = #{status}
+            </if>
+            <if test="entrustStatus != null">
+                and entrust_status = #{entrustStatus}
+            </if>
+            <if test="estimatedQuantity != null">
+                and estimated_quantity = #{estimatedQuantity}
+            </if>
+            <if test="quantity != null">
+                and quantity = #{quantity}
+            </if>
+            <if test="relationAssetType != null and relationAssetType != ''">
+                and relation_asset_type = #{relationAssetType}
+            </if>
+            <if test="relationAssetQuantity != null">
+                and relation_asset_quantity = #{relationAssetQuantity}
+            </if>
+            <if test="holderName != null and holderName != ''">
+                and holder_name = #{holderName}
+            </if>
+            <if test="unit != null and unit != ''">
+                and unit = #{unit}
+            </if>
+            <if test="developedTime != null">
+                and developed_time = #{developedTime}
+            </if>
+            <if test="consumerName != null and consumerName != ''">
+                and consumer_name = #{consumerName}
+            </if>
+            <if test="customerId != null">
+                and customer_id = #{customerId}
+            </if>
+            <if test="entrustCustomerId != null">
+                and entrust_customer_id = #{entrustCustomerId}
+            </if>
+            <if test="creatorUserId != null">
+                and creator_user_id = #{creatorUserId}
+            </if>
+            <if test="creatorUserName != null and creatorUserName != ''">
+                and creator_user_name = #{creatorUserName}
+            </if>
+            <if test="isDelete != null">
+                and is_delete = #{isDelete}
+            </if>
+            <if test="updatedAt != null">
+                and updated_at = #{updatedAt}
+            </if>
+            <if test="createdAt != null">
+                and created_at = #{createdAt}
+            </if>
+        </where>
+    </select>
+
+    <!-- 计算权益月份-->
+    <select id="countByProjectId" resultType="java.lang.Long">
+        select count(Distinct date)
+        from equity
+        where is_delete=0
+        and project_id=#{projectId}
+    </select>
+
+    <!--新增所有列-->
+    <insert id="insert" keyProperty="id" useGeneratedKeys="true">
+        insert into equity(serialnumber, project_id, project_name, date, reduction_quantity, type, quantity_type, status, entrust_status, estimated_quantity, quantity, relation_asset_type, relation_asset_quantity, holder_name, unit, developed_time, consumer_name, customer_id, entrust_customer_id, creator_user_id, creator_user_name, is_delete, updated_at, created_at)
+        values (#{serialnumber}, #{projectId}, #{projectName}, #{date}, #{reductionQuantity}, #{type}, #{quantityType}, #{status}, #{entrustStatus}, #{estimatedQuantity}, #{quantity}, #{relationAssetType}, #{relationAssetQuantity}, #{holderName}, #{unit}, #{developedTime}, #{consumerName}, #{customerId}, #{entrustCustomerId}, #{creatorUserId}, #{creatorUserName}, #{isDelete}, #{updatedAt}, #{createdAt})
+    </insert>
+
+    <insert id="insertBatch" keyProperty="id" useGeneratedKeys="true">
+        insert into equity(serialnumber, project_id, project_name, date, reduction_quantity, type, quantity_type, status, entrust_status, estimated_quantity, quantity, relation_asset_type, relation_asset_quantity, holder_name, unit, developed_time, consumer_name, customer_id, entrust_customer_id, creator_user_id, creator_user_name, is_delete, updated_at, created_at)
+        values
+        <foreach collection="entities" item="entity" separator=",">
+        (#{entity.serialnumber}, #{entity.projectId}, #{entity.projectName}, #{entity.date}, #{entity.reductionQuantity}, #{entity.type}, #{entity.quantityType}, #{entity.status}, #{entity.entrustStatus}, #{entity.estimatedQuantity}, #{entity.quantity}, #{entity.relationAssetType}, #{entity.relationAssetQuantity}, #{entity.holderName}, #{entity.unit}, #{entity.developedTime}, #{entity.consumerName}, #{entity.customerId}, #{entity.entrustCustomerId}, #{entity.creatorUserId}, #{entity.creatorUserName}, #{entity.isDelete}, #{entity.updatedAt}, #{entity.createdAt})
+        </foreach>
+    </insert>
+
+    <insert id="insertOrUpdateBatch" keyProperty="id" useGeneratedKeys="true">
+        insert into equity(serialnumber, project_id, project_name, date, reduction_quantity, type, quantity_type, status, entrust_status, estimated_quantity, quantity, relation_asset_type, relation_asset_quantity, holder_name, unit, developed_time, consumer_name, customer_id, entrust_customer_id, creator_user_id, creator_user_name, is_delete, updated_at, created_at)
+        values
+        <foreach collection="entities" item="entity" separator=",">
+            (#{entity.serialnumber}, #{entity.projectId}, #{entity.projectName}, #{entity.date}, #{entity.reductionQuantity}, #{entity.type}, #{entity.quantityType}, #{entity.status}, #{entity.entrustStatus}, #{entity.estimatedQuantity}, #{entity.quantity}, #{entity.relationAssetType}, #{entity.relationAssetQuantity}, #{entity.holderName}, #{entity.unit}, #{entity.developedTime}, #{entity.consumerName}, #{entity.customerId}, #{entity.entrustCustomerId}, #{entity.creatorUserId}, #{entity.creatorUserName}, #{entity.isDelete}, #{entity.updatedAt}, #{entity.createdAt})
+        </foreach>
+        on duplicate key update
+        serialnumber = values(serialnumber),
+        project_id = values(project_id),
+        project_name = values(project_name),
+        date = values(date),
+        reduction_quantity = values(reduction_quantity),
+        type = values(type),
+        quantity_type = values(quantity_type),
+        status = values(status),
+        entrust_status = values(entrust_status),
+        estimated_quantity = values(estimated_quantity),
+        quantity = values(quantity),
+        relation_asset_type = values(relation_asset_type),
+        relation_asset_quantity = values(relation_asset_quantity),
+        holder_name = values(holder_name),
+        unit = values(unit),
+        developed_time = values(developed_time),
+        consumer_name = values(consumer_name),
+        customer_id = values(customer_id),
+        entrust_customer_id = values(entrust_customer_id),
+        creator_user_id = values(creator_user_id),
+        creator_user_name = values(creator_user_name),
+        is_delete = values(is_delete),
+        updated_at = values(updated_at),
+        created_at = values(created_at)
+    </insert>
+
+    <!--通过主键修改数据-->
+    <update id="update">
+        update equity
+        <set>
+            <if test="serialnumber != null and serialnumber != ''">
+                serialnumber = #{serialnumber},
+            </if>
+            <if test="projectId != null">
+                project_id = #{projectId},
+            </if>
+            <if test="projectName != null and projectName != ''">
+                project_name = #{projectName},
+            </if>
+            <if test="date != null">
+                date = #{date},
+            </if>
+            <if test="reductionQuantity != null">
+                reduction_quantity = #{reductionQuantity},
+            </if>
+            <if test="type != null and type != ''">
+                type = #{type},
+            </if>
+            <if test="quantityType != null and quantityType != ''">
+                quantity_type = #{quantityType},
+            </if>
+            <if test="status != null">
+                status = #{status},
+            </if>
+            <if test="entrustStatus != null">
+                entrust_status = #{entrustStatus},
+            </if>
+            <if test="estimatedQuantity != null">
+                estimated_quantity = #{estimatedQuantity},
+            </if>
+            <if test="quantity != null">
+                quantity = #{quantity},
+            </if>
+            <if test="relationAssetType != null and relationAssetType != ''">
+                relation_asset_type = #{relationAssetType},
+            </if>
+            <if test="relationAssetQuantity != null">
+                relation_asset_quantity = #{relationAssetQuantity},
+            </if>
+            <if test="holderName != null and holderName != ''">
+                holder_name = #{holderName},
+            </if>
+            <if test="unit != null and unit != ''">
+                unit = #{unit},
+            </if>
+            <if test="developedTime != null">
+                developed_time = #{developedTime},
+            </if>
+            <if test="consumerName != null and consumerName != ''">
+                consumer_name = #{consumerName},
+            </if>
+            <if test="customerId != null">
+                customer_id = #{customerId},
+            </if>
+            <if test="entrustCustomerId != null">
+                entrust_customer_id = #{entrustCustomerId},
+            </if>
+            <if test="creatorUserId != null">
+                creator_user_id = #{creatorUserId},
+            </if>
+            <if test="creatorUserName != null and creatorUserName != ''">
+                creator_user_name = #{creatorUserName},
+            </if>
+            <if test="isDelete != null">
+                is_delete = #{isDelete},
+            </if>
+            <if test="updatedAt != null">
+                updated_at = #{updatedAt},
+            </if>
+            <if test="createdAt != null">
+                created_at = #{createdAt},
+            </if>
+        </set>
+        where id = #{id}
+    </update>
+
+    <!--通过主键删除-->
+    <delete id="deleteById">
+        delete from equity where id = #{id}
+    </delete>
+
+</mapper>
+
