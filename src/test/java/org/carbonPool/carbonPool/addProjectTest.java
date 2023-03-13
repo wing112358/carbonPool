@@ -10,6 +10,7 @@ import org.carbonPool.Utils.RandomUtil;
 import org.carbonPool.Utils.TestngListener;
 import org.carbonPool.Utils.YamlDataHelper;
 import org.carbonPool.entity.Project;
+import org.testng.Assert;
 import org.testng.ITestContext;
 import org.testng.annotations.*;
 
@@ -66,7 +67,7 @@ public class addProjectTest extends BaseTest {
         //根据项目名称查询项目信息
         Project project =this.projectService.queryByName(addProjectBean.getName());
 
-//        Project project=this.projectDao.queryByName(addProjectBean.getName());
+        //校验项目信息
 
         System.out.println("新增项目Id为："+project.getId());
 

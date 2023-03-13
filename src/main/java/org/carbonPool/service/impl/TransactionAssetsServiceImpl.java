@@ -9,6 +9,7 @@ import org.springframework.data.domain.PageImpl;
 import org.springframework.data.domain.PageRequest;
 
 import javax.annotation.Resource;
+import java.util.List;
 
 /**
  * 交易资产关联表(TransactionAssets)表服务实现类
@@ -30,6 +31,17 @@ public class TransactionAssetsServiceImpl implements TransactionAssetsService {
     @Override
     public TransactionAssets queryById(Long id) {
         return this.transactionAssetsDao.queryById(id);
+    }
+
+    /**
+     * 通过交易ID查询多条数据
+     *
+     * @param transactionId 主键
+     * @return 实例对象
+     */
+    @Override
+    public List<TransactionAssets> queryByTransactionId(Long transactionId) {
+        return this.transactionAssetsDao.queryByTransactionId(transactionId);
     }
 
     /**

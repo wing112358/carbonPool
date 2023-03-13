@@ -79,7 +79,7 @@ public class addAssetTest extends BaseTest {
         System.out.println("新增资产Id为："+assets.getId());
         this.assetId=assets.getId();
 
-        Assert.assertEquals((int)assets.getStatus(),0,"状态校验通过");
+        Assert.assertEquals((int)assets.getStatus(),0,"新增资产-状态校验不通过");
 
 
         return this.assetId;

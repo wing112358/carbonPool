@@ -81,7 +81,7 @@ public class updateEquityTest extends BaseTest {
         //校验权益记录
         for(int j=0;j<3;j++){
             Equity equity=this.equityService.queryById(baseEquityList.get(j));
-            Assert.assertEquals( equity.getStatus().intValue(),1,"状态校验通过");
+            Assert.assertEquals( equity.getStatus().intValue(),1,"更新权益-状态校验不通过");
         }
 
 

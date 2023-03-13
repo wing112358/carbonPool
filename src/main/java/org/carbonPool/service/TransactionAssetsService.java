@@ -4,6 +4,8 @@ import org.carbonPool.entity.TransactionAssets;
 import org.springframework.data.domain.Page;
 import org.springframework.data.domain.PageRequest;
 
+import java.util.List;
+
 /**
  * 交易资产关联表(TransactionAssets)表服务接口
  *
@@ -19,6 +21,8 @@ public interface TransactionAssetsService {
      * @return 实例对象
      */
     TransactionAssets queryById(Long id);
+
+    List<TransactionAssets> queryByTransactionId(Long transactionId);
 
     /**
      * 分页查询

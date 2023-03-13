@@ -66,7 +66,7 @@ public class configEquityTest extends BaseTest {
         //校验权益记录
         Long counte=this.equityService.countByProjectId(this.projectId);
 
-        Assert.assertNotEquals(counte,0,"权益插入成功");
+        Assert.assertNotEquals(counte,0,"权益插入不成功");
 
         //获取权益列表
         this.equityList=this.equityService.queryIdById(this.projectId);

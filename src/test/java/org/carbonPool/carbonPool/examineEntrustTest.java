@@ -77,13 +77,13 @@ public class examineEntrustTest extends BaseTest {
 
         System.out.println("委托记录状态为："+entrust.getStatus());
 
-        Assert.assertEquals((int)entrust.getStatus(),2,"委托记录校验通过");
+        Assert.assertEquals((int)entrust.getStatus(),2,"委托审核-委托记录校验不通过");
 
         //校验项目状态变更
         Project project=this.projectService.queryById(this.projectId);
         System.out.println("项目委托状态为："+project.getEntrustStatus());
 
-        Assert.assertEquals((int)project.getEntrustStatus(),2,"项目委托状态校验通过");
+        Assert.assertEquals((int)project.getEntrustStatus(),2,"托审核-项目委托状态校验不通过");
 
 
         return this.entrustId;

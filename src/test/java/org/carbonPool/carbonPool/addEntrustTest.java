@@ -8,7 +8,10 @@ import org.carbonPool.BaseTest;
 import org.carbonPool.Bean.CarbonPool.AddEntrustBean;
 import org.carbonPool.Utils.TestngListener;
 import org.carbonPool.Utils.YamlDataHelper;
+import org.carbonPool.entity.Entrust;
 import org.carbonPool.entity.EntrustData;
+import org.carbonPool.entity.Project;
+import org.testng.Assert;
 import org.testng.ITestContext;
 import org.testng.annotations.*;
 
@@ -68,11 +71,19 @@ public class addEntrustTest extends BaseTest {
         }
 
         //根据项目id查询委托记录
-        EntrustData entrust =this.entrustDataService.queryByDataId(this.projectId);
+        EntrustData entrustdata =this.entrustDataService.queryByDataId(this.projectId);
 
-        System.out.println("新增委托Id为："+entrust.getEntrustId());
+        //校验委托信息
+        System.out.println("新增委托Id为："+entrustdata.getEntrustId());
 
-        this.entrustId=entrust.getEntrustId();
+        this.entrustId=entrustdata.getEntrustId();
+
+        Entrust entrust=this.entrustService.queryById(this.entrustId);
+
+        Assert.assertEquals(entrust.getStatus().intValue(),1,"新增委托-委托状态校验不通过");
+        Project project=this.projectService.queryById(this.projectId);
+
+        Assert.assertEquals(project.getEntrustStatus().intValue(),1,"新增委托-项目委托状态校验不通过");
 
         return this.entrustId;
 

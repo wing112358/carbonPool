@@ -21,6 +21,15 @@
         where id = #{id}
     </select>
 
+
+    <!--查询单个-->
+    <select id="queryByTransactionId" resultMap="TransactionAssetsMap">
+        select
+            id, transaction_id, assets_id, assets_quantity, price, is_delete, updated_at, created_at
+        from transaction_assets
+        where transaction_id = #{transactionId}
+    </select>
+
     <!--查询指定行数据-->
     <select id="queryAllByLimit" resultMap="TransactionAssetsMap">
         select

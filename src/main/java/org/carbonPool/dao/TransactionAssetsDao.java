@@ -24,6 +24,14 @@ public interface TransactionAssetsDao {
     TransactionAssets queryById(Long id);
 
     /**
+     * 通过交易ID查询多条数据
+     *
+     * @param transactionId 主键
+     * @return 实例对象
+     */
+    List<TransactionAssets> queryByTransactionId(Long transactionId);
+
+    /**
      * 查询指定行数据
      *
      * @param transactionAssets 查询条件
