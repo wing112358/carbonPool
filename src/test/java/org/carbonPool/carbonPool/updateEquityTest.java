@@ -49,7 +49,7 @@ public class updateEquityTest extends BaseTest {
     }
 
 
-    @Test(dataProvider = "addparam",description = "更新权益测试",groups = "updateequity")
+    @Test(dataProvider = "addparam",description = "更新权益测试",groups = "updateequity",dependsOnGroups = {"configequity"})
     public List<Long> updateEquityTest(UpdateEquityBean updateEquityBean, String result){
 
         JSONObject response=null;
@@ -64,9 +64,9 @@ public class updateEquityTest extends BaseTest {
             //循环更新3条权益
             for(int i=0;i<3;i++){
                 updateEquityBean.setId(baseEquityList.get(i));
-                response=this.equityWorkService.updateEquity(updateEquityBean,result,this.headers);
+                response=this.equityWorkService.updateEquity(updateEquityBean,result,this.headers,this.signFlag);
             }
-            response=this.equityWorkService.updateEquity(updateEquityBean,result,this.headers);
+            response=this.equityWorkService.updateEquity(updateEquityBean,result,this.headers,this.signFlag);
             log.info(response.toString());
 
 

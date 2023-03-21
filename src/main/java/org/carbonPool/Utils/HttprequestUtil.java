@@ -1,6 +1,7 @@
 package org.carbonPool.Utils;
 
 
+import com.fasterxml.jackson.databind.ObjectMapper;
 import com.google.gson.Gson;
 import com.google.gson.JsonElement;
 import com.google.gson.JsonObject;
@@ -20,6 +21,7 @@ import org.apache.http.entity.StringEntity;
 import org.apache.http.impl.client.BasicCookieStore;
 import org.apache.http.impl.client.CloseableHttpClient;
 import org.apache.http.impl.client.HttpClients;
+import org.apache.http.message.BasicHeader;
 import org.apache.http.message.BasicNameValuePair;
 import org.apache.http.util.EntityUtils;
 import org.carbonPool.Bean.common.Request;
@@ -28,9 +30,7 @@ import org.carbonPool.Bean.common.Response;
 import java.io.IOException;
 import java.io.UnsupportedEncodingException;
 import java.nio.charset.Charset;
-import java.util.ArrayList;
-import java.util.Iterator;
-import java.util.List;
+import java.util.*;
 
 /**
  * 基础发送请求方法
@@ -39,6 +39,73 @@ import java.util.List;
 
 @Slf4j
 public class HttprequestUtil {
+
+
+    public String getValue( String key){
+
+        ResourceBundle bundle = ResourceBundle.getBundle("application");
+        String value=bundle.getString(key);
+
+        return value;
+    }
+
+    public String PRIVATEKEY=getValue("PRIVATEKEY");
+
+
+    public String PUBLICKEY=getValue("PUBLICKEY");
+
+
+
+    /**
+     * 处理Header
+     */
+
+    public Header[]  encryptheader(Request request) throws Exception {
+
+        String body=aesbody(request);
+
+        String X_TIMESTAMP=String.valueOf(new Date().getTime());
+        String X_NONCE=X_TIMESTAMP;
+        byte [] bytekey  =  PRIVATEKEY.getBytes("UTF-8");;
+        byte[] rsakey= RSAUtil.encrypt(bytekey,PUBLICKEY);
+        String X_EAK= Base64Util.encode(rsakey);
+        TreeMap<String, String> params = new TreeMap<>();
+        params.put("timestamp", X_TIMESTAMP);
+        params.put("nonce", X_NONCE);
+        params.put("aesKey", PRIVATEKEY);
+//        params.put("id", "99");
+        params.put("body", body);
+        String X_SIGN = SignUtil.sign(params);
+
+        Header[] headers={
+
+                new BasicHeader("X_TIMESTAMP", X_TIMESTAMP)
+
+                ,new BasicHeader("X_NONCE", X_NONCE)
+
+                ,new BasicHeader("X_EAK", X_EAK)
+
+                ,new BasicHeader("X_SIGN", X_SIGN)
+        };
+
+        return headers;
+
+    }
+
+    /**
+     * 处理请求加密
+     */
+
+    public String aesbody(Request request)  throws Exception {
+        String aesresult="";
+
+        String body=new ObjectMapper().writeValueAsString(request);
+
+        aesresult= AESUtil.encrypt(body,PRIVATEKEY);
+
+        return aesresult;
+
+    }
 
 
     //POST-Form
@@ -115,13 +182,15 @@ public class HttprequestUtil {
         return null;
     }
 
-    public Response postString(String url, String request, CookieStore cookies, Header[] headers) throws IOException {
+    public Response postWithSign(String url, Request request, CookieStore cookies, Header[] headers) throws Exception {
 
         //用来存放结果
         if (cookies == null) {
             cookies = new BasicCookieStore();
         }
-        HttpEntity reqentity = new StringEntity(request, Charset.forName("UTF-8"));
+
+        String stringRequest=this.aesbody(request);
+        HttpEntity reqentity = new StringEntity(stringRequest, Charset.forName("UTF-8"));
         ((StringEntity) reqentity).setContentType("application/json");
 
 
@@ -133,7 +202,25 @@ public class HttprequestUtil {
         //传递参数
         post.setEntity(reqentity);
         //设置header
+        String X_TIMESTAMP=String.valueOf(new Date().getTime());
+        String X_NONCE=X_TIMESTAMP;
+        byte [] bytekey  =  PRIVATEKEY.getBytes("UTF-8");;
+        byte[] rsakey= RSAUtil.encrypt(bytekey,PUBLICKEY);
+        String X_EAK= Base64Util.encode(rsakey);
+        TreeMap<String, String> params = new TreeMap<>();
+        params.put("timestamp", X_TIMESTAMP);
+        params.put("nonce", X_NONCE);
+        params.put("aesKey", PRIVATEKEY);
+//        params.put("id", "99");
+        params.put("body", stringRequest);
+        String X_SIGN = SignUtil.sign(params);
+
         post.setHeaders(headers);
+        post.addHeader("X_TIMESTAMP", X_TIMESTAMP);
+        post.addHeader("X_NONCE", X_NONCE);
+        post.addHeader("X_EAK", X_EAK);
+        post.addHeader("X_SIGN", X_SIGN);
+
 
         //获取请求header
         Header requestheaders[] = post.getAllHeaders();

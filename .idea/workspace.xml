@@ -4,15 +4,25 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="a1f9d140-8187-41e6-8f2c-8ba58b134f08" name="Changes" comment="修改文件格式">
+    <list default="true" id="a1f9d140-8187-41e6-8f2c-8ba58b134f08" name="Changes" comment="完善校验">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/carbonPool/dao/TransactionAssetsDao.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/carbonPool/dao/TransactionAssetsDao.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/carbonPool/service/TransactionAssetsService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/carbonPool/service/TransactionAssetsService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/carbonPool/service/impl/TransactionAssetsServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/carbonPool/service/impl/TransactionAssetsServiceImpl.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/mapper/TransactionAssetsDao.xml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/mapper/TransactionAssetsDao.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/carbonPool/Utils/HttprequestUtil.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/carbonPool/Utils/HttprequestUtil.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/carbonPool/service/BaseService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/carbonPool/service/BaseService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/carbonPool/service/carbonPool/assetWorkService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/carbonPool/service/carbonPool/assetWorkService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/carbonPool/service/carbonPool/entrustWorkService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/carbonPool/service/carbonPool/entrustWorkService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/carbonPool/service/carbonPool/equityWorkService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/carbonPool/service/carbonPool/equityWorkService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/carbonPool/service/carbonPool/projectWorkService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/carbonPool/service/carbonPool/projectWorkService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/carbonPool/service/carbonPool/transactionWorkService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/carbonPool/service/carbonPool/transactionWorkService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/carbonPool/service/user/loginService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/carbonPool/service/user/loginService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/application.properties" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/application.properties" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/org/carbonPool/BaseLoginTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/org/carbonPool/BaseLoginTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/org/carbonPool/BaseTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/org/carbonPool/BaseTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/org/carbonPool/User/loginTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/org/carbonPool/User/loginTest.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/test/java/org/carbonPool/carbonPool/addAssetTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/org/carbonPool/carbonPool/addAssetTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/org/carbonPool/carbonPool/addDemandTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/org/carbonPool/carbonPool/addDemandTest.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/test/java/org/carbonPool/carbonPool/addEntrustTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/org/carbonPool/carbonPool/addEntrustTest.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/test/java/org/carbonPool/carbonPool/addProjectTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/org/carbonPool/carbonPool/addProjectTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/org/carbonPool/carbonPool/analysisDemandTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/org/carbonPool/carbonPool/analysisDemandTest.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/test/java/org/carbonPool/carbonPool/configEquityTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/org/carbonPool/carbonPool/configEquityTest.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/test/java/org/carbonPool/carbonPool/confirmDemandTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/org/carbonPool/carbonPool/confirmDemandTest.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/test/java/org/carbonPool/carbonPool/examineEntrustTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/org/carbonPool/carbonPool/examineEntrustTest.java" afterDir="false" />
@@ -213,7 +223,8 @@
       <workItem from="1677052874118" duration="16419000" />
       <workItem from="1677475467908" duration="39894000" />
       <workItem from="1678342679055" duration="2599000" />
-      <workItem from="1678671831951" duration="16856000" />
+      <workItem from="1678671831951" duration="23117000" />
+      <workItem from="1679375938825" duration="12503000" />
     </task>
     <task id="LOCAL-00001" summary="碳资源池主流程初始版本">
       <created>1677823911388</created>
@@ -236,7 +247,14 @@
       <option name="project" value="LOCAL" />
       <updated>1678344398233</updated>
     </task>
-    <option name="localTasksCounter" value="4" />
+    <task id="LOCAL-00004" summary="完善校验">
+      <created>1678698284939</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1678698284940</updated>
+    </task>
+    <option name="localTasksCounter" value="5" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -257,6 +275,18 @@
     <MESSAGE value="碳资源池主流程初始版本" />
     <MESSAGE value="修改配置" />
     <MESSAGE value="修改文件格式" />
-    <option name="LAST_COMMIT_MESSAGE" value="修改文件格式" />
+    <MESSAGE value="完善校验" />
+    <option name="LAST_COMMIT_MESSAGE" value="完善校验" />
+  </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <breakpoints>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/test/java/org/carbonPool/carbonPool/addProjectTest.java</url>
+          <line>54</line>
+          <option name="timeStamp" value="6" />
+        </line-breakpoint>
+      </breakpoints>
+    </breakpoint-manager>
   </component>
 </project>

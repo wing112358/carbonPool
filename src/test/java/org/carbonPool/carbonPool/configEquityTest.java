@@ -43,7 +43,7 @@ public class configEquityTest extends BaseTest {
     }
 
 
-    @Test(dataProvider = "addparam",description = "配置权益测试",groups = "configequity")
+    @Test(dataProvider = "addparam",description = "配置权益测试",groups = "configequity",dependsOnGroups = {"examineentrust"})
     public List<Long> configEquityTest(ConfigEquityBean configEquityBean, String result){
 
         JSONObject response=null;
@@ -51,7 +51,7 @@ public class configEquityTest extends BaseTest {
         try{
 
             log.info("准备开始---------");
-            response=this.equityWorkService.configEquity(configEquityBean,result,this.headers);
+            response=this.equityWorkService.configEquity(configEquityBean,result,this.headers,this.signFlag);
             log.info(response.toString());
 
 

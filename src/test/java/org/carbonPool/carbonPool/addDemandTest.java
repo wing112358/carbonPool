@@ -46,7 +46,7 @@ public class addDemandTest extends BaseTest {
 
 
 
-    @Test(dataProvider = "addparam",description = "新增需求测试",groups = "adddemand")
+    @Test(dataProvider = "addparam",description = "新增需求测试",groups = "adddemand",dependsOnGroups = {"addasset"})
     public Long addDemandTest(AddDemandBean addDemandBean, String result){
 
         JSONObject response=null;
@@ -54,7 +54,7 @@ public class addDemandTest extends BaseTest {
         try{
 
             log.info("准备开始---------");
-            response=this.transactionWorkService.adddemand(addDemandBean, result, this.headers);
+            response=this.transactionWorkService.adddemand(addDemandBean, result, this.headers,this.signFlag);
             log.info(response.toString());
 
 

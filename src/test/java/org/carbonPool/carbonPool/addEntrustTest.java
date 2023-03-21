@@ -50,7 +50,7 @@ public class addEntrustTest extends BaseTest {
 
 
 
-    @Test(dataProvider = "addparam",description = "项目委托测试",groups = "addentrust")
+    @Test(dataProvider = "addparam",description = "项目委托测试",groups = "addentrust" ,dependsOnGroups = {"addproject"})
     public Long addEntrustTest(AddEntrustBean addEntrustBean, String result){
 
         JSONObject response=null;
@@ -58,7 +58,7 @@ public class addEntrustTest extends BaseTest {
         try{
 
             log.info("准备开始---------");
-            response=this.entrustWorkService.addentrust(addEntrustBean,result,this.headers);
+            response=this.entrustWorkService.addentrust(addEntrustBean,result,this.headers,this.signFlag);
             log.info(response.toString());
 
 

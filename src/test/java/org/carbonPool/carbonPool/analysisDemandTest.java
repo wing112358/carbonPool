@@ -48,7 +48,7 @@ public class analysisDemandTest extends BaseTest {
 
 
 
-    @Test(dataProvider = "addparam",description = "分析需求测试",groups = "analysisdemand")
+    @Test(dataProvider = "addparam",description = "分析需求测试",groups = "analysisdemand",dependsOnGroups = {"adddemand"})
     public List<Long> analysisDemandTest(AnalysisDemandBean analysisDemandBean, String result){
 
         JSONObject response=null;
@@ -56,7 +56,7 @@ public class analysisDemandTest extends BaseTest {
         try{
 
             log.info("准备开始---------");
-            response=this.transactionWorkService.analysisdemand(analysisDemandBean, result, this.headers);
+            response=this.transactionWorkService.analysisdemand(analysisDemandBean, result, this.headers,this.signFlag);
             log.info(response.toString());
 
 

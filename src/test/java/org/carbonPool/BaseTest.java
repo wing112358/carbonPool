@@ -9,7 +9,11 @@ import org.carbonPool.service.*;
 import org.carbonPool.service.user.loginService;
 import org.junit.runner.RunWith;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.beans.factory.annotation.Value;
+import org.springframework.boot.context.properties.ConfigurationProperties;
 import org.springframework.boot.test.context.SpringBootTest;
+import org.springframework.context.annotation.Configuration;
+import org.springframework.stereotype.Component;
 import org.springframework.test.context.junit4.SpringRunner;
 import org.springframework.test.context.testng.AbstractTestNGSpringContextTests;
 
@@ -73,6 +77,10 @@ public class BaseTest extends AbstractTestNGSpringContextTests {
 
     @Resource
     public TransactionPriceService transactionPriceService;
+
+    public  Integer signFlag= Integer.parseInt(new BaseService().getValue("sign_flag"));
+
+    public String PRIVATEKEY=new BaseService().PRIVATEKEY;
 
 
 

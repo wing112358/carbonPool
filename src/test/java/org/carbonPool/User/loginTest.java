@@ -27,7 +27,7 @@ public class loginTest extends BaseTest {
         try{
 
             log.info("准备开始---------");
-            response=this.loginservice.login(loginBean,result);
+            response=this.loginservice.login(loginBean,result,this.signFlag);
             log.info(response.toString());
 
 

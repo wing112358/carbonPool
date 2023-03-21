@@ -53,7 +53,7 @@ public class addAssetTest extends BaseTest {
 
 
 
-    @Test(dataProvider = "addparam",description = "新增资产测试",groups = "addasset")
+    @Test(dataProvider = "addparam",description = "新增资产测试",groups = "addasset",dependsOnGroups = {"updateequity"})
     public Long addAssetTest(AddAssetBean addAssetBean, String result){
 
         JSONObject response=null;
@@ -61,7 +61,7 @@ public class addAssetTest extends BaseTest {
         try{
 
             log.info("准备开始---------");
-            response=this.assetWorkService.addasset(addAssetBean, result, this.headers);
+            response=this.assetWorkService.addasset(addAssetBean, result, this.headers,this.signFlag);
             log.info(response.toString());
 
 

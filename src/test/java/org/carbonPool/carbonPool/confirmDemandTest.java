@@ -49,7 +49,7 @@ public class confirmDemandTest extends BaseTest {
 
 
 
-    @Test(dataProvider = "addparam",description = "确认需求测试",groups = "confirmdemand")
+    @Test(dataProvider = "addparam",description = "确认需求测试",groups = "confirmdemand",dependsOnGroups = {"adddemand"})
     public Long confirmDemandTest(ConfirmDemandBean confirmDemandBean, String result){
 
         JSONObject response=null;
@@ -57,7 +57,7 @@ public class confirmDemandTest extends BaseTest {
         try{
 
             log.info("准备开始---------");
-            response=this.transactionWorkService.confirmdemand(confirmDemandBean, result, this.headers);
+            response=this.transactionWorkService.confirmdemand(confirmDemandBean, result, this.headers,this.signFlag);
             log.info(response.toString());
 
 

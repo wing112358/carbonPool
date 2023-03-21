@@ -45,7 +45,7 @@ public class updatePriceTest extends BaseTest {
     }
 
 
-    @Test(dataProvider = "addparam",description = "交易回填测试",groups = "updateprice")
+    @Test(dataProvider = "addparam",description = "交易回填测试",groups = "updateprice",dependsOnGroups = {"confirmdemand"})
     public void updatePriceTest(UpdatePriceBean updatePriceBean, String result) throws InterruptedException {
 
         JSONObject response=null;
@@ -53,7 +53,7 @@ public class updatePriceTest extends BaseTest {
         try{
 
             log.info("准备开始---------");
-            response=this.transactionWorkService.updatePrice(updatePriceBean, result, this.headers);
+            response=this.transactionWorkService.updatePrice(updatePriceBean, result, this.headers,this.signFlag);
             log.info(response.toString());
 
 
