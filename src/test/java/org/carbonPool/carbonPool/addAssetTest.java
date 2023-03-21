@@ -61,7 +61,7 @@ public class addAssetTest extends BaseTest {
         try{
 
             log.info("准备开始---------");
-            response=this.assetWorkService.addasset(addAssetBean, result, this.headers,this.signFlag);
+            response=this.assetWorkService.addasset(addAssetBean, result, this.headers);
             log.info(response.toString());
 
 

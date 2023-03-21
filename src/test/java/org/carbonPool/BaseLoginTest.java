@@ -27,7 +27,7 @@ public class BaseLoginTest extends BaseTest {
         try{
 
             log.info("准备开始---------");
-            response=new loginService().loginByParam(username,password,"操作成功",this.signFlag);
+            response=new loginService().loginByParam(username,password,"操作成功");
             log.info(response.toString());
 
 

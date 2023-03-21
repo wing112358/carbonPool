@@ -19,9 +19,9 @@ public class projectWorkService extends BaseService {
     String ADD_PROJECT_URL="/api/project/create";
 
 
-    public JSONObject addproject(AddProjectBean addProjectBean, String result, Header[] headers,Integer flag) throws Exception {
+    public JSONObject addproject(AddProjectBean addProjectBean, String result, Header[] headers) throws Exception {
 
-        return this.baseMethod(addProjectBean,result,headers,flag,ADD_PROJECT_URL);
+        return this.baseMethod(addProjectBean,result,headers,ADD_PROJECT_URL);
     }
 
 

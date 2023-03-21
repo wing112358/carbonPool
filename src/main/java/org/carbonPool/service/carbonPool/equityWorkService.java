@@ -21,16 +21,16 @@ public class equityWorkService extends BaseService {
     String UPDATE_EQUITY_URL="/api/equity/update";
 
 
-    public JSONObject configEquity(ConfigEquityBean equityBean, String result, Header[] headers,Integer flag) throws Exception {
+    public JSONObject configEquity(ConfigEquityBean equityBean, String result, Header[] headers) throws Exception {
 
 
-        return this.baseMethod(equityBean,result,headers,flag,CONFIG_EQUITY_URL);
+        return this.baseMethod(equityBean,result,headers,CONFIG_EQUITY_URL);
     }
 
-    public JSONObject updateEquity(UpdateEquityBean updateEquityBean, String result, Header[] headers,Integer flag) throws Exception {
+    public JSONObject updateEquity(UpdateEquityBean updateEquityBean, String result, Header[] headers) throws Exception {
 
 
-        return this.baseMethod(updateEquityBean,result,headers,flag,UPDATE_EQUITY_URL);
+        return this.baseMethod(updateEquityBean,result,headers,UPDATE_EQUITY_URL);
     }
 
 

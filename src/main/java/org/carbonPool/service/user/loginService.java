@@ -20,14 +20,14 @@ public class loginService extends BaseService {
     String LOGIN_URL="/api/uaa/user/login";
 
 
-    public JSONObject login(LoginBean loginBean, String result,Integer flag) throws Exception {
+    public JSONObject login(LoginBean loginBean, String result) throws Exception {
 
         Header[] headers={};
 
-        return this.baseMethod(loginBean,result,headers,flag,LOGIN_URL);
+        return this.baseMethod(loginBean,result,headers,LOGIN_URL);
     }
 
-    public JSONObject loginByParam(String account,String code, String result,Integer flag) throws Exception {
+    public JSONObject loginByParam(String account,String code, String result) throws Exception {
 
 
         Header[] headers={};
@@ -37,6 +37,6 @@ public class loginService extends BaseService {
         LoginBean loginBean=new LoginBean(account,code);
 
 
-        return this.baseMethod(loginBean,result,headers,flag,LOGIN_URL);
+        return this.baseMethod(loginBean,result,headers,LOGIN_URL);
     }
 }

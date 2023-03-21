@@ -78,9 +78,6 @@ public class BaseTest extends AbstractTestNGSpringContextTests {
     @Resource
     public TransactionPriceService transactionPriceService;
 
-    public  Integer signFlag= Integer.parseInt(new BaseService().getValue("sign_flag"));
-
-    public String PRIVATEKEY=new BaseService().PRIVATEKEY;
 
 
 
@@ -95,34 +92,6 @@ public class BaseTest extends AbstractTestNGSpringContextTests {
 
 
 
-
-
-
-
-
-
-//
-//    @Resource
-//    public AssetsDao assetsDao=sqlSession.getMapper(AssetsDao.class);
-//    @Resource
-//    public AssetsEquityDao assetsEquityDao=sqlSession.getMapper(AssetsEquityDao.class);
-//    @Resource
-//    public DemandDao demandDao=sqlSession.getMapper(DemandDao.class);
-//    @Resource
-//    public EntrustDao entrustDao=sqlSession.getMapper(EntrustDao.class);
-//    @Resource
-//    public EntrustDataDao entrustDataDao=sqlSession.getMapper(EntrustDataDao.class);
-//    @Resource
-//    public EquityDao equityDao=sqlSession.getMapper(EquityDao.class);
-//
-//    @Resource
-//    public ProjectDao projectDao=sqlSession.getMapper(ProjectDao.class);
-//    @Resource
-//    public TransactionDao transactionDao=sqlSession.getMapper(TransactionDao.class);
-//    @Resource
-//    public TransactionAssetsDao transactionAssetsDao=sqlSession.getMapper(TransactionAssetsDao.class);
-//    @Resource
-//    public TransactionPriceDao transactionPriceDao=sqlSession.getMapper(TransactionPriceDao.class);
 
 
 

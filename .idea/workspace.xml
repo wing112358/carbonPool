@@ -4,9 +4,27 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="a1f9d140-8187-41e6-8f2c-8ba58b134f08" name="Changes" comment="增加加签配置及逻辑">
+    <list default="true" id="a1f9d140-8187-41e6-8f2c-8ba58b134f08" name="Changes" comment="简化服务请求">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/org/carbonPool/service/BaseService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/carbonPool/service/BaseService.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/org/carbonPool/service/carbonPool/assetWorkService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/carbonPool/service/carbonPool/assetWorkService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/carbonPool/service/carbonPool/entrustWorkService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/carbonPool/service/carbonPool/entrustWorkService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/carbonPool/service/carbonPool/equityWorkService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/carbonPool/service/carbonPool/equityWorkService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/carbonPool/service/carbonPool/projectWorkService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/carbonPool/service/carbonPool/projectWorkService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/carbonPool/service/carbonPool/transactionWorkService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/carbonPool/service/carbonPool/transactionWorkService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/carbonPool/service/user/loginService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/carbonPool/service/user/loginService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/org/carbonPool/BaseLoginTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/org/carbonPool/BaseLoginTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/org/carbonPool/BaseTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/org/carbonPool/BaseTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/org/carbonPool/carbonPool/addAssetTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/org/carbonPool/carbonPool/addAssetTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/org/carbonPool/carbonPool/addDemandTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/org/carbonPool/carbonPool/addDemandTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/org/carbonPool/carbonPool/addEntrustTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/org/carbonPool/carbonPool/addEntrustTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/org/carbonPool/carbonPool/addProjectTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/org/carbonPool/carbonPool/addProjectTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/org/carbonPool/carbonPool/analysisDemandTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/org/carbonPool/carbonPool/analysisDemandTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/org/carbonPool/carbonPool/configEquityTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/org/carbonPool/carbonPool/configEquityTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/org/carbonPool/carbonPool/confirmDemandTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/org/carbonPool/carbonPool/confirmDemandTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/org/carbonPool/carbonPool/examineEntrustTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/org/carbonPool/carbonPool/examineEntrustTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/org/carbonPool/carbonPool/updateEquityTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/org/carbonPool/carbonPool/updateEquityTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/org/carbonPool/carbonPool/updatePriceTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/org/carbonPool/carbonPool/updatePriceTest.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -202,7 +220,7 @@
       <workItem from="1677475467908" duration="39894000" />
       <workItem from="1678342679055" duration="2599000" />
       <workItem from="1678671831951" duration="23117000" />
-      <workItem from="1679375938825" duration="13461000" />
+      <workItem from="1679375938825" duration="14535000" />
     </task>
     <task id="LOCAL-00001" summary="碳资源池主流程初始版本">
       <created>1677823911388</created>
@@ -239,7 +257,14 @@
       <option name="project" value="LOCAL" />
       <updated>1679390026724</updated>
     </task>
-    <option name="localTasksCounter" value="6" />
+    <task id="LOCAL-00006" summary="简化服务请求">
+      <created>1679391099446</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1679391099446</updated>
+    </task>
+    <option name="localTasksCounter" value="7" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -262,7 +287,8 @@
     <MESSAGE value="修改文件格式" />
     <MESSAGE value="完善校验" />
     <MESSAGE value="增加加签配置及逻辑" />
-    <option name="LAST_COMMIT_MESSAGE" value="增加加签配置及逻辑" />
+    <MESSAGE value="简化服务请求" />
+    <option name="LAST_COMMIT_MESSAGE" value="简化服务请求" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>

@@ -55,13 +55,15 @@ public class BaseService {
 
     public String PUBLICKEY=getValue("PUBLICKEY");
 
+    public Integer sign_flag=Integer.parseInt(getValue("sign_flag"));
 
-    public JSONObject baseMethod(Request request, String result, Header[] headers, Integer flag,String url) throws Exception {
+
+    public JSONObject baseMethod(Request request, String result, Header[] headers, String url) throws Exception {
         //flag=1--加密；flag=0--不加密
 
         Response response=new Response(null,null,null,null);
 
-        if(flag==1){
+        if(sign_flag==1){
 
             //发送请求
             response=new HttprequestUtil().postWithSign(Baseurl+url,request,null,headers);
@@ -76,7 +78,7 @@ public class BaseService {
         String methodName = Thread.currentThread().getStackTrace()[1].getMethodName();
 
         //校验返回
-        JSONObject jsonresult=new JSONObject(assertMsgAndData(response,result,methodName,flag));
+        JSONObject jsonresult=new JSONObject(assertMsgAndData(response,result,methodName));
 
         return jsonresult;
     }
@@ -91,13 +93,13 @@ public class BaseService {
      * @param methodName
      * @return
      */
-    public JSONObject  assertMsgAndData(Response response, String result, String methodName,Integer flag) {
+    public JSONObject  assertMsgAndData(Response response, String result, String methodName) {
 
         Integer code=response.getStatusCode();
 
         JSONObject resultcontent=new JSONObject();
 
-        if(flag==1){
+        if(sign_flag==1){
             String decresult=AESUtil.decrypt(response.getResponseContent().replace("\"",""),PRIVATEKEY);
             resultcontent= JsonUtil.jsonstring2Jsonobject(decresult);
         }else{

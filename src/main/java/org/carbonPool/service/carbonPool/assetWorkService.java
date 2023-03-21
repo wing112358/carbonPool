@@ -21,9 +21,9 @@ public class assetWorkService extends BaseService {
     String ADD_ASSET_URL="/api/assets/create";
 
 
-    public JSONObject addasset(AddAssetBean assetBean, String result, Header[] headers,Integer flag) throws Exception {
+    public JSONObject addasset(AddAssetBean assetBean, String result, Header[] headers) throws Exception {
 
-        return this.baseMethod(assetBean,result,headers,flag,ADD_ASSET_URL);
+        return this.baseMethod(assetBean,result,headers,ADD_ASSET_URL);
     }
 
 

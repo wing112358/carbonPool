@@ -51,7 +51,7 @@ public class configEquityTest extends BaseTest {
         try{
 
             log.info("准备开始---------");
-            response=this.equityWorkService.configEquity(configEquityBean,result,this.headers,this.signFlag);
+            response=this.equityWorkService.configEquity(configEquityBean,result,this.headers);
             log.info(response.toString());
 
 

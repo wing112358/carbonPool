@@ -60,7 +60,7 @@ public class examineEntrustTest extends BaseTest {
         try{
 
             log.info("准备开始---------");
-            response=this.entrustWorkService.examineEntrust(examineEntrustBean,result,this.headers,this.signFlag);
+            response=this.entrustWorkService.examineEntrust(examineEntrustBean,result,this.headers);
             log.info(response.toString());
 
 

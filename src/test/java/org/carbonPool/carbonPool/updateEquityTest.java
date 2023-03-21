@@ -64,9 +64,9 @@ public class updateEquityTest extends BaseTest {
             //循环更新3条权益
             for(int i=0;i<3;i++){
                 updateEquityBean.setId(baseEquityList.get(i));
-                response=this.equityWorkService.updateEquity(updateEquityBean,result,this.headers,this.signFlag);
+                response=this.equityWorkService.updateEquity(updateEquityBean,result,this.headers);
             }
-            response=this.equityWorkService.updateEquity(updateEquityBean,result,this.headers,this.signFlag);
+            response=this.equityWorkService.updateEquity(updateEquityBean,result,this.headers);
             log.info(response.toString());
 
 

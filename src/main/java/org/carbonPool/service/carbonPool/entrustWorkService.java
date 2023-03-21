@@ -21,15 +21,15 @@ public class entrustWorkService extends BaseService {
     String EXAMINE_ENTRUST_URL="/api/entrust/audit";
 
 
-    public JSONObject addentrust(AddEntrustBean addEntrustBean, String result, Header[] headers,Integer flag) throws Exception {
+    public JSONObject addentrust(AddEntrustBean addEntrustBean, String result, Header[] headers) throws Exception {
 
-        return this.baseMethod(addEntrustBean,result,headers,flag,ADD_ENTRUST_URL);
+        return this.baseMethod(addEntrustBean,result,headers,ADD_ENTRUST_URL);
     }
 
-    public JSONObject examineEntrust(ExamineEntrustBean examineEntrustBean, String result, Header[] headers,Integer flag) throws Exception {
+    public JSONObject examineEntrust(ExamineEntrustBean examineEntrustBean, String result, Header[] headers) throws Exception {
 
 
-        return this.baseMethod(examineEntrustBean,result,headers,flag,EXAMINE_ENTRUST_URL);
+        return this.baseMethod(examineEntrustBean,result,headers,EXAMINE_ENTRUST_URL);
     }
 
 

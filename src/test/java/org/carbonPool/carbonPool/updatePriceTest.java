@@ -53,7 +53,7 @@ public class updatePriceTest extends BaseTest {
         try{
 
             log.info("准备开始---------");
-            response=this.transactionWorkService.updatePrice(updatePriceBean, result, this.headers,this.signFlag);
+            response=this.transactionWorkService.updatePrice(updatePriceBean, result, this.headers);
             log.info(response.toString());
 
 

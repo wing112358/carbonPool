@@ -52,7 +52,7 @@ public class addProjectTest extends BaseTest {
         try{
 
             log.info("准备开始---------");
-            response=this.projectWorkService.addproject(addProjectBean,result,this.headers,this.signFlag);
+            response=this.projectWorkService.addproject(addProjectBean,result,this.headers);
             log.info(response.toString());
 
 

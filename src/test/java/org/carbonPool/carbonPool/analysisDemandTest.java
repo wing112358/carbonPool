@@ -56,7 +56,7 @@ public class analysisDemandTest extends BaseTest {
         try{
 
             log.info("准备开始---------");
-            response=this.transactionWorkService.analysisdemand(analysisDemandBean, result, this.headers,this.signFlag);
+            response=this.transactionWorkService.analysisdemand(analysisDemandBean, result, this.headers);
             log.info(response.toString());
 
 

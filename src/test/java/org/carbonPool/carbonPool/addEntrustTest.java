@@ -58,7 +58,7 @@ public class addEntrustTest extends BaseTest {
         try{
 
             log.info("准备开始---------");
-            response=this.entrustWorkService.addentrust(addEntrustBean,result,this.headers,this.signFlag);
+            response=this.entrustWorkService.addentrust(addEntrustBean,result,this.headers);
             log.info(response.toString());
 
 

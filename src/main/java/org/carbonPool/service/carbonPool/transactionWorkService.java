@@ -25,28 +25,28 @@ public class transactionWorkService extends BaseService {
     String UPDATE_PRICE_URL="/api/transaction/updateUnitPrice";
 
 
-    public JSONObject adddemand(AddDemandBean addDemandBean, String result, Header[] headers,Integer flag) throws Exception {
+    public JSONObject adddemand(AddDemandBean addDemandBean, String result, Header[] headers) throws Exception {
 
 
-        return this.baseMethod(addDemandBean,result,headers,flag,ADD_DEMAND_URL);
+        return this.baseMethod(addDemandBean,result,headers,ADD_DEMAND_URL);
     }
 
-    public JSONObject analysisdemand(AnalysisDemandBean analysisDemandBean, String result, Header[] headers,Integer flag) throws Exception {
+    public JSONObject analysisdemand(AnalysisDemandBean analysisDemandBean, String result, Header[] headers) throws Exception {
 
 
-        return this.baseMethod(analysisDemandBean,result,headers,flag,ANALYSIS_DEMAND_URL);
+        return this.baseMethod(analysisDemandBean,result,headers,ANALYSIS_DEMAND_URL);
     }
 
-    public JSONObject confirmdemand(ConfirmDemandBean confirmDemandBean, String result, Header[] headers,Integer flag) throws Exception {
+    public JSONObject confirmdemand(ConfirmDemandBean confirmDemandBean, String result, Header[] headers) throws Exception {
 
 
-        return this.baseMethod(confirmDemandBean,result,headers,flag,CONFIRM_DEMAND_URL);
+        return this.baseMethod(confirmDemandBean,result,headers,CONFIRM_DEMAND_URL);
     }
 
-    public JSONObject updatePrice(UpdatePriceBean updatePriceBean, String result, Header[] headers,Integer flag) throws Exception {
+    public JSONObject updatePrice(UpdatePriceBean updatePriceBean, String result, Header[] headers) throws Exception {
 
 
-        return this.baseMethod(updatePriceBean,result,headers,flag,UPDATE_PRICE_URL);
+        return this.baseMethod(updatePriceBean,result,headers,UPDATE_PRICE_URL);
     }
 
 
