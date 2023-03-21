@@ -23,53 +23,13 @@ public class entrustWorkService extends BaseService {
 
     public JSONObject addentrust(AddEntrustBean addEntrustBean, String result, Header[] headers,Integer flag) throws Exception {
 
-
-        //flag=1--加密；flag=0--不加密
-
-        Response response=new Response(null,null,null,null);
-
-        if(flag==1){
-            //发送请求
-            response=new HttprequestUtil().postWithSign(Baseurl+ADD_ENTRUST_URL,addEntrustBean,null,headers);
-        }else {
-            //发送请求
-            response=new HttprequestUtil().postJson(Baseurl+ADD_ENTRUST_URL,addEntrustBean,null,headers);
-        }
-
-
-        //获取当前方法名
-        String methodName = Thread.currentThread().getStackTrace()[1].getMethodName();
-
-        //校验返回
-        JSONObject jsonresult=new JSONObject(assertMsgAndData(response,result,methodName,flag));
-
-        return jsonresult;
+        return this.baseMethod(addEntrustBean,result,headers,flag,ADD_ENTRUST_URL);
     }
 
     public JSONObject examineEntrust(ExamineEntrustBean examineEntrustBean, String result, Header[] headers,Integer flag) throws Exception {
 
 
-        //flag=1--加密；flag=0--不加密
-
-        Response response=new Response(null,null,null,null);
-
-        if(flag==1){
-
-            //发送请求
-            response=new HttprequestUtil().postWithSign(Baseurl+EXAMINE_ENTRUST_URL,examineEntrustBean,null,headers);
-        }else {
-            //发送请求
-            response=new HttprequestUtil().postJson(Baseurl+EXAMINE_ENTRUST_URL,examineEntrustBean,null,headers);
-        }
-
-
-        //获取当前方法名
-        String methodName = Thread.currentThread().getStackTrace()[1].getMethodName();
-
-        //校验返回
-        JSONObject jsonresult=new JSONObject(assertMsgAndData(response,result,methodName,flag));
-
-        return jsonresult;
+        return this.baseMethod(examineEntrustBean,result,headers,flag,EXAMINE_ENTRUST_URL);
     }
 
 

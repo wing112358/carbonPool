@@ -28,103 +28,25 @@ public class transactionWorkService extends BaseService {
     public JSONObject adddemand(AddDemandBean addDemandBean, String result, Header[] headers,Integer flag) throws Exception {
 
 
-        //flag=1--加密；flag=0--不加密
-
-        Response response=new Response(null,null,null,null);
-
-        if(flag==1){
-            //发送请求
-            response=new HttprequestUtil().postWithSign(Baseurl+ADD_DEMAND_URL,addDemandBean,null,headers);
-        }else {
-            //发送请求
-            response=new HttprequestUtil().postJson(Baseurl+ADD_DEMAND_URL,addDemandBean,null,headers);
-        }
-
-
-        //获取当前方法名
-        String methodName = Thread.currentThread().getStackTrace()[1].getMethodName();
-
-        //校验返回
-        JSONObject jsonresult=new JSONObject(assertMsgAndData(response,result,methodName,flag));
-
-        return jsonresult;
+        return this.baseMethod(addDemandBean,result,headers,flag,ADD_DEMAND_URL);
     }
 
     public JSONObject analysisdemand(AnalysisDemandBean analysisDemandBean, String result, Header[] headers,Integer flag) throws Exception {
 
 
-        //flag=1--加密；flag=0--不加密
-
-        Response response=new Response(null,null,null,null);
-
-        if(flag==1){
-
-            //发送请求
-            response=new HttprequestUtil().postWithSign(Baseurl+ANALYSIS_DEMAND_URL,analysisDemandBean,null,headers);
-        }else {
-            //发送请求
-            response=new HttprequestUtil().postJson(Baseurl+ANALYSIS_DEMAND_URL,analysisDemandBean,null,headers);
-        }
-
-
-        //获取当前方法名
-        String methodName = Thread.currentThread().getStackTrace()[1].getMethodName();
-
-        //校验返回
-        JSONObject jsonresult=new JSONObject(assertMsgAndData(response,result,methodName,flag));
-
-        return jsonresult;
+        return this.baseMethod(analysisDemandBean,result,headers,flag,ANALYSIS_DEMAND_URL);
     }
 
     public JSONObject confirmdemand(ConfirmDemandBean confirmDemandBean, String result, Header[] headers,Integer flag) throws Exception {
 
 
-        //flag=1--加密；flag=0--不加密
-
-        Response response=new Response(null,null,null,null);
-
-        if(flag==1){
-
-            //发送请求
-            response=new HttprequestUtil().postWithSign(Baseurl+CONFIRM_DEMAND_URL,confirmDemandBean,null,headers);
-        }else {
-            //发送请求
-            response=new HttprequestUtil().postJson(Baseurl+CONFIRM_DEMAND_URL,confirmDemandBean,null,headers);
-        }
-
-
-        //获取当前方法名
-        String methodName = Thread.currentThread().getStackTrace()[1].getMethodName();
-
-        //校验返回
-        JSONObject jsonresult=new JSONObject(assertMsgAndData(response,result,methodName,flag));
-
-        return jsonresult;
+        return this.baseMethod(confirmDemandBean,result,headers,flag,CONFIRM_DEMAND_URL);
     }
 
     public JSONObject updatePrice(UpdatePriceBean updatePriceBean, String result, Header[] headers,Integer flag) throws Exception {
 
 
-        //flag=1--加密；flag=0--不加密
-
-        Response response=new Response(null,null,null,null);
-
-        if(flag==1){
-            //发送请求
-            response=new HttprequestUtil().postWithSign(Baseurl+UPDATE_PRICE_URL,updatePriceBean,null,headers);
-        }else {
-            //发送请求
-            response=new HttprequestUtil().postJson(Baseurl+UPDATE_PRICE_URL,updatePriceBean,null,headers);
-        }
-
-
-        //获取当前方法名
-        String methodName = Thread.currentThread().getStackTrace()[1].getMethodName();
-
-        //校验返回
-        JSONObject jsonresult=new JSONObject(assertMsgAndData(response,result,methodName,flag));
-
-        return jsonresult;
+        return this.baseMethod(updatePriceBean,result,headers,flag,UPDATE_PRICE_URL);
     }
 
 

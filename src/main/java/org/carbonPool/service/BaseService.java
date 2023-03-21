@@ -6,6 +6,7 @@ import com.fasterxml.jackson.databind.ObjectMapper;
 import org.apache.http.Header;
 import org.apache.http.message.BasicHeader;
 
+import org.carbonPool.Bean.CarbonPool.AddAssetBean;
 import org.carbonPool.Bean.common.Environment;
 import org.carbonPool.Bean.common.Request;
 import org.carbonPool.Bean.common.Response;
@@ -55,7 +56,30 @@ public class BaseService {
     public String PUBLICKEY=getValue("PUBLICKEY");
 
 
+    public JSONObject baseMethod(Request request, String result, Header[] headers, Integer flag,String url) throws Exception {
+        //flag=1--加密；flag=0--不加密
 
+        Response response=new Response(null,null,null,null);
+
+        if(flag==1){
+
+            //发送请求
+            response=new HttprequestUtil().postWithSign(Baseurl+url,request,null,headers);
+        }else {
+            //发送请求
+            response=new HttprequestUtil().postJson(Baseurl+url,request,null,headers);
+        }
+
+
+
+        //获取当前方法名
+        String methodName = Thread.currentThread().getStackTrace()[1].getMethodName();
+
+        //校验返回
+        JSONObject jsonresult=new JSONObject(assertMsgAndData(response,result,methodName,flag));
+
+        return jsonresult;
+    }
 
 
 

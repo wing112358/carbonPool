@@ -23,28 +23,7 @@ public class assetWorkService extends BaseService {
 
     public JSONObject addasset(AddAssetBean assetBean, String result, Header[] headers,Integer flag) throws Exception {
 
-        //flag=1--加密；flag=0--不加密
-
-        Response response=new Response(null,null,null,null);
-
-        if(flag==1){
-
-            //发送请求
-            response=new HttprequestUtil().postWithSign(Baseurl+ADD_ASSET_URL,assetBean,null,headers);
-        }else {
-            //发送请求
-            response=new HttprequestUtil().postJson(Baseurl+ADD_ASSET_URL,assetBean,null,headers);
-        }
-
-
-
-        //获取当前方法名
-        String methodName = Thread.currentThread().getStackTrace()[1].getMethodName();
-
-        //校验返回
-        JSONObject jsonresult=new JSONObject(assertMsgAndData(response,result,methodName,flag));
-
-        return jsonresult;
+        return this.baseMethod(assetBean,result,headers,flag,ADD_ASSET_URL);
     }
 
 
